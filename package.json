@@ -11,6 +11,10 @@
     "typecheck": "nuxt typecheck",
     "docs:index": "tsx scripts/index-docs.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opensya/docs.git"
+  },
   "dependencies": {
     "@docsearch/css": "^4.6.3",
     "@docsearch/js": "^4.6.3",
