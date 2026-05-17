@@ -8,11 +8,19 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'nuxt-llms',
     '@nuxtjs/mcp-toolkit',
-    '@nuxtjs/algolia',
+    // '@nuxtjs/algolia',
   ],
 
   devtools: {
     enabled: true,
+  },
+
+  app: {
+    head: {
+      meta: [
+        { name: 'algolia-site-verification', content: '8D33EE3FC8C49066' },
+      ],
+    },
   },
 
   css: ['~/assets/css/main.css'],
@@ -49,25 +57,6 @@ export default defineNuxtConfig({
       include: ['@vueuse/core'],
     },
   },
-
-  // algolia: {
-  //   applicationId: process.env.NUXT_PUBLIC_ALGOLIA_APP_ID!,
-  //   apiKey: process.env.NUXT_PUBLIC_ALGOLIA_SEARCH_API_KEY!,
-
-  //   docSearch: {
-  //     applicationId: process.env.NUXT_PUBLIC_ALGOLIA_APP_ID!,
-  //     apiKey: process.env.NUXT_PUBLIC_ALGOLIA_SEARCH_API_KEY,
-  //     indexName: process.env.NUXT_PUBLIC_ALGOLIA_INDEX_NAME,
-  //     placeholder: 'Search ...',
-  //   },
-
-  //   crawler: {
-  //     meta: ['title', 'description', 'lang'],
-  //     include: ['/docs'],
-  //     indexName: process.env.NUXT_PUBLIC_ALGOLIA_INDEX_NAME!,
-  //     apiKey: process.env.ALGOLIA_WRITE_API_KEY!,
-  //   },
-  // },
 
   eslint: {
     config: {
