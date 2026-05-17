@@ -1,4 +1,4 @@
-<!-- <script setup lang="ts">
+<script setup lang="ts">
 import 'instantsearch.css/themes/satellite-min.css';
 
 const { data: page } = await useAsyncData('index', () =>
@@ -27,8 +27,4 @@ useSeoMeta({
 
 <template>
   <ContentRenderer v-if="page" :value="page" :prose="false" />
-</template> -->
-
-<template>
-  <AlgoliaDocSearch />
 </template>
