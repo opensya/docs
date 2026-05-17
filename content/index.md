@@ -247,7 +247,7 @@ Enhanced with Nuxt Content
   ---
   links:
     - label: Start building
-      to: '/getting-started'
+      to: 'docs/getting-started/introduction'
       trailingIcon: i-lucide-arrow-right
     - label: View on GitHub
       to: 'https://github.com/nuxt-ui-templates/docs'
