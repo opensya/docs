@@ -27,6 +27,7 @@
     "@nuxtjs/algolia": "^1.11.2",
     "@nuxtjs/mcp-toolkit": "^0.16.1",
     "@nuxtjs/mdc": "^0.21.1",
+    "@nuxtjs/sitemap": "^8.0.15",
     "@takumi-rs/core": "^1.1.2",
     "@vueuse/core": "^14.3.0",
     "algoliasearch": "^5.52.1",
