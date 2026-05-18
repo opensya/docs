@@ -41,12 +41,23 @@ const headline = computed(() =>
   findPageHeadline(navigation?.value, page.value?.path),
 );
 
-defineOgImage('Docs', { title, description, headline: headline.value });
+defineOgImage('Docs.takumi', { title, description, headline: headline.value });
 </script>
 
 <template>
   <UPage v-if="page">
     <div class="max-w-4xl mx-auto">
+      <div
+        class="pointer-events-none absolute left-1/2 -translate-x-1/2"
+        style="
+          background: radial-gradient(
+            ellipse at center,
+            color-mix(in oklch, var(--ui-primary) 6%, transparent) 0%,
+            transparent 70%
+          );
+        "
+      />
+
       <UPageHeader
         :title="page.title"
         :description="page.description"
