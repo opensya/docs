@@ -2,7 +2,7 @@ export default defineAppConfig({
   ui: {
     colors: {
       primary: 'blue',
-      neutral: 'neutral',
+      neutral: 'stone',
     },
     footer: {
       slots: {
@@ -14,6 +14,10 @@ export default defineAppConfig({
     prose: {
       pre: {
         base: 'bg-transparent rounded-xl',
+
+        slots: {
+          header: 'rounded-t-xl bg-muted',
+        },
       },
     },
   },

@@ -46,7 +46,7 @@ defineOgImage('Docs.takumi', { title, description, headline: headline.value });
 
 <template>
   <UPage v-if="page">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-193 mt-16 mx-auto">
       <div
         class="pointer-events-none absolute left-1/2 -translate-x-1/2"
         style="
