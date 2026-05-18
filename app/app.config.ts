@@ -10,6 +10,12 @@ export default defineAppConfig({
         left: 'text-sm text-muted',
       },
     },
+
+    prose: {
+      pre: {
+        base: 'bg-transparent rounded-xl',
+      },
+    },
   },
   seo: {
     siteName: 'Nuxt Docs Template',

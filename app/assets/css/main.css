@@ -25,4 +25,5 @@
 
 :root {
   --ui-container: var(--container-8xl);
+  --ui-header-height: calc(var(--spacing) * 12);
 }

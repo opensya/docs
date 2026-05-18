@@ -8,8 +8,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "typecheck": "nuxt typecheck",
-    "docs:index": "tsx scripts/index-docs.ts"
+    "typecheck": "nuxt typecheck"
   },
   "repository": {
     "type": "git",

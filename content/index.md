@@ -21,7 +21,7 @@ Build professional documentation with Nuxt UI's powerful components, enhanced ty
 #links
   :::u-button
   ---
-  to: /getting-started/introduction
+  to: /introduction
   size: xl
   trailing-icon: i-lucide-arrow-right
   ---

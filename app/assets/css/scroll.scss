@@ -1,9 +1,11 @@
 .w-scroll,
 .w-scroll-permanent {
+  --scroll-width: 7px;
+
   overflow: auto;
 
   &::-webkit-scrollbar {
-    width: 7px;
+    width: var(--scroll-width);
     transition: all 0.5s ease;
   }
 
@@ -19,7 +21,7 @@
 
   &:hover {
     &::-webkit-scrollbar {
-      width: 7px;
+      width: var(--scroll-width);
     }
   }
 }

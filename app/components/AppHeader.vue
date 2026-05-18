@@ -7,25 +7,12 @@ const { header } = useAppConfig();
 </script>
 
 <template>
-  <UHeader :ui="{ center: 'flex-1' }" :to="header?.to || '/'" mode="slideover">
-    <template
-      v-if="header?.logo?.dark || header?.logo?.light || header?.title"
-      #title
-    >
-      <UColorModeImage
-        v-if="header?.logo?.dark || header?.logo?.light"
-        :light="header?.logo?.light!"
-        :dark="header?.logo?.dark!"
-        :alt="header?.logo?.alt"
-        class="h-6 w-auto shrink-0"
-      />
-
-      <span v-else-if="header?.title">
-        {{ header.title }}
-      </span>
-    </template>
-
-    <template v-else #left>
+  <UHeader
+    :ui="{ center: 'flex-1', container: 'max-w-full' }"
+    :to="header?.to || '/'"
+    mode="slideover"
+  >
+    <template #title>
       <NuxtLink :to="header?.to || '/'">
         <AppLogo class="w-auto h-6 shrink-0" />
       </NuxtLink>
@@ -46,7 +33,16 @@ const { header } = useAppConfig();
     </template>
 
     <template #body>
-      <UContentNavigation highlight :navigation="navigation" />
+      <UContentNavigation highlight :navigation="navigation">
+        <template #link-trailing="{ link }">
+          <u-icon
+            v-if="link?.children?.length"
+            name="i-lucide-plus"
+            class="transition-all group-data-[state=open]:rotate-45"
+            :class="{ 'rotate-45': link.open }"
+          />
+        </template>
+      </UContentNavigation>
     </template>
   </UHeader>
 </template>
