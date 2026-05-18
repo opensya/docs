@@ -3,21 +3,24 @@
 
 @source "../../../content/**/*";
 
+@import './scroll.scss';
+@import './algoliasearch.scss';
+
 @theme static {
   --container-8xl: 90rem;
   --font-sans: 'Public Sans', sans-serif;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+  --color-blue-50: #e6e6ff;
+  --color-blue-100: #d1d0ff;
+  --color-blue-200: #9f9fff;
+  --color-blue-300: #706fff;
+  --color-blue-400: #3935ff;
+  --color-blue-500: #0900c2;
+  --color-blue-600: #0600a5;
+  --color-blue-700: #040085;
+  --color-blue-800: #020067;
+  --color-blue-900: #01004e;
+  --color-blue-950: #010031;
 }
 
 :root {

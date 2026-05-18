@@ -1,30 +1,25 @@
 <script setup lang="ts">
-const { seo } = useAppConfig()
+const { seo } = useAppConfig();
 
-const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'))
-const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
-  server: false
-})
+const { data: navigation } = await useAsyncData('navigation', () =>
+  queryCollectionNavigation('docs'),
+);
 
 useHead({
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-  ],
-  link: [
-    { rel: 'icon', href: '/favicon.ico' }
-  ],
+  meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+  link: [{ rel: 'icon', href: '/favicon.svg' }],
   htmlAttrs: {
-    lang: 'en'
-  }
-})
+    lang: 'en',
+  },
+});
 
 useSeoMeta({
   titleTemplate: `%s - ${seo?.siteName}`,
   ogSiteName: seo?.siteName,
-  twitterCard: 'summary_large_image'
-})
+  twitterCard: 'summary_large_image',
+});
 
-provide('navigation', navigation)
+provide('navigation', navigation);
 </script>
 
 <template>
@@ -40,12 +35,5 @@ provide('navigation', navigation)
     </UMain>
 
     <AppFooter />
-
-    <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        :navigation="navigation"
-      />
-    </ClientOnly>
   </UApp>
 </template>

@@ -21,7 +21,7 @@ Build professional documentation with Nuxt UI's powerful components, enhanced ty
 #links
   :::u-button
   ---
-  to: /docs/getting-started/introduction
+  to: /getting-started/introduction
   size: xl
   trailing-icon: i-lucide-arrow-right
   ---
@@ -247,7 +247,7 @@ Enhanced with Nuxt Content
   ---
   links:
     - label: Start building
-      to: 'docs/getting-started/introduction'
+      to: 'getting-started/introduction'
       trailingIcon: i-lucide-arrow-right
     - label: View on GitHub
       to: 'https://github.com/nuxt-ui-templates/docs'
