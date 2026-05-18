@@ -98,7 +98,7 @@ defineOgImage('Docs.takumi', { title, description, headline: headline.value });
       </UPageBody>
     </div>
 
-    <template v-if="page?.body?.toc?.links?.length" #right>
+    <template #right>
       <UContentToc
         highlight
         highlight-color="neutral"
@@ -106,7 +106,11 @@ defineOgImage('Docs.takumi', { title, description, headline: headline.value });
         color="neutral"
         :title="toc?.title"
         :links="page.body?.toc?.links"
-      />
+      >
+        <template #leading>
+          <u-icon name="i-lucide-text" class="size-5.5 ml-1.5" />
+        </template>
+      </UContentToc>
     </template>
   </UPage>
 </template>
