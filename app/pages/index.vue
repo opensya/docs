@@ -21,8 +21,10 @@ useSeoMeta({
   ogTitle: title,
   description,
   ogDescription: description,
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png',
+  // ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/docs-light.png',
 });
+
+// defineOgImage('Docs.takumi', { title, description, headline: headline.value });
 </script>
 
 <template>

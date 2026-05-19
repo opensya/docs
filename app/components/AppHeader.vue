@@ -10,6 +10,7 @@ const { header } = useAppConfig();
   <UHeader
     :ui="{ center: 'flex-1', container: 'max-w-full' }"
     :to="header?.to || '/'"
+    class="bg-transparent"
     mode="slideover"
   >
     <template #title>

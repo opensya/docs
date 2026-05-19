@@ -13,7 +13,7 @@ export default defineAppConfig({
 
     prose: {
       pre: {
-        base: 'bg-transparent rounded-xl',
+        base: 'bg-default rounded-xl',
 
         slots: {
           header: 'rounded-t-xl bg-muted',

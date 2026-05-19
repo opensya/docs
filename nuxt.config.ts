@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/mcp-toolkit',
     '@nuxtjs/sitemap',
     '@nuxtjs/algolia',
+    'motion-v/nuxt',
   ],
 
   devtools: {
