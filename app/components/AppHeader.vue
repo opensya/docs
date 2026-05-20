@@ -34,7 +34,7 @@ const { header } = useAppConfig();
     </template>
 
     <template #body>
-      <UContentNavigation highlight :navigation="navigation">
+      <UContentNavigation highlight :navigation="navigation" type="single">
         <template #link-trailing="{ link }">
           <u-icon
             v-if="link?.children?.length"

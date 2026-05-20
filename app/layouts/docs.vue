@@ -17,6 +17,7 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation');
             highlight
             color="neutral"
             variant="link"
+            type="single"
             :navigation="navigation"
           >
             <template #link-trailing="{ link }">
