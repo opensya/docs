@@ -5,7 +5,11 @@ description: The open-source recruitment infrastructure for modern companies. Mo
 
 ::u-page-hero
 ---
-orientation: vertical
+orientation: horizontal
+ui:
+  container: lg:items-start
+  title: sm:text-5xl
+  links: gap-x-2
 ---
 
 #title
@@ -30,7 +34,7 @@ OpenSya helps you build modular, scalable and fully owned recruitment platforms 
   to: /core/architecture
   size: xl
   color: neutral
-  variant: subtle
+  variant: soft
   icon: i-lucide-folder-open
   ---
   Explore architecture

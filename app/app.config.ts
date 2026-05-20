@@ -12,6 +12,15 @@ export default defineAppConfig({
     },
 
     prose: {
+      codeGroup: {
+        base: 'bg-default rounded-xl',
+        slots: {
+          list: 'rounded-t-xl bg-muted',
+          indicator: 'bg-accented',
+          trigger: 'cursor-pointer hover:bg-accented',
+        },
+      },
+
       pre: {
         base: 'bg-default rounded-xl',
 

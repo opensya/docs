@@ -32,29 +32,33 @@ function lineMotion(index: number) {
 </script>
 
 <template>
-  <div
-    class="overflow-hidden rounded-xl border border-default bg-elevated/50 backdrop-blur ring-1 ring-white/2 w-[90%]"
-  >
-    <div class="flex items-center gap-1.5 border-b border-default p-4 sm:px-6">
-      <span class="size-2.5 rounded-full border border-default bg-muted" />
-      <span class="size-2.5 rounded-full border border-default bg-muted" />
-      <span class="size-2.5 rounded-full border border-default bg-muted" />
-    </div>
-
-    <div class="min-h-50 p-5 font-mono text-[13px] leading-[1.8] sm:p-6">
-      <Motion
-        v-for="(line, lineIndex) in lines"
-        :key="lineIndex"
-        v-bind="lineMotion(lineIndex)"
+  <div>
+    <div
+      class="overflow-hidden rounded-2xl border border-default bg-muted dark:bg-ace backdrop-blur ring-1 ring-white/2 w-[90%]"
+    >
+      <div
+        class="flex items-center gap-1.5 border-b border-default p-4 sm:px-6"
       >
-        <span
-          v-for="(segment, segIndex) in line.segments"
-          :key="segIndex"
-          :class="segmentStyles[segment.style]"
+        <span class="size-2.5 rounded-full border border-default bg-default" />
+        <span class="size-2.5 rounded-full border border-default bg-default" />
+        <span class="size-2.5 rounded-full border border-default bg-default" />
+      </div>
+
+      <div class="min-h-50 p-5 font-mono text-[13px] leading-[1.8] sm:p-6">
+        <Motion
+          v-for="(line, lineIndex) in lines"
+          :key="lineIndex"
+          v-bind="lineMotion(lineIndex)"
         >
-          {{ segment.text }}
-        </span>
-      </Motion>
+          <span
+            v-for="(segment, segIndex) in line.segments"
+            :key="segIndex"
+            :class="segmentStyles[segment.style]"
+          >
+            {{ segment.text }}
+          </span>
+        </Motion>
+      </div>
     </div>
   </div>
 </template>
