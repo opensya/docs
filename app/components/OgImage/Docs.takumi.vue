@@ -1,13 +1,19 @@
 <script setup lang="ts">
-defineOptions({ inheritAttrs: false });
+defineOptions({ inheritAttrs: false, island: false });
 
-defineProps<{
-  headline?: string;
-  title?: string;
-  description?: string;
-}>();
+withDefaults(
+  defineProps<{
+    headline?: string;
+    title?: string;
+    description?: string;
+    siteUrl?: string;
+  }>(),
+  {
+    siteUrl: 'docs.opensya.com',
+  },
+);
 
-const siteConfig = useSiteConfig();
+// const siteConfig = useSiteConfig();
 </script>
 
 <template>
@@ -47,7 +53,7 @@ const siteConfig = useSiteConfig();
 
       <div class="flex items-center gap-4">
         <span class="text-xl text-dimmed ml-auto">
-          {{ siteConfig.url.replace(/^https?:\/\//i, '') }}
+          {{ siteUrl.replace(/^https?:\/\//i, '') }}
         </span>
       </div>
     </div>

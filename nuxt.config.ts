@@ -40,6 +40,12 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    '/_og/**': {
+      prerender: false,
+    },
+  },
+
   experimental: {
     asyncContext: true,
   },

@@ -6,6 +6,7 @@ definePageMeta({
   layout: 'docs',
 });
 
+const siteConfig = useSiteConfig();
 const route = useRoute();
 const { toc } = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation');
@@ -41,7 +42,12 @@ const headline = computed(() =>
   findPageHeadline(navigation?.value, page.value?.path),
 );
 
-defineOgImage('Docs.takumi', { title, description, headline: headline.value });
+defineOgImage('Docs.takumi', {
+  title,
+  description,
+  headline: headline.value,
+  siteUrl: siteConfig.url,
+});
 </script>
 
 <template>
