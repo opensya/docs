@@ -31,7 +31,7 @@ OpenSya helps you build modular, scalable and fully owned recruitment platforms 
 
   :::u-button
   ---
-  to: /core/architecture
+  to: /docs/core/architecture
   size: xl
   color: neutral
   variant: soft
@@ -236,7 +236,7 @@ description: Learn how OpenSya discovers files, generates runtimes and keeps app
   ---
   title: Architecture
   icon: i-lucide-folder-open
-  to: /core/architecture
+  to: /docs/core/architecture
   ---
   Understand how OpenSya organizes fullstack applications around `server/`, `client/` and shared configuration.
   :::
