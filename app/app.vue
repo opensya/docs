@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useMagicKeys } from '@vueuse/core';
+
 const { seo } = useAppConfig();
 
 useHead({
@@ -14,6 +16,19 @@ useSeoMeta({
   ogSiteName: seo?.siteName,
   twitterCard: 'summary_large_image',
 });
+
+const { t } = useMagicKeys();
+const colorMode = useColorMode();
+
+watch(
+  () => t?.value,
+  (v) => {
+    if (v) {
+      colorMode.preference =
+        colorMode.preference === 'light' ? 'dark' : 'light';
+    }
+  },
+);
 </script>
 
 <template>

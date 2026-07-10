@@ -14,6 +14,8 @@ const breakpoints = useBreakpoints(breakpointsTailwind);
 const lgAndSmaller = breakpoints.smallerOrEqual('lg');
 const isOpen = ref(false);
 
+const colorMode = useColorMode();
+
 const siteConfig = useSiteConfig();
 const route = useRoute();
 const { toc } = useAppConfig();
@@ -72,6 +74,10 @@ defineOgImage('Docs.takumi', {
   headline: headline.value,
   siteUrl: siteConfig.url,
 });
+
+function switchColorMode() {
+  colorMode.preference = colorMode.preference === 'light' ? 'dark' : 'light';
+}
 </script>
 
 <template>
@@ -115,7 +121,17 @@ defineOgImage('Docs.takumi', {
 
       <template #right>
         <!-- <AlgoliaDocSearch v-if="!isOpen" /> -->
-        <UColorModeButton class="rounded-full" icon />
+
+        <UTooltip>
+          <template #content> Press <UKbd>T</UKbd> to switch </template>
+
+          <UButton
+            class="rounded-full"
+            icon="i-tabler-blur"
+            variant="ghost"
+            @click="switchColorMode"
+          />
+        </UTooltip>
       </template>
 
       <template #body>
