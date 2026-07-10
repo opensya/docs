@@ -10,14 +10,36 @@ export default defineContentConfig({
     docs: defineCollection({
       type: 'page',
       source: {
-        include: '**',
-        exclude: ['index.md'],
+        include: 'docs/**',
+        exclude: ['docs/index.md'],
       },
       schema: z.object({
         links: z
           .array(
             z.object({
               label: z.string(),
+              title: z.string(),
+              icon: z.string(),
+              to: z.string(),
+              target: z.string().optional(),
+            }),
+          )
+          .optional(),
+      }),
+    }),
+
+    persistence: defineCollection({
+      type: 'page',
+      source: {
+        include: 'persistence/**',
+        // exclude: ['persistence/index.md'],
+      },
+      schema: z.object({
+        links: z
+          .array(
+            z.object({
+              label: z.string(),
+              title: z.string(),
               icon: z.string(),
               to: z.string(),
               target: z.string().optional(),

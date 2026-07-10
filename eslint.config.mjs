@@ -1,5 +1,5 @@
 // @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
+import withNuxt from './.nuxt/eslint.config.mjs';
 
 export default withNuxt({
   rules: {
@@ -9,6 +9,7 @@ export default withNuxt({
     '@stylistic/operator-linebreak': 'off',
     'vue/max-attributes-per-line': 'off',
     '@stylistic/quote-props': 'off',
-    'vue/singleline-html-element-content-newline': 'off'
-  }
-})
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/comma-dangle': 'off',
+  },
+});

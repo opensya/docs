@@ -1,8 +1,5 @@
 <script setup lang="ts">
 const { seo } = useAppConfig();
-const { data: navigation } = await useAsyncData('navigation', () =>
-  queryCollectionNavigation('docs'),
-);
 
 useHead({
   meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
@@ -17,12 +14,22 @@ useSeoMeta({
   ogSiteName: seo?.siteName,
   twitterCard: 'summary_large_image',
 });
-
-provide('navigation', navigation);
 </script>
 
 <template>
   <UApp>
+    <NuxtLoadingIndicator />
+
+    <UMain>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </UMain>
+
+    <!-- <AppFooter /> -->
+  </UApp>
+
+  <!-- <UApp>
     <NuxtLoadingIndicator />
 
     <AppHeader />
@@ -34,5 +41,5 @@ provide('navigation', navigation);
     </UMain>
 
     <AppFooter />
-  </UApp>
+  </UApp> -->
 </template>
