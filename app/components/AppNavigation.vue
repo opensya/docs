@@ -12,9 +12,14 @@ const navigation = $navigation[navigationName];
 const links = ref<PageAnchor[]>([
   {
     label: 'Documentation',
-    icon: 'i-tabler-book',
+    icon: 'i-tabler-book-filled',
     to: '/docs',
     disabled: true,
+  },
+  {
+    label: 'Developers',
+    icon: 'i-tabler-prompt',
+    to: '/docs',
   },
   {
     label: 'Persistence',
