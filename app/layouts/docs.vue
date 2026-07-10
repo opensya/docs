@@ -18,11 +18,11 @@ const navigation = $navigation[navigationName];
       >
         <template #top>
           <div
-            class="border-b border-default sticky top-0 z-10 h-(--ui-header-height) flex items-center px-3 gap-2"
+            class="border-b border-default sticky top-0 z-10 h-(--ui-header-height) flex items-center px-5 gap-2"
           >
             <NuxtLink to="/">
               <AppFavicon
-                class="text-primary size-6.5"
+                class="text-primary size-6"
                 :arrow-stroke-width="1.8"
               />
             </NuxtLink>
@@ -34,10 +34,7 @@ const navigation = $navigation[navigationName];
               size="sm"
             />
 
-            <NuxtLink
-              :to="navigation?.at(0)?.path"
-              class="text-lg font-semibold"
-            >
+            <NuxtLink :to="navigation?.at(0)?.path" class="text-lg font-bold">
               {{ navigation?.at(0)?.title }}
             </NuxtLink>
           </div>

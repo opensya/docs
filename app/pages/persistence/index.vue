@@ -34,7 +34,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <UContainer v-if="page" class="max-w-5xl pt-20 pb-16">
+  <UContainer v-if="page" class="max-w-4xl pt-20 pb-16">
     <ContentRenderer :value="page" />
   </UContainer>
 </template>
