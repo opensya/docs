@@ -76,6 +76,36 @@ export default defineAppConfig({
         },
       },
     },
+
+    pageCard: {
+      variants: {
+        variant: {
+          soft: {
+            root: 'bg-elevated dark:bg-elevated/50',
+            spotlight: 'bg-elevated/90',
+          },
+          subtle: {
+            root: 'bg-elevated dark:bg-elevated/50',
+            spotlight: 'bg-elevated/90',
+          },
+        },
+      },
+    },
+
+    card: {
+      variants: {
+        variant: {
+          soft: {
+            root: 'bg-elevated dark:bg-elevated/50',
+            spotlight: 'bg-elevated/90',
+          },
+          subtle: {
+            root: 'bg-elevated dark:bg-elevated/50',
+            spotlight: 'bg-elevated/90',
+          },
+        },
+      },
+    },
   },
 
   seo: {

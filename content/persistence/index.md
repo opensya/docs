@@ -24,8 +24,9 @@ description: Install the package, declare a table, and execute your first query.
 icon: i-tabler-rocket
 to: /persistence/getting-started
 spotlight: true
+class: shadow-lg border-default
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 ::
 
@@ -36,8 +37,9 @@ description: Describe tables, columns, defaults, validators, and relations.
 icon: i-tabler-schema
 to: /persistence/concepts/metadata-and-registry
 spotlight: true
+class: shadow-lg border-default
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 ::
 
@@ -48,8 +50,9 @@ description: Read, create, update, and delete data through the Query Engine.
 icon: i-tabler-database
 to: /persistence/concepts/query-engine
 spotlight: true
+class: shadow-lg border-default
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 ::
 
@@ -64,7 +67,7 @@ icon: i-tabler-database-search
 to: /persistence/guides/schema-consistency
 spotlight: true
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 :: -->
 
@@ -81,43 +84,49 @@ title:  Architecture
 description: Understand the registry, engine, hooks, resolver, and adapter layers.
 icon: i-tabler-sitemap
 to: /persistence/concepts/architecture
+class: shadow-sm
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 ::
 
 ::u-page-card{title="Queries and filters" description="Compose nested filters, sorting, and pagination." icon="i-tabler-filter" to="/persistence/guides/queries-and-filters"}
 ---
+class: shadow-sm
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 ::
 
 ::u-page-card{title="Validation" description="Apply structural, field-level, and cross-field rules." icon="i-tabler-checkup-list" to="/persistence/guides/validation"}
 ---
+class: shadow-sm
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 ::
 
 ::u-page-card{title="Relations" description="Declare and populate direct relations in batches." icon="i-tabler-link" to="/persistence/guides/relations"}
 ---
+class: shadow-sm
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 ::
 
 ::u-page-card{title="Lifecycle hooks" description="Run domain behavior around transactional mutations." icon="i-tabler-arrows-split" to="/persistence/guides/lifecycle-hooks"}
 ---
+class: shadow-sm
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 ::
 
 ::u-page-card{title="Drizzle adapter" description="Use PostgreSQL through the built-in Drizzle implementation." icon="i-tabler-database-cog" to="/persistence/adapters/drizzle"}
 ---
+class: shadow-sm
 ui:
-  leading: mb-35
+  leading: h-40 flex items-start
 ---
 ::
 
