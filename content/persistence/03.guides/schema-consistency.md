@@ -1,24 +1,34 @@
 ---
 title: Schema consistency
-description: Compare declared metadata with the live PostgreSQL public schema.
+description: Detect drift between declared metadata and live PostgreSQL tables.
 navigation:
   icon: i-tabler-database-search
 ---
 
-The consistency checker detects drift between the metadata registry and the schema reported by a database adapter.
-
-## Run a check
+The consistency checker is read-only. It compares the locked registry with
+`DatabaseAdapter.introspect()` and never changes the database.
 
 ```ts
-import { createConsistencyChecker } from '@opensya/persistence'
-
 const checker = createConsistencyChecker(registry, adapter)
 const drift = await checker.check()
 
-for (const table of drift) {
-  console.error(table.table, table.issues)
+if (drift.length) {
+  for (const table of drift) {
+    console.error(table.table, table.issues)
+  }
 }
 ```
+
+## Detected drift
+
+- missing declared tables;
+- missing or unexpected columns;
+- mapped type mismatches;
+- nullability mismatches;
+- primary-key mismatches;
+- single-column uniqueness mismatches;
+- missing, unexpected or changed declared indexes;
+- composite index field order and uniqueness mismatches.
 
 ```ts
 interface SchemaDrift {
@@ -27,94 +37,27 @@ interface SchemaDrift {
 }
 ```
 
-An empty array means that every declared table and column matched the introspected representation for the properties currently compared.
+An empty array means the currently supported properties match.
 
-## Comparison process
+## Introspection boundaries
 
-::steps{level="3"}
-### Introspect the database
-The checker calls `adapter.introspect()`.
+PostgreSQL introspection currently reads base tables in the `public` schema,
+columns, primary keys and indexes. Single-column unique indexes are surfaced as
+`ColumnMetadata.unique`; other indexes become `TableMetadata.indexes`.
 
-### Match physical table names
-Actual tables are indexed by `collectionName`.
+It does not reconstruct:
 
-### Compare declared columns
-Columns are matched through `columnName`.
-
-### Report drift
-Issues are grouped by the logical declared table name.
-::
-
-## Detected drift
-
-::accordion
-  :::accordion-item{label="Missing table" icon="i-tabler-table-off"}
-  A metadata table has no physical table with the same `collectionName`.
-  :::
-
-  :::accordion-item{label="Missing column" icon="i-tabler-column-remove"}
-  A declared `columnName` does not exist in the introspected table.
-  :::
-
-  :::accordion-item{label="Unexpected column" icon="i-tabler-column-insert-right"}
-  The physical table contains a column that is absent from metadata.
-  :::
-
-  :::accordion-item{label="Type mismatch" icon="i-tabler-arrows-diff"}
-  The declared metadata type differs from the SQL type mapped by the adapter.
-  :::
-
-  :::accordion-item{label="Nullability mismatch" icon="i-tabler-circle-half-2"}
-  The declared `nullable` flag differs from `information_schema.columns.is_nullable`.
-  :::
-
-  :::accordion-item{label="Primary-key mismatch" icon="i-tabler-key-off"}
-  The declared `primaryKey` flag differs from the discovered PostgreSQL primary-key constraint.
-  :::
-::
-
-## Example output
-
-```ts
-[
-  {
-    table: 'users',
-    issues: [
-      'Colonne "email" : nullable déclaré "false" ≠ réel "true".',
-      'Colonne "display_name" déclarée mais absente en base.'
-    ]
-  }
-]
-```
-
-## What is not compared
-
-The current checker does not compare:
-
-- unique constraints;
-- foreign keys or relations;
+- validators or lifecycle behavior;
+- relation metadata and foreign keys;
 - database defaults;
-- indexes;
 - check constraints;
-- schemas other than `public`;
-- PostgreSQL-specific precision, scale, or length.
+- non-public schemas and views;
+- precision, scale and length details.
 
-::callout
----
-icon: i-tabler-alert-triangle
-color: warning
-variant: subtle
----
-Because unique constraints are not introspected yet, `unique` cannot participate in drift detection. A clean result only covers tables, columns, mapped types, nullability, and primary keys.
-::
+Declared metadata remains the domain source of truth.
 
 ## Operational use
 
-Run consistency checks:
-
-- during application startup in non-production environments;
-- in a dedicated CI integration test against a migrated PostgreSQL database;
-- as a deployment diagnostic after migrations;
-- from an administration command that reports drift without mutating the schema.
-
-The checker is read-only. It reports differences and never creates or alters database objects.
+Run the check in CI against a migrated PostgreSQL database, during non-production
+startup, or as a deployment diagnostic. A clean check complements migrations;
+it does not replace them.

@@ -52,6 +52,18 @@ Registry Hooks   RelationResolver
   :::accordion-item{label="ConsistencyChecker" icon="i-tabler-database-search"}
   Compares declared metadata with the schema returned by `DatabaseAdapter.introspect()`.
   :::
+
+  :::accordion-item{label="FieldSerializer" icon="i-tabler-eye-off"}
+  Removes hidden and context-sensitive fields from base entities and populated relations.
+  :::
+
+  :::accordion-item{label="AuditManager" icon="i-tabler-history"}
+  Produces before/after snapshots and field changes through a transaction-scoped writer.
+  :::
+
+  :::accordion-item{label="Domain Events" icon="i-tabler-broadcast"}
+  Collects business events inside application transactions, stores them in an outbox, and publishes them through an injectable processor.
+  :::
 ::
 
 ## Read path
@@ -66,8 +78,9 @@ The engine forwards filters, sorting, limit, and offset.
 ### Populate requested relations
 When `populate` is present, the resolver loads each named direct relation.
 
-### Return typed data
-The generic return type is supplied by the caller; it is not inferred from metadata.
+### Serialize and return typed data
+Hidden and contextual fields are removed, including inside populated relations.
+The entity type is inferred from the registered table metadata.
 ::
 
 Reads do not run lifecycle hooks and are not automatically transactional.
@@ -88,7 +101,9 @@ Reads do not run lifecycle hooks and are not automatically transactional.
   :::
 ::
 
-All mutation steps execute inside `adapter.transaction()`.
+All mutation steps execute inside `adapter.transaction()`. When configured,
+audit entries use that same adapter. Application transactions additionally
+flush collected Domain Events to the outbox before the outer commit.
 
 ## Logical and physical identifiers
 

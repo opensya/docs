@@ -1,103 +1,93 @@
 ---
 title: Query Engine
-description: Read and mutate entities through one validated, transactional API.
+description: Execute typed reads, safe mutations and application transactions.
 navigation:
   icon: i-tabler-engine
 ---
 
-Create an engine from a locked registry, an adapter with built runtime tables, and an optional hooks registry.
-
-```ts
-const engine = createQueryEngine(registry, adapter, hooks)
-```
+`QueryEngine` is the application-facing runtime. It coordinates the registry,
+adapter, validators, hooks, serializer, audit manager and domain-event outbox.
 
 ## Reads
 
 ```ts
-const users = await engine.findMany<User>('users', {
+const users = await engine.findMany('users', {
   where,
   orderBy: [{ field: 'createdAt', direction: 'desc' }],
   limit: 20,
-  offset: 0,
-  populate: ['projects']
+  populate: ['teams'],
+  context: { user: actor }
 })
 
-const user = await engine.findOne<User>('users', {
-  where: byId(userId)
-})
+const user = await engine.findOne('users', { where: byId(userId) })
 ```
 
-`findOne()` delegates to the adapter with `limit: 1`. Population happens after the base query.
+Results are inferred from registered metadata and serialized before returning.
+Reads do not execute lifecycle hooks.
 
-## Create
+## Mutations
 
 ```ts
-const user = await engine.create<User>(
-  'users',
-  { email: 'john@example.com' },
-  { requestId, tenantId, user: actor }
-)
+const created = await engine.create('users', input, context)
+const updated = await engine.updateOne('users', byId(id), patch, context)
+const rows = await engine.updateMany('users', activeUsers, patch, context)
+const removed = await engine.deleteOne('users', byId(id), context)
+const count = await engine.deleteMany('sessions', expiredSessions, context)
 ```
+
+Every mutation runs inside `adapter.transaction()`.
+
+| Method | Inferred return |
+| --- | --- |
+| `findMany('users')` | `User[]` |
+| `findOne('users')` | `User \| null` |
+| `findPage('users')` | `CursorPage<User>` |
+| `create('users')` | `User` |
+| `updateOne('users')` | `User \| null` |
+| `updateMany('users')` | `User[]` |
+| `deleteOne` | `boolean` |
+| `deleteMany` | `number` |
+
+## Mutation pipeline
 
 ::steps{level="3"}
-### Apply missing metadata defaults
-### Run before-create hooks in order
+### Resolve metadata and defaults
+### Run ordered before hooks
 ### Reject unknown fields
-### Run structural, field, and table validation
-### Insert with the transaction adapter
-### Run after-create hooks
+### Validate the resulting entity
+### Execute through the transaction adapter
+### Run after hooks
+### Record audit entries when enabled
+### Serialize the returned entity
 ::
 
-## Update one
+Updates and deletes require a filter containing at least one effective
+condition. Empty nested filters are rejected with `UnsafeMutationError`.
+
+## Application transaction
+
+Use `transaction()` when several domain mutations and emitted events must commit
+as one unit.
 
 ```ts
-const updated = await engine.updateOne<User>(
-  'users',
-  byId(userId),
-  { email: 'new@example.com' },
-  context
-)
+await engine.transaction(context, async tx => {
+  const application = await tx.updateOne(
+    'applications',
+    byId(applicationId),
+    { status: 'hired' }
+  )
+
+  tx.events.emit('candidate.hired', {
+    applicationId: application!.id,
+    candidateId: application!.candidateId
+  })
+})
 ```
 
-The engine loads one current entity, transforms the patch through hooks, merges it for validation, then targets the write through the entity's complete primary key. It returns `null` when no row matches.
+Events are collected and persisted only after the callback succeeds, but still
+inside the same outer transaction.
 
-## Update many
-
-```ts
-const updated = await engine.updateMany<User>(
-  'users',
-  {
-    conditions: [
-      { field: 'status', operator: 'eq', value: 'pending' }
-    ]
-  },
-  { status: 'active' }
-)
-```
-
-Every matched entity is validated after merging the resolved patch. After-update hooks run once for every returned updated row.
-
-## Delete
-
-```ts
-const removed = await engine.deleteOne('users', byId(userId))
-const count = await engine.deleteMany('sessions', expiredSessions)
-```
-
-`deleteOne()` first resolves the target, then deletes through its primary key. `deleteMany()` passes the supplied filter directly to the adapter.
-
-## Safe targeting
-
-All update and delete methods reject filters without effective constraints.
-
-```ts
-await engine.deleteMany('users', {})
-// UnsafeMutationError
-```
-
-A nested filter is only considered effective when it eventually contains at least one condition.
-
-## Mutation context
+## Context
 
 ```ts
 interface QueryContextInput {
@@ -108,27 +98,5 @@ interface QueryContextInput {
 }
 ```
 
-Context is forwarded to hooks together with the table metadata and transaction adapter.
-
-::callout
----
-icon: i-tabler-shield-exclamation
-color: warning
-variant: subtle
----
-Context does not enforce authorization or tenant isolation automatically. It is input for your policies and hooks.
-::
-
-## Return values
-
-| Method | Return |
-| --- | --- |
-| `findMany<T>` | `T[]` |
-| `findOne<T>` | `T | null` |
-| `create<T>` | `T` |
-| `updateOne<T>` | `T | null` |
-| `updateMany<T>` | `T[]` |
-| `deleteOne` | `boolean` |
-| `deleteMany` | `number` |
-
-The generic type is caller-provided. The current API does not infer entity types from metadata.
+Context feeds hooks, visibility rules, audit metadata and domain events. It does
+not enforce authorization or tenant isolation by itself.

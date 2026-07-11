@@ -1,6 +1,6 @@
 ---
 title: Queries and filters
-description: Compose database-independent constraints, sorting, and pagination.
+description: Compose database-independent constraints, sorting, offset and cursor pagination.
 navigation:
   icon: i-tabler-filter
 ---
@@ -46,7 +46,7 @@ interface FilterCondition {
 Conditions declared together are combined with `AND`.
 
 ```ts
-const activeAdmins = await engine.findMany<User>('users', {
+const activeAdmins = await engine.findMany('users', {
   where: {
     conditions: [
       { field: 'active', operator: 'eq', value: true },
@@ -59,7 +59,7 @@ const activeAdmins = await engine.findMany<User>('users', {
 ## Boolean groups
 
 ```ts
-const users = await engine.findMany<User>('users', {
+const users = await engine.findMany('users', {
   where: {
     and: [
       {
@@ -126,10 +126,10 @@ variant: subtle
 { field: 'deletedAt', operator: 'isNull', value: false }
 ```
 
-## Sorting and pagination
+## Sorting and offset pagination
 
 ```ts
-const page = await engine.findMany<User>('users', {
+const page = await engine.findMany('users', {
   orderBy: [
     { field: 'createdAt', direction: 'desc' },
     { field: 'email', direction: 'asc' }
@@ -140,6 +140,9 @@ const page = await engine.findMany<User>('users', {
 ```
 
 A limit or offset below zero is rejected. `limit: 0` is valid.
+
+For large or frequently changing datasets, prefer
+[cursor pagination](/persistence/guides/cursor-pagination).
 
 ## Reusable filters
 

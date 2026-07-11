@@ -1,16 +1,16 @@
 ---
 title: OpenSya Persistence
-description: Learn how to model, validate, query, and inspect data with the OpenSya persistence runtime.
+description: The metadata-driven persistence engine built for OpenSya.
 navigation: false
 ---
 
 # OpenSya Persistence
 
-A metadata-driven persistence runtime for TypeScript applications.
+The persistence engine built for OpenSya.
 
-OpenSya Persistence sits between your application and its database adapter. It provides one execution path for validation, lifecycle hooks, relations, transactions, safe mutations, and schema consistency checks.
-
-## Popular
+Declare the domain once. Persistence executes validation, relations, lifecycle
+hooks, transactions, audit trails and domain events consistently, while the
+database remains behind an adapter.
 
 ::u-page-grid
 ---
@@ -20,127 +20,71 @@ class: gap-3
 ::u-page-card
 ---
 title: Getting started
-description: Install the package, declare a table, and execute your first query.
+description: Define a typed table and execute your first PostgreSQL query.
 icon: i-tabler-rocket
 to: /persistence/getting-started
 spotlight: true
-class: shadow-lg border-default
-ui:
-  leading: h-40 flex items-start
 ---
 ::
 
 ::u-page-card
 ---
-title: Define metadata
-description: Describe tables, columns, defaults, validators, and relations.
+title: Metadata and inference
+description: Model tables once and infer every returned entity automatically.
 icon: i-tabler-schema
 to: /persistence/concepts/metadata-and-registry
 spotlight: true
-class: shadow-lg border-default
-ui:
-  leading: h-40 flex items-start
 ---
 ::
 
 ::u-page-card
 ---
-title: Query data
-description: Read, create, update, and delete data through the Query Engine.
+title: Query Engine
+description: Read and mutate data through the validated execution runtime.
 icon: i-tabler-database
 to: /persistence/concepts/query-engine
 spotlight: true
-class: shadow-lg border-default
-ui:
-  leading: h-40 flex items-start
 ---
 ::
 
-
 ::
 
-<!-- ::u-page-card
----
-title: Check schema consistency
-description: Compare declared metadata with the live PostgreSQL schema.
-icon: i-tabler-database-search
-to: /persistence/guides/schema-consistency
-spotlight: true
-ui:
-  leading: h-40 flex items-start
----
-:: -->
-
-## Core concepts
+## Runtime features
 
 ::u-page-grid
 ---
 class: gap-3
 ---
 
-::u-page-card
----
-title:  Architecture
-description: Understand the registry, engine, hooks, resolver, and adapter layers.
-icon: i-tabler-sitemap
-to: /persistence/concepts/architecture
-class: shadow-sm
-ui:
-  leading: h-40 flex items-start
----
+::u-page-card{title="Validation" description="Structural, field and cross-field rules." icon="i-tabler-checkup-list" to="/persistence/guides/validation"}
 ::
 
-::u-page-card{title="Queries and filters" description="Compose nested filters, sorting, and pagination." icon="i-tabler-filter" to="/persistence/guides/queries-and-filters"}
----
-class: shadow-sm
-ui:
-  leading: h-40 flex items-start
----
+::u-page-card{title="Relations" description="Explicit batched population for every cardinality." icon="i-tabler-link" to="/persistence/guides/relations"}
 ::
 
-::u-page-card{title="Validation" description="Apply structural, field-level, and cross-field rules." icon="i-tabler-checkup-list" to="/persistence/guides/validation"}
----
-class: shadow-sm
-ui:
-  leading: h-40 flex items-start
----
+::u-page-card{title="Field visibility" description="Keep secrets and contextual fields out of results." icon="i-tabler-eye-off" to="/persistence/guides/field-visibility"}
 ::
 
-::u-page-card{title="Relations" description="Declare and populate direct relations in batches." icon="i-tabler-link" to="/persistence/guides/relations"}
----
-class: shadow-sm
-ui:
-  leading: h-40 flex items-start
----
+::u-page-card{title="Audit Log" description="Record transactional before/after snapshots and changes." icon="i-tabler-history" to="/persistence/guides/audit-log"}
 ::
 
-::u-page-card{title="Lifecycle hooks" description="Run domain behavior around transactional mutations." icon="i-tabler-arrows-split" to="/persistence/guides/lifecycle-hooks"}
----
-class: shadow-sm
-ui:
-  leading: h-40 flex items-start
----
+::u-page-card{title="Domain Events" description="Persist typed events atomically and publish them safely." icon="i-tabler-broadcast" to="/persistence/guides/domain-events"}
 ::
 
-::u-page-card{title="Drizzle adapter" description="Use PostgreSQL through the built-in Drizzle implementation." icon="i-tabler-database-cog" to="/persistence/adapters/drizzle"}
----
-class: shadow-sm
-ui:
-  leading: h-40 flex items-start
----
+::u-page-card{title="Cursor pagination" description="Stable keyset pagination without OFFSET." icon="i-tabler-arrow-bar-to-down" to="/persistence/guides/cursor-pagination"}
 ::
 
 ::
 
-## What Persistence does
+## What it owns
 
-- validates metadata before the application starts;
-- validates entities before inserts and updates;
-- wraps mutations and hooks in transactions;
-- rejects update and delete operations without effective filters;
-- resolves declared relations explicitly and in batches;
-- translates generic filters through a database adapter;
-- introspects PostgreSQL and reports schema drift.
+- a typed metadata registry and schema validation;
+- a database-independent query model;
+- inferred result types from table metadata;
+- safe, transactional mutations and lifecycle hooks;
+- explicit relation population and result serialization;
+- transactional audit logs and domain-event outboxes;
+- PostgreSQL execution and introspection through Drizzle.
 
 ::callout
 ---
@@ -148,5 +92,6 @@ icon: i-tabler-info-circle
 color: neutral
 variant: subtle
 ---
-Persistence does not create migrations or replace your ORM. It provides the runtime that executes domain rules around database operations.
+Persistence does not generate migrations and does not replace Drizzle. It gives
+OpenSya one runtime for executing domain rules around database operations.
 ::
