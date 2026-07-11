@@ -1,13 +1,38 @@
 ---
 title: Metadata and registry
-description: Declare the persistence model and validate its internal consistency.
+description: Define the domain model once and preserve it through the typed runtime.
 navigation:
   icon: i-tabler-schema
 ---
 
-Metadata describes the model consumed by every Persistence service.
+Metadata is the source of truth consumed by validation, relation resolution,
+serialization, audit, schema checks and type inference.
 
-## Table metadata
+## Preserve literal types
+
+```ts
+export const users = defineTable({
+  name: 'users',
+  collectionName: 'app_users',
+  columns: [/* ... */],
+  relations: [],
+  tableValidators: [],
+  indexes: [],
+  audit: { enabled: true, excludedFields: ['password'] }
+})
+```
+
+::callout
+---
+icon: i-tabler-alert-triangle
+color: warning
+variant: subtle
+---
+Avoid `const users: TableMetadata = {...}` when you need inference. That
+annotation widens `"users"`, field names and column types to generic strings.
+::
+
+## Table shape
 
 ```ts
 interface TableMetadata {
@@ -16,130 +41,83 @@ interface TableMetadata {
   columns: ColumnMetadata[]
   relations: RelationMetadata[]
   tableValidators: TableValidatorMetadata[]
+  indexes?: IndexMetadata[]
+  audit?: AuditMetadata
 }
 ```
 
-- `name` is the logical identifier used by the engine.
-- `collectionName` is the physical database table name.
-- `columns` describe fields and their constraints.
-- `relations` describe direct links between registered tables.
-- `tableValidators` express rules spanning several fields.
+Logical names are used by the engine; physical names are used by the adapter.
 
-## Column metadata
+## Column types and inference
 
-```ts
-interface ColumnMetadata {
-  name: string
-  columnName: string
-  type: ColumnType
-  nullable: boolean
-  primaryKey: boolean
-  unique: boolean
-  default?: unknown | (() => unknown)
-  validators: FieldValidatorMetadata[]
-}
-```
-
-## Column types
-
-| Type | Expected runtime value |
+| Metadata type | Runtime and inferred type |
 | --- | --- |
-| `uuid`, `string`, `text`, `date` | string |
-| `integer` | integer number |
-| `bigint` | bigint |
-| `boolean` | boolean |
-| `timestamp` | Date |
-| `json` | any value |
-| `decimal` | string or number |
+| `uuid`, `string`, `text`, `date` | `string` |
+| `integer` | `number` |
+| `bigint` | `bigint` |
+| `boolean` | `boolean` |
+| `timestamp` | `Date` |
+| `decimal` | `string \| number` |
+| `json` | `unknown` |
 
-## Defaults
+A nullable column becomes `T | null`. `hidden: true` removes the field from the
+inferred result. A field using a dynamic `visibility` resolver becomes optional.
 
 ```ts
-// Static
-default: 'draft'
-
-// Evaluated for each creation
-default: () => crypto.randomUUID()
+type User = InferTableEntity<typeof users>
 ```
 
-The Query Engine applies missing defaults before before-create hooks. The Drizzle adapter also maps defaults when building its runtime table.
-
-## Registry lifecycle
-
-::steps{level="3"}
-### Create
+## Defaults and validators
 
 ```ts
-const registry = createMetadataRegistry()
+{
+  name: 'createdAt',
+  columnName: 'created_at',
+  type: 'timestamp',
+  nullable: false,
+  primaryKey: false,
+  unique: false,
+  default: () => new Date(),
+  validators: []
+}
 ```
 
-### Register all tables
+Defaults are applied for missing creation fields before before-create hooks.
+Validators may be synchronous or asynchronous.
+
+## Indexes
 
 ```ts
-registry.register(users)
-registry.register(projects)
+indexes: [
+  {
+    name: 'applications_tenant_status_idx',
+    fields: ['tenantId', 'status'],
+    unique: false
+  }
+]
 ```
 
-Registration rejects duplicate logical table names immediately.
+Index fields use logical column names and preserve order. Registry validation
+rejects empty indexes, duplicate names and unknown fields.
 
-### Validate
-
-```ts
-const errors = registry.validate()
-```
-
-Validation returns every discovered `RegistryValidationError` without changing registry state.
-
-### Lock
+## Typed registry
 
 ```ts
+const registry = createMetadataRegistry(users, posts, applications)
 registry.lock()
 ```
 
-`lock()` validates and throws one aggregated schema error when necessary. A locked registry rejects further registrations.
-::
+The registry carries its table map into `QueryEngine`. TypeScript then restricts
+table names and infers return types from the selected table.
 
-## Registry invariants
+The registry validates:
 
-The registry verifies:
+- unique physical collection names;
+- unique logical and physical columns;
+- at least one primary key per table;
+- valid relation targets and fields;
+- valid junction tables;
+- declared indexes;
+- fields listed in `audit.excludedFields`.
 
-- physical collection names are unique;
-- logical and physical column names are unique within a table;
-- every table has at least one primary key;
-- relation names are unique within their source table;
-- relation targets are registered;
-- source and target fields exist;
-- many-to-many junction tables and fields exist.
-
-::callout
----
-icon: i-tabler-list-check
-color: info
-variant: subtle
----
-Register the full model before validating it. A relation target that has not been registered yet is reported as unknown.
-::
-
-## Relation metadata
-
-::tabs
-  :::tab{label="To one" icon="i-tabler-arrow-right"}
-  `manyToOne` and `oneToOne` store `foreignKey` on the source and use `references ?? 'id'` on the target.
-  :::
-
-  :::tab{label="One to many" icon="i-tabler-git-branch"}
-  `oneToMany` uses `references ?? 'id'` on the source and `foreignKey` on the target.
-  :::
-
-  :::tab{label="Many to many" icon="i-tabler-topology-star-3"}
-  `manyToMany` declares a registered junction table with source and target foreign-key fields.
-  :::
-::
-
-## Composite primary keys
-
-Multiple columns may be primary keys. For single-row update and delete operations, the engine builds a filter containing every primary-key value from the loaded entity.
-
-## Metadata and introspection
-
-Declared metadata is richer than introspected metadata. PostgreSQL introspection reconstructs physical tables and columns but cannot currently reconstruct validators, relations, defaults, or unique constraints. This is expected; declared metadata remains the domain source of truth.
+`lock()` aggregates validation errors and makes registration immutable.

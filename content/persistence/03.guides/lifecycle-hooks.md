@@ -93,7 +93,9 @@ icon: i-tabler-clock-exclamation
 color: warning
 variant: subtle
 ---
-Do not perform slow, non-transactional external calls directly inside hooks. Write an outbox record transactionally, then deliver emails, webhooks, or messages asynchronously.
+Do not perform slow, non-transactional external calls directly inside hooks.
+Emit a Domain Event from an application transaction and let the built-in outbox
+processor deliver emails, webhooks or messages asynchronously.
 ::
 
 ## Good uses
@@ -101,8 +103,12 @@ Do not perform slow, non-transactional external calls directly inside hooks. Wri
 - normalization and derived fields;
 - authorization checks that require mutation context;
 - tenant field injection;
-- audit or outbox inserts;
+- maintaining domain records that belong to the same transaction;
 - maintaining related records atomically;
 - rejecting invalid domain transitions.
 
 Hooks complement validators. Use validators for data validity and hooks for mutation behavior.
+
+Use the dedicated [Audit Log](/persistence/guides/audit-log) and
+[Domain Events](/persistence/guides/domain-events) APIs instead of hand-written
+audit or outbox hooks.

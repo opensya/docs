@@ -135,8 +135,9 @@ Reads base tables from `information_schema.tables` where `table_schema = 'public
 ### Discover columns
 Reads column name, SQL data type, nullability, and ordinal position from `information_schema.columns`.
 
-### Discover primary keys
-Joins `table_constraints` and `key_column_usage` for each table.
+### Discover keys and indexes
+Reads primary keys, unique indexes and standalone indexes from PostgreSQL
+catalogs, preserving composite field order and uniqueness.
 
 ### Produce metadata
 Returns `TableMetadata[]` with physical names used as both logical and collection names.
@@ -165,7 +166,10 @@ color: info
 variant: subtle
 title: Introspection boundaries
 ---
-Unique constraints are currently returned as `unique: false`. Foreign keys and relations are returned as empty arrays. Defaults and custom validators are not introspected. Unknown SQL types deliberately fall back to `text` so consistency checking reports drift instead of crashing.
+Foreign keys and relations are returned as empty arrays. Defaults, check
+constraints and custom validators are not introspected. Unknown SQL types
+deliberately fall back to `text` so consistency checking reports drift instead
+of crashing.
 ::
 
 ## When to use the adapter directly

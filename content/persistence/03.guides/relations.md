@@ -79,7 +79,7 @@ The junction table must be registered and built like every other table.
 ## Populate
 
 ```ts
-const users = await engine.findMany<UserWithProjects>('users', {
+const users = await engine.findMany('users', {
   populate: ['projects', 'teams']
 })
 ```
@@ -103,6 +103,10 @@ variant: subtle
 ---
 Population is explicit so callers can see when a query will perform additional database work.
 ::
+
+Every populated target passes through its own table serialization rules. A
+`hidden` password on `users`, for example, remains hidden when a user is loaded
+through `projects.owner`.
 
 ## Current scope
 
