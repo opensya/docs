@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import 'instantsearch.css/themes/satellite-min.css';
 
+const route = useRoute();
+
 const { data: page } = await useAsyncData('index', () =>
-  queryCollection('landing').path('/').first(),
+  queryCollection('docsLanding').path(route.path).first(),
 );
 if (!page.value) {
   throw createError({

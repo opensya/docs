@@ -3,14 +3,9 @@ export default defineNuxtPlugin(async () => {
     queryCollectionNavigation('docs'),
   );
 
-  const { data: persistence } = await useAsyncData(
-    'persistence-navigation',
-    () => queryCollectionNavigation('persistence'),
-  );
-
   return {
     provide: {
-      navigation: { docs, persistence },
+      navigation: { docs },
     },
   };
 });

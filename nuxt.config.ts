@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
     '@nuxtjs/algolia',
     'motion-v/nuxt',
+    '@nuxtjs/i18n',
   ],
 
   devtools: {
@@ -85,6 +86,14 @@ export default defineNuxtConfig({
         braceStyle: '1tbs',
       },
     },
+  },
+
+  i18n: {
+    defaultLocale: 'fr',
+    locales: [
+      { code: 'fr', name: 'Français', file: 'fr.json' },
+      // { code: 'nl', name: 'Nederlands', file: 'nl.json' },
+    ],
   },
 
   icon: {

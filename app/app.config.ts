@@ -20,7 +20,7 @@ export default defineAppConfig({
       chevronUp: 'i-tabler-chevron-up',
       close: 'i-tabler-x',
       copy: 'i-tabler-copy',
-      copyCheck: 'i-tabler-copy-check',
+      copyCheck: 'i-tabler-circle-check-filled',
       dark: 'i-tabler-moon',
       drag: 'i-tabler-grip-vertical',
       ellipsis: 'i-tabler-dots',

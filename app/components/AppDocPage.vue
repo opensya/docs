@@ -62,6 +62,9 @@ const breadcrumb = computed(() => {
 
   const clone = _.cloneDeep(breadcrumb).map((bread) => {
     _.unset(bread, 'icon');
+
+    if (bread.page !== false) _.set(bread, 'to', bread.path);
+
     return bread;
   });
 
@@ -91,10 +94,6 @@ function switchColorMode() {
         body: 'min-h-[calc(100vh-var(--ui-header-height))] sm:p-0 p-0',
       }"
     >
-      <!-- <template #title>
-        <AppFavicon class="text-primary size-6.5" :arrow-stroke-width="1.8" />
-      </template> -->
-
       <template #left>
         <template v-if="lgAndSmaller">
           <NuxtLink to="/">

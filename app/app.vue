@@ -38,8 +38,6 @@ watch(
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-
-    <!-- <AppFooter /> -->
   </UApp>
 
   <!-- <UApp>

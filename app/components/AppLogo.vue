@@ -3,11 +3,12 @@
     <AppFavicon class="text-primary size-6" :arrow-stroke-width="1.8" />
 
     <div class="font-extralight text-[22px] text-highlighted">
-      OpenSya <span class="text-muted">docs</span>
+      OpenSya
+      <!-- <span class="text-muted">docs</span> -->
     </div>
 
     <div
-      class="bg-inverted text-inverted font-extralight text-xs rounded-sm px-1"
+      class="bg-amber-500 text-black font-extralight text-xs rounded-sm px-1"
     >
       Alpha
     </div>

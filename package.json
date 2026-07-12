@@ -25,6 +25,7 @@
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.7.1",
     "@nuxtjs/algolia": "^1.11.2",
+    "@nuxtjs/i18n": "10.4.1",
     "@nuxtjs/mcp-toolkit": "^0.16.1",
     "@nuxtjs/mdc": "^0.21.1",
     "@nuxtjs/sitemap": "^8.0.15",

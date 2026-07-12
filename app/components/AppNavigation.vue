@@ -23,7 +23,7 @@ const links = ref<PageAnchor[]>([
   },
   {
     label: 'Persistence',
-    icon: 'i-tabler-table-column',
+    icon: 'i-tabler-bowl-chopsticks-filled',
     to: '/persistence',
   },
   {
