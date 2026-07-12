@@ -22,11 +22,6 @@ const links = ref<PageAnchor[]>([
     to: '/docs',
   },
   {
-    label: 'Persistence',
-    icon: 'i-tabler-bowl-chopsticks-filled',
-    to: '/persistence',
-  },
-  {
     label: 'Github',
     icon: 'i-simple-icons-github',
     to: 'https://github.com/opensya/core',
