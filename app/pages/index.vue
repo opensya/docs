@@ -1,15 +1,19 @@
 <script setup lang="ts">
+import type { VueMessageType } from '#i18n';
+
 const { t, tm, rt } = useI18n();
 
 const githubUrl = 'https://github.com/opensya';
 const githubDscussionUrl = 'https://github.com/orgs/opensya/discussions';
-const documentationUrl = '/docs';
+// const documentationUrl = '/docs';
 const persistenceUrl = 'https://persistence.opensya.com';
 
 function translateList(key: string): string[] {
   const value = tm(key);
 
-  return Array.isArray(value) ? value.map((item) => rt(item)) : [];
+  return Array.isArray(value)
+    ? value.map((item: VueMessageType) => rt(item))
+    : [];
 }
 
 const principles = [
@@ -60,6 +64,9 @@ const audienceIcons = {
   publishers: 'i-tabler-apps',
   community: 'i-tabler-users-group',
 } as const;
+
+const { locales, setLocale, localeProperties } = useI18n();
+const { ui } = useAppConfig();
 </script>
 
 <template>
@@ -809,10 +816,71 @@ const audienceIcons = {
         class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"
       >
         <div>
-          <p class="text-lg font-semibold">{{ t('landing.footer.brand') }}</p>
+          <AppLogo class="w-auto h-6 shrink-0" hide-version />
           <p class="mt-2 max-w-xl text-sm leading-6 text-muted">
             {{ t('landing.footer.description') }}
           </p>
+
+          <div class="mt-5 flex items-center gap-2">
+            <UDropdownMenu
+              :items="
+                locales.map((locale) => ({
+                  value: locale.code,
+                  label: locale.name,
+                  onSelect() {
+                    setLocale(locale.code);
+                  },
+                }))
+              "
+              :content="{
+                align: 'start',
+                side: 'bottom',
+                sideOffset: 8,
+              }"
+              :ui="{
+                content: 'w-48',
+              }"
+            >
+              <UButton
+                :label="localeProperties.name"
+                icon="i-tabler-language"
+                color="neutral"
+                variant="outline"
+                size="lg"
+                class="rounded-4xl"
+              />
+            </UDropdownMenu>
+
+            <UDropdownMenu
+              :items="
+                (['system', 'light', 'dark'] as const).map((mode) => ({
+                  value: mode,
+                  label: mode,
+                  icon: ui.icons[mode],
+                  onSelect() {
+                    $colorMode.preference = mode;
+                  },
+                }))
+              "
+              :content="{
+                align: 'start',
+                side: 'bottom',
+                sideOffset: 8,
+              }"
+              :ui="{
+                content: 'w-48',
+              }"
+            >
+              <UButton
+                :label="$colorMode.preference"
+                :icon="ui.icons[$colorMode.preference as 'light']"
+                color="neutral"
+                variant="outline"
+                size="lg"
+                class="rounded-4xl"
+              />
+            </UDropdownMenu>
+          </div>
         </div>
         <p class="text-sm font-medium text-secondary">
           {{ t('landing.footer.tagline') }}

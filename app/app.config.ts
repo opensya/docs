@@ -6,6 +6,10 @@ export default defineAppConfig({
     },
 
     icons: {
+      system: 'i-tabler-device-desktop',
+      light: 'i-tabler-sun',
+      dark: 'i-tabler-moon',
+
       arrowDown: 'i-tabler-arrow-down',
       arrowLeft: 'i-tabler-arrow-left',
       arrowRight: 'i-tabler-arrow-right',
@@ -21,7 +25,6 @@ export default defineAppConfig({
       close: 'i-tabler-x',
       copy: 'i-tabler-copy',
       copyCheck: 'i-tabler-circle-check-filled',
-      dark: 'i-tabler-moon',
       drag: 'i-tabler-grip-vertical',
       ellipsis: 'i-tabler-dots',
       error: 'i-tabler-square-rounded-x',
@@ -33,7 +36,6 @@ export default defineAppConfig({
       folderOpen: 'i-tabler-folder-open',
       hash: 'i-tabler-hash',
       info: 'i-tabler-info-square-rounded',
-      light: 'i-tabler-sun',
       loading: 'i-tabler-loader-2',
       menu: 'i-tabler-menu',
       minus: 'i-tabler-minus',
@@ -45,7 +47,6 @@ export default defineAppConfig({
       stop: 'i-tabler-player-stop',
       star: 'i-tabler-star',
       success: 'i-tabler-square-rounded-check',
-      system: 'i-tabler-device-desktop',
       tip: 'i-tabler-bulb',
       upload: 'i-tabler-upload',
       warning: 'i-tabler-alert-triangle',

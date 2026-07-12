@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+defineProps<{ hideVersion?: boolean }>();
+</script>
+
 <template>
   <div class="flex items-center gap-2 group/logo select-none">
     <AppFavicon class="text-primary size-6" :arrow-stroke-width="1.8" />
@@ -8,7 +12,8 @@
     </div>
 
     <div
-      class="bg-amber-500 text-black font-extralight text-xs rounded-sm px-1"
+      v-if="!hideVersion"
+      class="bg-black text-white font-extralight text-xs rounded-sm px-1"
     >
       Alpha
     </div>

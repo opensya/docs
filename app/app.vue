@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { useMagicKeys } from '@vueuse/core';
+import * as locales from '@nuxt/ui/locale';
 
+const { locale } = useI18n();
 const { seo } = useAppConfig();
 
 useHead({
   meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
   link: [{ rel: 'icon', href: '/favicon.svg' }],
-  htmlAttrs: {
-    lang: 'en',
-  },
+  htmlAttrs: { lang: locale.value },
 });
 
 useSeoMeta({
@@ -32,7 +32,7 @@ watch(
 </script>
 
 <template>
-  <UApp>
+  <UApp :locale="locales[locale]">
     <NuxtLoadingIndicator />
 
     <NuxtLayout>

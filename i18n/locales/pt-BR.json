@@ -1,0 +1,374 @@
+{
+  "landing": {
+    "navigation": {
+      "brand": "OpenSya",
+      "items": {
+        "vision": "Visão",
+        "architecture": "Arquitetura",
+        "ecosystem": "Ecossistema",
+        "roadmap": "Roadmap",
+        "documentation": "Documentação",
+        "github": "GitHub"
+      },
+      "action": "Acompanhar o projeto"
+    },
+    "hero": {
+      "eyebrow": "Infraestrutura de recrutamento open source",
+      "title": "A infraestrutura de recrutamento open source para empresas modernas.",
+      "description": "OpenSya é uma infraestrutura open source que permite às empresas criar, adaptar e ter controle total sobre seu sistema de recrutamento.",
+      "summary": "Uma base comum. Módulos instaláveis. Uma plataforma capaz de evoluir com cada organização.",
+      "tagline": "Modular, escalável e totalmente sob seu controle.",
+      "actions": {
+        "primary": "Conhecer a visão",
+        "secondary": "Ver o projeto no GitHub"
+      },
+      "status": "OpenSya está atualmente em uma fase ativa de concepção e desenvolvimento."
+    },
+    "problem": {
+      "eyebrow": "O desafio",
+      "title": "O recrutamento não deveria depender de um software rígido",
+      "subtitle": "Cada empresa recruta de uma forma diferente. Por que todas deveriam usar ferramentas que funcionam do mesmo jeito?",
+      "description": "Os processos de recrutamento variam conforme o porte da empresa, sua organização, suas áreas de atuação, suas exigências regulatórias e sua cultura.",
+      "introduction": "Ainda assim, a maioria dos softwares impõe sua própria forma de trabalhar:",
+      "items": [
+        "workflows difíceis de adaptar;",
+        "funcionalidades bloqueadas por planos de preço;",
+        "integrações limitadas;",
+        "dados hospedados em um sistema que a empresa não controla;",
+        "dependência de longo prazo de um fornecedor;",
+        "pouca liberdade para atender a necessidades específicas."
+      ],
+      "conclusion": "À medida que a organização cresce, sua ferramenta frequentemente se torna uma limitação.",
+      "quote": "A empresa não deveria ter que se adaptar ao seu software de recrutamento. O software é que deveria se adaptar à empresa."
+    },
+    "positioning": {
+      "eyebrow": "Nossa resposta",
+      "title": "Mais do que um ATS",
+      "subtitle": "OpenSya não foi concebido para ser apenas mais um software de recrutamento.",
+      "description": "Um ATS oferece um produto com um conjunto predefinido de funcionalidades. OpenSya pretende oferecer uma infraestrutura.",
+      "definition": "Uma base técnica e funcional sobre a qual uma empresa, equipe de produto ou integrador pode construir seu próprio ambiente de recrutamento.",
+      "introduction": "Isso significa poder:",
+      "items": [
+        "começar com as funcionalidades essenciais;",
+        "instalar somente os módulos necessários;",
+        "adaptar workflows e regras de negócio;",
+        "integrar o OpenSya aos sistemas já existentes;",
+        "desenvolver funcionalidades próprias da organização;",
+        "hospedar a plataforma no ambiente de sua escolha;",
+        "manter o controle sobre o código, os dados e a evolução do produto."
+      ],
+      "conclusion": "OpenSya não busca impor uma única forma de recrutar. Ele oferece as bases para que cada organização construa a sua."
+    },
+    "principles": {
+      "eyebrow": "Os princípios",
+      "title": "Uma plataforma que pertence a você",
+      "subtitle": "Seu recrutamento. Seus processos. Seus dados. Sua infraestrutura.",
+      "description": "OpenSya se baseia em quatro princípios fundamentais.",
+      "items": {
+        "openSource": {
+          "title": "Open source",
+          "description": "O funcionamento da plataforma é visível, compreensível e pode ser aprimorado. As empresas podem auditar o código, contribuir com o projeto ou desenvolver suas próprias extensões."
+        },
+        "modular": {
+          "title": "Modular",
+          "description": "Cada organização instala somente as funcionalidades de que precisa. Os módulos podem ampliar o backend, a interface, os modelos de dados, os workflows, as integrações e as regras de negócio."
+        },
+        "selfHosted": {
+          "title": "Auto-hospedável",
+          "description": "OpenSya foi pensado para ser executado na infraestrutura escolhida pela organização. Nuvem pública, nuvem privada ou infraestrutura interna: a empresa mantém o controle do seu ambiente."
+        },
+        "extensible": {
+          "title": "Extensível",
+          "description": "OpenSya deve se adaptar a necessidades que ainda não existem. Sua arquitetura permite combinar módulos, substituir componentes e criar experiências especializadas."
+        }
+      }
+    },
+    "useCases": {
+      "eyebrow": "As possibilidades",
+      "title": "Uma base, muitas possibilidades",
+      "subtitle": "Construa o sistema de recrutamento de que sua organização realmente precisa.",
+      "items": {
+        "internalPlatform": {
+          "title": "Uma plataforma interna de recrutamento",
+          "description": "Centralize vagas, candidaturas, entrevistas, avaliações e a colaboração entre recrutadores e gestores."
+        },
+        "careerPortal": {
+          "title": "Um portal de carreiras",
+          "description": "Crie uma experiência do candidato alinhada à sua marca, às suas áreas e à sua estratégia de recrutamento."
+        },
+        "multisite": {
+          "title": "Um sistema de recrutamento para múltiplas unidades",
+          "description": "Adapte os processos a filiais, equipes, países ou entidades, mantendo uma governança comum."
+        },
+        "specializedSolution": {
+          "title": "Uma solução de negócio especializada",
+          "description": "Construa uma plataforma dedicada a um setor, modelo de contratação ou organização específica."
+        },
+        "commercialProduct": {
+          "title": "Um produto comercial de recrutamento",
+          "description": "Use o OpenSya como base técnica para desenvolver uma solução destinada aos seus próprios clientes."
+        }
+      },
+      "conclusion": "A mesma infraestrutura pode sustentar vários produtos, interfaces e modelos operacionais."
+    },
+    "model": {
+      "eyebrow": "O modelo OpenSya",
+      "title": "Um Core estável. Capacidades combináveis. Liberdade para evoluir.",
+      "description": "OpenSya foi concebido como um ecossistema composto por várias camadas complementares.",
+      "core": {
+        "title": "OpenSya Core",
+        "description": "O Core oferece as capacidades fundamentais comuns a qualquer plataforma de recrutamento:",
+        "items": [
+          "usuários e organizações;",
+          "equipes, funções e permissões;",
+          "candidatos e perfis;",
+          "vagas e necessidades de contratação;",
+          "candidaturas e pipelines;",
+          "workflows e status;",
+          "colaboração e histórico;",
+          "configuração e administração;",
+          "APIs, eventos e integrações;",
+          "segurança e orquestração do runtime."
+        ],
+        "conclusion": "O Core não busca concentrar todas as funcionalidades possíveis. Ele oferece uma base consistente sobre a qual elas podem ser construídas."
+      },
+      "modules": {
+        "title": "Os módulos",
+        "description": "Os módulos adicionam capacidades funcionais ou técnicas sem sobrecarregar desnecessariamente a base.",
+        "items": [
+          "portal de carreiras;",
+          "agendamento de entrevistas;",
+          "avaliações e scorecards;",
+          "automação de workflows;",
+          "comunicação com candidatos;",
+          "análises e relatórios;",
+          "gestão de bancos de talentos;",
+          "integrações com serviços externos;",
+          "conformidade e governança de dados;",
+          "inteligência artificial aplicada ao recrutamento."
+        ],
+        "conclusion": "Um módulo pode fornecer interfaces, rotas, serviços, regras de negócio, modelos de dados e configurações."
+      },
+      "extensions": {
+        "title": "Extensões específicas da empresa",
+        "description": "Quando uma necessidade é específica, a organização pode criar seus próprios módulos. Ela não precisa esperar que um fornecedor adicione a funcionalidade ao roadmap."
+      }
+    },
+    "architecture": {
+      "eyebrow": "Arquitetura",
+      "title": "Uma arquitetura feita para durar",
+      "subtitle": "As necessidades mudam. A infraestrutura precisa acompanhar.",
+      "description": "OpenSya é construído sobre uma arquitetura full-stack orientada por convenções. O sistema descobre, conecta e orquestra as diferentes partes da aplicação para que as equipes possam se concentrar no domínio de negócio.",
+      "introduction": "Suas bases incluem:",
+      "items": [
+        "TypeScript de ponta a ponta;",
+        "uma arquitetura modular;",
+        "convenções de arquivos previsíveis;",
+        "contratos fortemente tipados;",
+        "orquestração centralizada do runtime;",
+        "APIs e eventos concebidos para integração;",
+        "uma separação clara entre domínio e infraestrutura;",
+        "componentes substituíveis;",
+        "um design adequado a implantações modernas."
+      ],
+      "conclusion": "O objetivo não é apenas acelerar o desenvolvimento inicial. É tornar as plataformas OpenSya compreensíveis, testáveis e sustentáveis por muitos anos."
+    },
+    "persistence": {
+      "eyebrow": "O mecanismo de dados",
+      "title": "OpenSya Persistence",
+      "subtitle": "O domínio de negócio antes do banco de dados.",
+      "description": "No centro de uma plataforma de recrutamento existem regras complexas: quem pode visualizar ou alterar uma candidatura, quais transições são permitidas, como validar uma operação, quando acionar uma automação e como manter um histórico confiável.",
+      "definition": "OpenSya Persistence é o mecanismo responsável por executar essas regras de forma consistente em torno dos dados.",
+      "introduction": "Ele orquestra:",
+      "items": [
+        "metadados e inferência de tipos;",
+        "validação;",
+        "relacionamentos;",
+        "hooks de ciclo de vida;",
+        "transações;",
+        "visibilidade e serialização de campos;",
+        "logs de auditoria;",
+        "eventos de domínio;",
+        "paginação e execução de consultas."
+      ],
+      "adapterDescription": "Ele opera acima dos adaptadores de banco de dados. O objetivo é usar PostgreSQL hoje e, depois, oferecer suporte a outros ambientes, como MySQL, SQLite ou MongoDB, sem prender o domínio OpenSya a uma tecnologia específica.",
+      "conclusion": "OpenSya Persistence foi concebido, antes de tudo, para impulsionar o OpenSya, mas sua arquitetura também permite que ele seja utilizado em outras aplicações TypeScript.",
+      "action": "Conhecer o OpenSya Persistence"
+    },
+    "audiences": {
+      "eyebrow": "Para quem?",
+      "title": "Para quem estamos construindo o OpenSya?",
+      "subtitle": "Uma infraestrutura comum para diferentes públicos.",
+      "items": {
+        "companies": {
+          "title": "Para empresas",
+          "description": "Organizações que desejam controlar sua plataforma de recrutamento, seus dados e seus custos no longo prazo."
+        },
+        "technicalTeams": {
+          "title": "Para equipes técnicas",
+          "description": "Desenvolvedores que desejam criar uma solução de negócio sem começar do zero nem depender de um produto fechado."
+        },
+        "integrators": {
+          "title": "Para integradores",
+          "description": "Consultorias e empresas de serviços que desejam implantar plataformas adaptadas aos processos de seus clientes."
+        },
+        "publishers": {
+          "title": "Para fornecedores de software",
+          "description": "Equipes de produto que desejam criar um software de recrutamento especializado a partir de uma base open source."
+        },
+        "community": {
+          "title": "Para a comunidade",
+          "description": "Colaboradores que acreditam que infraestruturas de negócio essenciais podem ser abertas, compartilhadas e construídas coletivamente."
+        }
+      }
+    },
+    "philosophy": {
+      "eyebrow": "Nossa filosofia",
+      "title": "Uma nova forma de pensar o software de recrutamento",
+      "subtitle": "OpenSya não substitui uma dependência por outra.",
+      "description": "O projeto busca construir uma relação diferente entre as empresas e suas ferramentas.",
+      "items": {
+        "ownership": {
+          "title": "Propriedade em vez de aluguel permanente",
+          "description": "Uma organização deve poder manter seu sistema, seus dados e seus desenvolvimentos personalizados."
+        },
+        "composition": {
+          "title": "Composição em vez de acumulação",
+          "description": "As funcionalidades devem ser adicionadas conforme a necessidade, sem transformar o produto em uma plataforma monolítica."
+        },
+        "interoperability": {
+          "title": "Interoperabilidade em vez de aprisionamento",
+          "description": "OpenSya deve poder se comunicar com as ferramentas de RH, os sistemas internos e os serviços externos já utilizados."
+        },
+        "conventions": {
+          "title": "Convenções em vez de complexidade repetitiva",
+          "description": "A infraestrutura automatiza tarefas previsíveis, mantendo as regras de negócio explícitas."
+        },
+        "community": {
+          "title": "Comunidade em vez de um roadmap fechado",
+          "description": "As necessidades não são determinadas apenas por um fornecedor. Empresas, desenvolvedores e integradores podem participar da evolução do projeto."
+        }
+      }
+    },
+    "ambition": {
+      "eyebrow": "A ambição",
+      "title": "Uma ambição maior do que um produto",
+      "subtitle": "Construir uma infraestrutura aberta para o futuro do recrutamento.",
+      "description": "Nossa ambição não é simplesmente lançar um ATS open source. Queremos criar uma base capaz de sustentar um verdadeiro ecossistema:",
+      "items": [
+        "um Core comum e confiável;",
+        "módulos oficiais;",
+        "módulos da comunidade;",
+        "soluções especializadas por setor;",
+        "integradores capazes de apoiar as empresas;",
+        "fornecedores de serviços compatíveis;",
+        "padrões abertos para a circulação de dados e eventos;",
+        "uma comunidade que compartilha as mesmas bases sem impor os mesmos produtos."
+      ],
+      "conclusion": "Com o tempo, OpenSya deverá permitir a criação de diferentes experiências de recrutamento sobre uma infraestrutura comum. As empresas não deveriam ter que escolher entre um produto rápido de adotar e um sistema que realmente controlam."
+    },
+    "status": {
+      "eyebrow": "Status do projeto",
+      "title": "OpenSya está em construção.",
+      "description": "As bases técnicas e os princípios de arquitetura estão atualmente em fase de concepção, implementação e estabilização.",
+      "warning": "O projeto ainda não está pronto para uso em produção.",
+      "introduction": "Os trabalhos atuais incluem:",
+      "items": [
+        "estabilização do Core;",
+        "o mecanismo de persistência;",
+        "o sistema de módulos;",
+        "os contratos e as convenções do runtime;",
+        "a gestão de dados e relacionamentos;",
+        "autenticação e autorização;",
+        "auditoria e eventos de domínio;",
+        "a experiência do desenvolvedor;",
+        "testes e documentação;",
+        "a definição dos primeiros casos de uso funcionais."
+      ],
+      "conclusion": "Esta fase é intencionalmente aberta. Ela nos permite construir as bases com desenvolvedores, profissionais de recrutamento, empresas-piloto e parceiros que compartilham a visão do projeto."
+    },
+    "contribution": {
+      "eyebrow": "Participe",
+      "title": "Ajude a construir o OpenSya",
+      "subtitle": "Grandes infraestruturas não são construídas por uma única pessoa.",
+      "description": "OpenSya busca pessoas e organizações interessadas em participar de suas primeiras etapas.",
+      "items": {
+        "companies": {
+          "title": "Empresas e equipes de RH",
+          "description": "Compartilhem seus processos, suas restrições e as limitações encontradas nas ferramentas atuais."
+        },
+        "developers": {
+          "title": "Desenvolvedores",
+          "description": "Explorem a arquitetura, iniciem discussões e contribuam com as bases técnicas."
+        },
+        "designPartners": {
+          "title": "Design partners",
+          "description": "Ajudem-nos a testar o OpenSya em casos de uso reais e a definir as primeiras capacidades prioritárias."
+        },
+        "partners": {
+          "title": "Integradores e parceiros",
+          "description": "Contribuam para construir um ecossistema de implantação, suporte e extensões em torno do projeto."
+        }
+      },
+      "actions": {
+        "discussion": "Participar da discussão",
+        "github": "Explorar o GitHub",
+        "documentation": "Conhecer a documentação"
+      }
+    },
+    "closing": {
+      "eyebrow": "OpenSya",
+      "title": "Sua ferramenta de recrutamento deveria pertencer a você.",
+      "lead": "Não apenas os seus dados.",
+      "description": "Seus processos. Suas integrações. Suas regras de negócio. Sua capacidade de evoluir.",
+      "conclusion": "OpenSya está construindo a infraestrutura open source que permitirá às empresas retomar o controle de seu recrutamento.",
+      "tagline": "Modular, escalável e totalmente sob seu controle.",
+      "actions": {
+        "primary": "Acompanhar o desenvolvimento",
+        "secondary": "Contribuir no GitHub"
+      },
+      "notice": "OpenSya é um projeto open source em desenvolvimento. A documentação, as APIs e a arquitetura podem mudar."
+    },
+    "footer": {
+      "brand": "OpenSya",
+      "description": "A infraestrutura de recrutamento open source para empresas modernas.",
+      "groups": {
+        "project": {
+          "title": "Projeto",
+          "items": {
+            "vision": "Visão",
+            "architecture": "Arquitetura",
+            "roadmap": "Roadmap",
+            "status": "Status do projeto"
+          }
+        },
+        "developers": {
+          "title": "Desenvolvedores",
+          "items": {
+            "documentation": "Documentação",
+            "github": "GitHub",
+            "persistence": "OpenSya Persistence",
+            "contributing": "Contribuir"
+          }
+        },
+        "community": {
+          "title": "Comunidade",
+          "items": {
+            "discussions": "Discussões",
+            "issues": "Issues",
+            "codeOfConduct": "Código de Conduta"
+          }
+        },
+        "legal": {
+          "title": "Informações legais",
+          "items": {
+            "license": "Licença",
+            "security": "Segurança",
+            "privacy": "Privacidade"
+          }
+        }
+      },
+      "tagline": "Infraestrutura aberta para um recrutamento melhor."
+    }
+  }
+}
