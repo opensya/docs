@@ -1,0 +1,69 @@
+import { fileURLToPath } from "node:url";
+
+export default defineNuxtConfig({
+  compatibilityDate: "2026-10-01",
+  modules: ["@nuxt/ui", "@nuxtjs/i18n"],
+
+  css: ["~/assets/css/main.css"],
+
+  devtools: { enabled: true },
+
+  runtimeConfig: {
+    resendApiKey: "",
+    contactFrom: "",
+    public: {
+      contactEmail: "",
+    },
+  },
+
+  app: {
+    head: {
+      htmlAttrs: { lang: "fr" },
+      title: "Automation Sprint — Une automatisation, livrée en 48 heures",
+      script: [
+        {
+          src: "https://analytics.runablejs.com/script.js",
+          "data-website-id": "756c383e-95d4-43f5-9363-40b1f84fd579",
+        },
+        {
+          src: "https://analytics.runablejs.com/recorder.js",
+          "data-website-id": "756c383e-95d4-43f5-9363-40b1f84fd579",
+        },
+      ],
+
+      meta: [
+        {
+          name: "description",
+          content:
+            "Automatisations et intégrations sur mesure, à prix fixe, livrées sous 48 heures. One problem. One solution. Delivered in 48 hours.",
+        },
+        { name: "theme-color", content: "#f56d00" },
+      ],
+      link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+    },
+  },
+
+  nitro: {
+    prerender: { routes: ["/"] },
+
+    serverAssets: [
+      {
+        baseName: "templates",
+        dir: fileURLToPath(new URL("./server/templates", import.meta.url)),
+      },
+    ],
+  },
+
+  ui: {
+    colorMode: false,
+  },
+
+  i18n: {
+    defaultLocale: "fr",
+    strategy: "prefix_and_default",
+    locales: [
+      { code: "fr", name: "Français", file: "fr.json" },
+      // { code: "nl", name: "Nederlands", file: "nl.json" },
+    ],
+  },
+});
