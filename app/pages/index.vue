@@ -1,8 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   ogTitle: "Opensya",
-  ogDescription:
-    "Nous construisons des infrastructures open source pour les entreprises.",
+  ogDescription: $t("home.hero.title"),
   twitterCard: "summary",
 });
 definePageMeta({ colorMode: "light" });

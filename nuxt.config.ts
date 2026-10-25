@@ -19,7 +19,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: "fr" },
-      title: "Automation Sprint — Une automatisation, livrée en 48 heures",
+      title:
+        "Opensya — Nous construisons des infrastructures open source pour les entreprises.",
       script: [
         {
           src: "https://analytics.runablejs.com/script.js",
