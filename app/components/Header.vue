@@ -34,7 +34,7 @@ const items = computed(() => {
   const items: NavigationMenuItem[] = [
     {
       label: $t("project.title"),
-      children: ["authen", "workspace", "tarico"].map((item) => {
+      children: ["authen", "workspace", "onerh"].map((item) => {
         return {
           label: $t(`home.projects.items.${item}.name`),
           // description: $t(`home.projects.items.${item}.description`),

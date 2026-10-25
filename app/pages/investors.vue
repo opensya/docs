@@ -13,7 +13,7 @@ useSeoMeta({
 definePageMeta({ colorMode: "light" });
 
 const beliefs = ["ownership", "foundations", "durability"];
-const projects = ["authen", "workspace", "tarico"];
+const projects = ["authen", "workspace", "onerh"];
 const facts = ["stage", "open", "claims"];
 </script>
 

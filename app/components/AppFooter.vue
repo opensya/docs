@@ -4,7 +4,7 @@ const { t } = useI18n();
 
 const year = new Date().getFullYear();
 
-const projects = ["authen", "workspace", "tarico"];
+const projects = ["authen", "workspace", "onerh"];
 
 const tools = [
   {

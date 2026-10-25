@@ -28,12 +28,12 @@
           "tagline": "A workspace you own.",
           "action": "Discover Workspace"
         },
-        "tarico": {
-          "name": "Tarico",
+        "onerh": {
+          "name": "One RH",
           "category": "Human resources management",
           "description": "A human resources management solution that helps businesses structure HR processes, centralize information, and manage their teams more effectively.",
           "tagline": "HR that supports your growth.",
-          "action": "Discover Tarico"
+          "action": "Discover One RH"
         }
       }
     },
@@ -142,12 +142,12 @@
         "tagline": "A workspace you own.",
         "action": "Discover Workspace"
       },
-      "tarico": {
-        "name": "Tarico",
+      "onerh": {
+        "name": "One RH",
         "category": "Human resources management",
         "description": "A human resources management solution that helps businesses structure HR processes, centralize information, and manage their teams more effectively.",
         "tagline": "HR that supports your growth.",
-        "action": "Discover Tarico"
+        "action": "Discover One RH"
       }
     }
   },
@@ -267,15 +267,15 @@
       "description": "If you’re interested in how organizations work and choose their tools, explore the project or talk with us about its direction."
     }
   },
-  "tarico": {
+  "onerh": {
     "meta": {
-      "title": "Tarico — A modular HR platform | Opensya",
-      "description": "Tarico is a human resources management platform project built around a shared core and modules that can evolve with the organization."
+      "title": "One RH — A modular HR platform | Opensya",
+      "description": "One RH is a human resources management platform project built around a shared core and modules that can evolve with the organization."
     },
     "hero": {
       "category": "Human resources management",
       "title": "HR that supports business growth.",
-      "intro": "Teams grow, processes change, and needs become clearer. Tarico is an HR platform project that aims to structure HR management around a shared foundation and modules that can evolve with the organization."
+      "intro": "Teams grow, processes change, and needs become clearer. One RH is an HR platform project that aims to structure HR management around a shared foundation and modules that can evolve with the organization."
     },
     "problem": {
       "title": "HR evolves faster than its tools",
@@ -284,19 +284,19 @@
     },
     "approach": {
       "title": "A shared foundation, modular capabilities",
-      "intro": "Tarico is built on a modular TypeScript architecture. Its core, Tarico Core, provides a shared foundation. Business capabilities are built on this foundation, so every new need does not become a separate application.",
+      "intro": "One RH is built on a modular TypeScript architecture. Its core, One RH Core, provides a shared foundation. Business capabilities are built on this foundation, so every new need does not become a separate application.",
       "modules": {
         "title": "Modules",
         "description": "Business capabilities added progressively as the organization needs them."
       },
       "core": {
-        "title": "Tarico Core",
+        "title": "One RH Core",
         "description": "The shared foundation on which the modules rely."
       },
       "outro": "This reflects a core belief: an HR product should evolve gradually, at the pace of the teams it supports."
     },
     "building": {
-      "title": "What Tarico aims to make possible",
+      "title": "What One RH aims to make possible",
       "items": {
         "processes": {
           "title": "Structure processes",
@@ -313,7 +313,7 @@
       }
     },
     "state": {
-      "description": "Tarico is under development. We do not present its modules as complete or the platform as commercially available. No adoption figures or pricing are being claimed."
+      "description": "One RH is under development. We do not present its modules as complete or the platform as commercially available. No adoption figures or pricing are being claimed."
     },
     "closing": {
       "title": "A product that grows with its needs",
@@ -323,7 +323,7 @@
   "investors": {
     "meta": {
       "title": "Investors — Why Opensya builds open infrastructure | Opensya",
-      "description": "Opensya’s vision, its three projects in development, and how they fit together: Authen, Workspace, and Tarico—open-source infrastructure for businesses."
+      "description": "Opensya’s vision, its three projects in development, and how they fit together: Authen, Workspace, and One RH—open-source infrastructure for businesses."
     },
     "contactHref": "mailto:contact{'@'}opensya.com",
     "actions": {
@@ -365,7 +365,7 @@
       "items": {
         "authen": "Identity and authentication as a shared foundation for multiple applications, including Workspace.",
         "workspace": "A work environment designed to bring an organization’s essential tools together in a coherent system.",
-        "tarico": "An HR platform built around a shared core, Tarico Core, and modules that evolve with the organization."
+        "onerh": "An HR platform built around a shared core, One RH Core, and modules that evolve with the organization."
       }
     },
     "transparency": {
@@ -374,7 +374,7 @@
       "items": {
         "stage": {
           "title": "Projects in development",
-          "description": "Authen, Workspace, and Tarico are being built. None is presented here as a finished product."
+          "description": "Authen, Workspace, and One RH are being built. None is presented here as a finished product."
         },
         "open": {
           "title": "Open development",
@@ -441,9 +441,9 @@
       "items": {
         "authen": "An exploration of digital identity and technological independence.",
         "workspace": "An exploration of consistency across work and collaboration tools.",
-        "tarico": "An HR product built around business needs and a modular architecture."
+        "onerh": "An HR product built around business needs and a modular architecture."
       },
-      "status": "Authen, Workspace, and Tarico are in development.",
+      "status": "Authen, Workspace, and One RH are in development.",
       "tools": "Alongside these projects, Opensya builds tools for developers:"
     },
     "closing": {
@@ -458,7 +458,7 @@
     "homeLabel": "Opensya, back to home",
     "navLabel": "Footer navigation",
     "mission": "We build open-source infrastructure for businesses.",
-    "status": "Authen, Workspace, and Tarico are in development.",
+    "status": "Authen, Workspace, and One RH are in development.",
     "projects": "Projects",
     "tools": "Tools",
     "company": "Opensya",

@@ -44,7 +44,7 @@ const tools = [
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
           <article
-            v-for="item in ['authen', 'workspace', 'tarico']"
+            v-for="item in ['authen', 'workspace', 'onerh']"
             :key="item"
             class="bg-default p-5 md:p-8 flex flex-col"
           >

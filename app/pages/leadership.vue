@@ -13,7 +13,7 @@ useSeoMeta({
 definePageMeta({ colorMode: "light" });
 
 const dimensions = ["products", "tools", "practice"];
-const projects = ["authen", "workspace", "tarico"];
+const projects = ["authen", "workspace", "onerh"];
 const tools = [
   { key: "runable", url: "https://runablejs.com" },
   { key: "syt", url: "https://github.com/domutala/syt" },
