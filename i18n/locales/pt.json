@@ -1,0 +1,471 @@
+{
+  "home": {
+    "hero": {
+      "title": "Construímos infraestruturas de código aberto para empresas.",
+      "description": "Na Opensya, construímos infraestruturas de código aberto para empresas. Bases tecnológicas sólidas, concebidas para responder às necessidades reais das organizações, apoiar o seu crescimento e permitir-lhes criar as suas próprias soluções. Acreditamos que as ferramentas essenciais às empresas não devem ser caixas-pretas, mas infraestruturas que todos possam compreender, adaptar e fazer evoluir livremente.",
+      "highlight": "Queremos dar às empresas a liberdade de construir sem limites. Tecnologias abertas, modulares e sustentáveis que lhes permitem manter o controlo das suas ferramentas, dos seus dados e do seu futuro digital. Como a inovação não deve depender de soluções impostas, criamos as bases para que as empresas desenvolvam, conectem e façam crescer as suas próprias ideias. A Opensya não se limita a criar software: construímos aquilo que permite aos outros construir.",
+      "actions": {
+        "projects": "Descubra os nossos projetos",
+        "github": "Explore no GitHub"
+      }
+    },
+    "projects": {
+      "eyebrow": "Os nossos projetos",
+      "title": "O que estamos a construir",
+      "description": "Soluções concretas para ajudar as empresas a trabalhar melhor, organizar-se e manter o controlo do seu ambiente digital.",
+      "items": {
+        "authen": {
+          "name": "Authen",
+          "category": "Identidade e autenticação",
+          "description": "Infraestrutura de código aberto para gerir identidades e autenticação de utilizadores, ligar aplicações e criar uma experiência de início de sessão unificada, sem depender de um framework ou fornecedor específico.",
+          "tagline": "Uma identidade. Todas as suas aplicações.",
+          "action": "Descubra o Authen"
+        },
+        "workspace": {
+          "name": "Workspace",
+          "category": "Trabalho e colaboração",
+          "description": "Um espaço de trabalho que reúne as ferramentas essenciais para as suas equipas comunicarem, organizarem-se e colaborarem num ambiente coerente, concebido para funcionar como um todo.",
+          "tagline": "Um espaço de trabalho que lhe pertence.",
+          "action": "Descubra o Workspace"
+        },
+        "tarico": {
+          "name": "Tarico",
+          "category": "Gestão de recursos humanos",
+          "description": "Uma solução de gestão de recursos humanos que ajuda as empresas a estruturar os processos de RH, centralizar informações e gerir melhor as suas equipas.",
+          "tagline": "RH ao serviço do seu crescimento.",
+          "action": "Descubra o Tarico"
+        }
+      }
+    },
+    "mission": {
+      "eyebrow": "A nossa razão de ser",
+      "title": "Porque existe a Opensya",
+      "description": "As empresas precisam de tecnologias que se adaptem às suas ambições, não de limitações que reduzam as suas possibilidades. Construímos infraestruturas abertas para lhes dar mais liberdade e controlo sobre o seu ambiente digital.",
+      "highlight": "Não nos limitamos a criar software. Construímos aquilo que permite aos outros construir."
+    },
+    "approach": {
+      "eyebrow": "A nossa abordagem",
+      "title": "Bases abertas. Possibilidades sem limites.",
+      "description": "Concebemos tecnologias para responder a necessidades reais, evoluir com a utilização e dar às empresas liberdade de escolha.",
+      "items": {
+        "open": {
+          "title": "Abertas por natureza",
+          "description": "Tecnologias de código aberto que todos podem explorar, compreender, utilizar e melhorar."
+        },
+        "modular": {
+          "title": "Modulares por conceção",
+          "description": "Componentes que podem ser utilizados, integrados e adaptados às necessidades de cada projeto."
+        },
+        "sustainable": {
+          "title": "Concebidas para durar",
+          "description": "Bases tecnológicas concebidas para evoluir com as empresas sem limitar as suas escolhas futuras."
+        }
+      }
+    },
+    "tools": {
+      "eyebrow": "Para programadores",
+      "title": "As ferramentas que desenvolvemos",
+      "description": "Também desenvolvemos ferramentas de código aberto que tornam o trabalho dos programadores mais simples, fiável e controlável.",
+      "action": "Explore as nossas ferramentas",
+      "items": {
+        "runable": {
+          "name": "Runable",
+          "category": "Framework Vue.js",
+          "description": "Uma framework para criar aplicações Vue.js modernas com routing baseado em ficheiros, renderização no servidor e carregamento de dados, mantendo a liberdade de escolher o ambiente de execução do servidor.",
+          "action": "Descubra o Runable"
+        },
+        "syt": {
+          "name": "Syt",
+          "category": "Configuração TypeScript",
+          "description": "Um builder fluente e com segurança de tipos para criar, editar e combinar ficheiros tsconfig.json, com validação Zod, preenchimento automático e verificação de tipos.",
+          "action": "Descubra o Syt"
+        },
+        "epizod": {
+          "name": "ēpizod",
+          "category": "Esquemas de validação",
+          "description": "Uma biblioteca que transforma esquemas Zod em definições JSON armazenáveis e transmissíveis e depois os reconstrói como esquemas Zod executáveis, tanto no frontend como no backend.",
+          "action": "Descubra o Epizod"
+        },
+        "persistence": {
+          "name": "Persistence",
+          "category": "Persistência de dados",
+          "description": "Uma camada de persistência que liga aplicações a diferentes bases de dados através de uma API consistente e de uma arquitetura extensível.",
+          "action": "Descubra o Persistence"
+        },
+        "vContent": {
+          "name": "v-content",
+          "category": "Conteúdo dinâmico para Vue.js",
+          "description": "Uma ferramenta para gerir e integrar conteúdo em aplicações Vue.js, concebida para simplificar a sua utilização e renderização.",
+          "action": "Descubra o v-content"
+        }
+      }
+    },
+    "openSource": {
+      "eyebrow": "O nosso compromisso",
+      "title": "O código aberto no centro do nosso trabalho",
+      "description": "Acreditamos que as tecnologias devem poder ser compreendidas, adaptadas e melhoradas por quem as utiliza. Por isso, desenvolvemos de forma aberta e damos a todos a oportunidade de explorar os nossos projetos, adaptá-los às suas necessidades e contribuir para a sua evolução.",
+      "action": "Explore os nossos projetos no GitHub"
+    },
+    "community": {
+      "eyebrow": "Vamos construir juntos",
+      "title": "As melhores ideias crescem em conjunto.",
+      "description": "Representa uma empresa, desenvolve software ou gostaria de contribuir para um projeto de código aberto? Conheça o nosso trabalho e vamos construir juntos o que vem a seguir.",
+      "actions": {
+        "contact": "Vamos falar sobre o seu projeto",
+        "contribute": "Contribua no GitHub"
+      }
+    }
+  },
+  "project": {
+    "title": "Projetos",
+    "status": "Em desenvolvimento",
+    "github": "Explore no GitHub",
+    "contact": "Conversar sobre o projeto",
+    "contactHref": "mailto:contact{'@'}opensya.com",
+    "back": "Todos os projetos",
+    "stateTitle": "Estado do projeto",
+    "stateCommon": "A Opensya desenvolve os seus projetos de forma aberta. O GitHub da organização é a melhor fonte para acompanhar o que realmente existe.",
+    "envisaged": "Planeado",
+    "newTab": "abre num novo separador",
+    "items": {
+      "authen": {
+        "name": "Authen",
+        "category": "Identidade e autenticação",
+        "description": "Infraestrutura de código aberto para gerir identidades e autenticação de utilizadores, ligar aplicações e criar uma experiência de início de sessão unificada, sem depender de um framework ou fornecedor específico.",
+        "tagline": "Uma identidade. Todas as suas aplicações.",
+        "action": "Descubra o Authen"
+      },
+      "workspace": {
+        "name": "Workspace",
+        "category": "Trabalho e colaboração",
+        "description": "Um espaço de trabalho que reúne as ferramentas essenciais para as suas equipas comunicarem, organizarem-se e colaborarem num ambiente coerente, concebido para funcionar como um todo.",
+        "tagline": "Um espaço de trabalho que lhe pertence.",
+        "action": "Descubra o Workspace"
+      },
+      "tarico": {
+        "name": "Tarico",
+        "category": "Gestão de recursos humanos",
+        "description": "Uma solução de gestão de recursos humanos que ajuda as empresas a estruturar os processos de RH, centralizar informações e gerir melhor as suas equipas.",
+        "tagline": "RH ao serviço do seu crescimento.",
+        "action": "Descubra o Tarico"
+      }
+    }
+  },
+  "authen": {
+    "meta": {
+      "title": "Authen — Infraestrutura de identidade e autenticação de código aberto | Opensya",
+      "description": "O Authen é um projeto de infraestrutura de identidade e autenticação, independente de frameworks e métodos de início de sessão, concebido para servir várias aplicações."
+    },
+    "hero": {
+      "category": "Identidade e autenticação",
+      "title": "Uma identidade. Várias aplicações. Liberdade de escolha.",
+      "intro": "Cada nova aplicação traz as suas próprias contas, processos de início de sessão e regras. O Authen é um projeto de infraestrutura de código aberto que procura tornar a identidade uma base comum, independente de frameworks e métodos de autenticação.",
+      "tagline": "Uma identidade. Qualquer aplicação. Qualquer fornecedor de autenticação."
+    },
+    "problem": {
+      "title": "Quando cada aplicação tem a sua própria identidade",
+      "p1": "Uma pessoa tem uma conta aqui e outra ali e precisa de introduzir os mesmos dados em todo o lado. Cada equipa recria o seu próprio processo de início de sessão, com as suas escolhas, e mudar o método de autenticação obriga a alterar todas as aplicações.",
+      "p2": "Enquanto existe apenas uma aplicação, isso pode passar despercebido. Assim que várias aplicações precisam de funcionar em conjunto, a identidade deixa de ser um detalhe de início de sessão e passa a ser uma questão de arquitetura."
+    },
+    "approach": {
+      "title": "Separar o que deve ser separado",
+      "intro": "O Authen parte de uma ideia simples: uma infraestrutura de identidade é mais do que um formulário de início de sessão. Por isso, o projeto distingue vários conceitos frequentemente confundidos.",
+      "items": {
+        "identity": {
+          "title": "Identidade",
+          "description": "Quem é a pessoa, independentemente da aplicação que utiliza."
+        },
+        "profile": {
+          "title": "Perfil",
+          "description": "As informações sobre a pessoa, que podem variar consoante o contexto."
+        },
+        "credentials": {
+          "title": "Credenciais",
+          "description": "A forma como a pessoa comprova a sua identidade. Essa forma pode mudar sem que a identidade se altere."
+        },
+        "sessions": {
+          "title": "Sessões",
+          "description": "O período durante o qual o acesso é concedido e a aplicação a que diz respeito."
+        }
+      },
+      "principles": "Dois princípios orientam esta separação: independência de qualquer framework, stack ou método de autenticação, e extensibilidade, para permitir considerar novos fornecedores sem repensar todo o sistema. O Authen é de código aberto, sob a licença Apache 2.0."
+    },
+    "building": {
+      "title": "O que pretendemos construir",
+      "intro": "O Authen foi concebido como uma infraestrutura independente, utilizável pelo Opensya Workspace e por outras aplicações.",
+      "items": {
+        "shared": "Uma identidade utilizável em várias aplicações.",
+        "login": "Experiências de início de sessão unificadas e, futuramente, cenários de single sign-on (SSO).",
+        "methods": "Vários métodos de autenticação: email e palavra-passe, códigos ou ligações enviados por email, telefone e fornecedores externos."
+      }
+    },
+    "state": {
+      "description": "O Authen está em fase de conceção e desenvolvimento. Os métodos de autenticação e cenários acima descritos representam os objetivos do projeto; não os apresentamos como operacionais enquanto não estiverem documentados no repositório."
+    },
+    "closing": {
+      "title": "Uma base construída abertamente",
+      "description": "Se a identidade digital das organizações lhe interessa, pode explorar e discutir o projeto e, à medida que evolui, contribuir para ele."
+    }
+  },
+  "workspace": {
+    "meta": {
+      "title": "Workspace — Um ambiente de trabalho aberto e modular | Opensya",
+      "description": "O Workspace é um projeto de ambiente de trabalho digital que pretende reunir as ferramentas essenciais de uma organização num sistema coerente, aberto e modular."
+    },
+    "hero": {
+      "category": "Trabalho e colaboração",
+      "title": "Um espaço de trabalho concebido para a sua organização.",
+      "intro": "Agenda, notas, mensagens, videoconferências e formulários: o trabalho diário depende de ferramentas concebidas separadamente. O Workspace pretende reuni-las num ambiente coerente e modular, sob o controlo da organização."
+    },
+    "problem": {
+      "title": "Ferramentas que não comunicam entre si",
+      "p1": "Uma reunião é marcada numa ferramenta, preparada noutra e acompanhada numa terceira. Cada uma tem as suas próprias contas, permissões e administração.",
+      "p2": "Cada ferramenta pode ser excelente por si só. Integrá-las exige tempo, atenção e compromissos — e é a organização que suporta o custo."
+    },
+    "approach": {
+      "title": "Porquê um novo ambiente de trabalho?",
+      "intro": "Já existem muitas ferramentas, e várias são excelentes. O Workspace explora uma abordagem diferente: um sistema concebido desde o início para funcionar de forma coerente, adaptar-se à organização e dar-lhe maior controlo sobre as suas ferramentas.",
+      "items": {
+        "open": {
+          "title": "Abertura",
+          "description": "Um projeto que se pode consultar, compreender e fazer evoluir."
+        },
+        "modular": {
+          "title": "Modularidade",
+          "description": "Componentes que se adaptam às necessidades, e não o contrário."
+        },
+        "coherent": {
+          "title": "Coerência",
+          "description": "Uma experiência contínua de uma ferramenta para outra."
+        },
+        "control": {
+          "title": "Controlo",
+          "description": "Uma organização que mantém o controlo do seu ambiente digital."
+        }
+      },
+      "origin": "A ideia nasceu das necessidades de empresas africanas, sobretudo senegalesas, mas pretende servir organizações muito além da região."
+    },
+    "building": {
+      "title": "O âmbito que idealizamos",
+      "intro": "Estas são as áreas que o Workspace pretende abranger. Trata-se do âmbito previsto, não de uma lista de funcionalidades disponíveis.",
+      "items": [
+        "Agenda e calendário",
+        "Notas e recolha de informação",
+        "Mensagens e comunicação",
+        "Videoconferência",
+        "Formulários",
+        "Organização e coordenação do trabalho",
+        "Utilizadores e administração"
+      ],
+      "outro": "O objetivo não é colocar aplicações lado a lado, mas fazê-las funcionar em conjunto."
+    },
+    "state": {
+      "description": "O Workspace está em desenvolvimento. O seu âmbito e as suas capacidades evoluirão ao longo da construção, e não afirmamos que todas as aplicações previstas já existam ou estejam atualmente ligadas."
+    },
+    "closing": {
+      "title": "Um ambiente de trabalho que evolui abertamente",
+      "description": "Se tem interesse na forma como as organizações trabalham e escolhem as suas ferramentas, explore o projeto ou converse connosco sobre a sua direção."
+    }
+  },
+  "tarico": {
+    "meta": {
+      "title": "Tarico — Uma plataforma modular de RH | Opensya",
+      "description": "O Tarico é um projeto de plataforma de gestão de recursos humanos construído em torno de um núcleo comum e de módulos capazes de evoluir com a organização."
+    },
+    "hero": {
+      "category": "Gestão de recursos humanos",
+      "title": "RH ao serviço do crescimento da empresa.",
+      "intro": "As equipas crescem, os processos mudam e as necessidades tornam-se mais claras. O Tarico é um projeto de plataforma de RH que pretende estruturar essa gestão em torno de uma base comum e de módulos capazes de evoluir com a organização."
+    },
+    "problem": {
+      "title": "Os RH evoluem mais depressa do que as suas ferramentas",
+      "p1": "À medida que uma organização cresce, os processos de RH acumulam-se, muitas vezes informalmente. A informação sobre as equipas dispersa-se e cada nova necessidade parece exigir um novo projeto.",
+      "p2": "Estruturar estes processos não significa torná-los rígidos. Significa dar-lhes uma base clara sobre a qual a organização possa continuar a construir."
+    },
+    "approach": {
+      "title": "Uma base comum, módulos flexíveis",
+      "intro": "O Tarico assenta numa arquitetura modular em TypeScript. O seu núcleo, Tarico Core, fornece uma base partilhada. As funcionalidades de negócio são construídas sobre essa base, sem transformar cada nova necessidade numa aplicação independente.",
+      "modules": {
+        "title": "Módulos",
+        "description": "Funcionalidades de negócio acrescentadas gradualmente, de acordo com as necessidades da organização."
+      },
+      "core": {
+        "title": "Tarico Core",
+        "description": "A base comum na qual os módulos assentam."
+      },
+      "outro": "Esta escolha reflete uma convicção: um produto de RH deve evoluir gradualmente, ao ritmo das equipas que apoia."
+    },
+    "building": {
+      "title": "O que o Tarico pretende possibilitar",
+      "items": {
+        "processes": {
+          "title": "Estruturar processos",
+          "description": "Dar um enquadramento claro às formas de trabalhar da organização."
+        },
+        "information": {
+          "title": "Organizar informação",
+          "description": "Reunir num só lugar a informação relativa às equipas."
+        },
+        "evolve": {
+          "title": "Fazer evoluir as ferramentas",
+          "description": "Adicionar funcionalidades à medida que surgem necessidades, sem começar do zero."
+        }
+      }
+    },
+    "state": {
+      "description": "O Tarico está em desenvolvimento. Não apresentamos os seus módulos como concluídos nem a plataforma como disponível comercialmente. Não divulgamos números de adoção nem preços."
+    },
+    "closing": {
+      "title": "Um produto que cresce com as necessidades",
+      "description": "Se tem interesse na estruturação de processos de RH e em produtos que evoluem gradualmente, explore o projeto ou converse connosco sobre a sua direção."
+    }
+  },
+  "investors": {
+    "meta": {
+      "title": "Investidores — Porque a Opensya constrói infraestruturas abertas | Opensya",
+      "description": "A visão da Opensya, os seus três projetos em desenvolvimento e a forma como se articulam: Authen, Workspace e Tarico — infraestruturas de código aberto para empresas."
+    },
+    "contactHref": "mailto:contact{'@'}opensya.com",
+    "actions": {
+      "contact": "Iniciar uma conversa",
+      "projects": "Descubra os projetos",
+      "github": "Explore no GitHub"
+    },
+    "hero": {
+      "eyebrow": "Investidores",
+      "title": "Bases abertas, concebidas para durar.",
+      "intro": "A Opensya constrói infraestruturas de código aberto para empresas. Esta página apresenta a nossa visão, a coerência dos nossos três projetos e o seu estado real de desenvolvimento."
+    },
+    "thesis": {
+      "title": "Porque estes projetos e porquê agora",
+      "p1": "As ferramentas essenciais de uma organização — identidade digital, espaço de trabalho e gestão de equipas — são muitas vezes caixas-pretas reunidas posteriormente. As organizações dependem delas sem as poder compreender, adaptar ou fazer evoluir.",
+      "p2": "A Opensya aposta numa abordagem diferente: infraestruturas abertas e modulares sobre as quais as empresas podem construir, mantendo o controlo."
+    },
+    "beliefs": {
+      "title": "O que orienta as nossas escolhas",
+      "intro": "Três convicções orientam a conceção de cada projeto.",
+      "items": {
+        "ownership": {
+          "title": "O controlo pertence à organização",
+          "description": "As empresas devem manter o controlo das suas ferramentas, dos seus dados e do seu ambiente digital."
+        },
+        "foundations": {
+          "title": "Bases antes das funcionalidades",
+          "description": "Bases abertas e modulares que permitem acrescentar funcionalidades sem reconstruir tudo."
+        },
+        "durability": {
+          "title": "Concebidas para o longo prazo",
+          "description": "Tecnologias concebidas para evoluir com as organizações sem limitar as suas escolhas futuras."
+        }
+      }
+    },
+    "projects": {
+      "title": "Três projetos, uma filosofia",
+      "intro": "Cada projeto responde a uma necessidade diferente. Todos partilham a mesma abordagem: aberta, modular e sustentável.",
+      "items": {
+        "authen": "Identidade e autenticação como base comum para várias aplicações, incluindo o Workspace.",
+        "workspace": "Um ambiente de trabalho que pretende reunir as ferramentas essenciais de uma organização num sistema coerente.",
+        "tarico": "Uma plataforma de RH construída em torno de um núcleo comum, Tarico Core, e de módulos que evoluem com a organização."
+      }
+    },
+    "transparency": {
+      "title": "O que podemos afirmar hoje",
+      "intro": "Preferimos apresentar os projetos tal como são, em vez de os retratar como mais avançados do que realmente estão.",
+      "items": {
+        "stage": {
+          "title": "Projetos em desenvolvimento",
+          "description": "Authen, Workspace e Tarico estão em desenvolvimento. Nenhum é apresentado aqui como um produto concluído."
+        },
+        "open": {
+          "title": "Desenvolvimento aberto",
+          "description": "O trabalho é desenvolvido de forma aberta. O GitHub da organização é a fonte mais fiável para verificar o que existe."
+        },
+        "claims": {
+          "title": "Sem números que não possamos comprovar",
+          "description": "Não apresentamos métricas de adoção, projeções nem referências de clientes. Preferimos falar destes assuntos diretamente e com o devido contexto."
+        }
+      }
+    },
+    "closing": {
+      "title": "Se esta visão faz sentido para si",
+      "description": "Gostamos de conversar sobre o propósito destes projetos, as suas decisões de conceção e a direção que estão a tomar. Contacte-nos ou comece por explorar o que está disponível no GitHub."
+    }
+  },
+  "leadership": {
+    "title": "Liderança",
+    "meta": {
+      "title": "Liderança — Mamadou DIA, fundador da Opensya | Opensya",
+      "description": "Mamadou DIA, fundador e responsável técnico da Opensya: a sua abordagem à engenharia, ao código aberto e à criação de produtos sustentáveis."
+    },
+    "hero": {
+      "name": "Mamadou DIA",
+      "role": "Fundador e responsável técnico da Opensya",
+      "photoAlt": "Retrato de Mamadou DIA",
+      "title": "Compreender primeiro o problema. Construir depois as bases.",
+      "intro": "Na Opensya, Mamadou DIA lidera a estratégia técnica e o desenvolvimento. O seu trabalho parte de um princípio simples: um bom sistema não é aquele que faz mais coisas, mas aquele que continua compreensível quando as necessidades mudam."
+    },
+    "approach": {
+      "title": "Uma abordagem à engenharia",
+      "background": "Programador sénior especializado no ecossistema JavaScript e TypeScript, Mamadou trabalha tanto no frontend como no backend. Já assumiu responsabilidades de liderança técnica, incluindo organização do código, revisões técnicas e acompanhamento de programadores.",
+      "p1": "Tudo começa pelo problema. Antes de escolher uma framework ou base de dados, procura compreender o que a organização pretende realmente alcançar e o que atualmente a impede.",
+      "p2": "Para ele, a arquitetura é uma forma de gerir a complexidade: dividir um sistema em partes modulares que possam evoluir sem obrigar a alterar o resto. Cada decisão técnica é avaliada pelo valor que acrescenta e pelo custo a longo prazo para quem terá de a manter.",
+      "p3": "É por isso que a experiência dos programadores é tão importante como a dos utilizadores: um sistema difícil de compreender torna-se rapidamente difícil de fazer evoluir. A complexidade sem valor real é uma dívida que é melhor evitar."
+    },
+    "work": {
+      "title": "Do código aos produtos",
+      "intro": "As ferramentas existentes nem sempre são suficientes. É preciso compreender as suas limitações, explorar outras abordagens e, quando existe uma necessidade real, construir a ferramenta em falta.",
+      "items": {
+        "products": {
+          "title": "Infraestruturas e produtos",
+          "description": "Projetos da Opensya concebidos em torno de problemas concretos das organizações."
+        },
+        "tools": {
+          "title": "Ferramentas para programadores",
+          "description": "Ferramentas de código aberto que tornam o desenvolvimento mais simples e controlável."
+        },
+        "practice": {
+          "title": "Reflexão sobre a prática",
+          "description": "Arquitetura, convenções e experiência de desenvolvimento, que determinam a vida útil de um produto."
+        }
+      },
+      "outro": "Estes trabalhos não são ideias isoladas. Expressam a mesma abordagem: compreender profundamente os problemas, conceber bases sólidas e construir soluções reutilizáveis."
+    },
+    "openSource": {
+      "title": "Porque a abertura importa",
+      "p1": "Para Mamadou, o código aberto não se resume a publicar código. É uma forma de criar tecnologias que outros podem analisar, compreender, adaptar e fazer evoluir.",
+      "p2": "Na prática, uma organização que pode analisar o funcionamento das suas ferramentas consegue adaptá-las às suas necessidades sem esperar que outros decidam por ela. A Opensya procura apoiar essa liberdade de construir o seu próprio ambiente digital."
+    },
+    "projects": {
+      "title": "Projetos que refletem uma mesma visão",
+      "intro": "Cada projeto ilustra uma vertente desta abordagem. As respetivas páginas apresentam mais detalhes.",
+      "items": {
+        "authen": "Uma reflexão sobre identidade digital e independência tecnológica.",
+        "workspace": "Uma reflexão sobre a coerência das ferramentas de trabalho e colaboração.",
+        "tarico": "Um produto de RH concebido em torno das necessidades de negócio e de uma arquitetura modular."
+      },
+      "status": "Authen, Workspace e Tarico estão em desenvolvimento.",
+      "tools": "Além destes projetos, a Opensya desenvolve ferramentas para programadores:"
+    },
+    "closing": {
+      "title": "Continuar a construir",
+      "description": "A melhor forma de conhecer o trabalho da Opensya é explorar os próprios projetos. Explore-os, leia o código ou contacte-nos se estiver a trabalhar num problema concreto.",
+      "projects": "Descubra os projetos",
+      "repos": "Explore os repositórios",
+      "contact": "Contacte a Opensya"
+    }
+  },
+  "footer": {
+    "homeLabel": "Opensya, voltar à página inicial",
+    "navLabel": "Navegação do rodapé",
+    "mission": "Construímos infraestruturas de código aberto para empresas.",
+    "status": "Authen, Workspace e Tarico estão em desenvolvimento.",
+    "projects": "Projetos",
+    "tools": "Ferramentas",
+    "company": "Opensya",
+    "leadership": "Liderança",
+    "investors": "Investidores",
+    "contact": "Contacto",
+    "rights": "Todos os direitos reservados.",
+    "backToTop": "Voltar ao topo"
+  }
+}

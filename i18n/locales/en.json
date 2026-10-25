@@ -1,0 +1,471 @@
+{
+  "home": {
+    "hero": {
+      "title": "We build open-source infrastructure for businesses.",
+      "description": "At Opensya, we build open-source infrastructure for businesses. Solid technological foundations designed to meet organizations’ real needs, support their growth, and empower them to build their own solutions. We believe the tools businesses rely on should not be black boxes, but infrastructure that anyone can understand, adapt, and evolve freely.",
+      "highlight": "We want to give businesses the freedom to build without limits. Open, modular, and sustainable technologies that let them stay in control of their tools, data, and digital future. Because innovation should not depend on imposed solutions, we create the foundations businesses can use to develop, connect, and grow their own ideas. Opensya does more than build software: we build what enables others to build.",
+      "actions": {
+        "projects": "Discover our projects",
+        "github": "Explore on GitHub"
+      }
+    },
+    "projects": {
+      "eyebrow": "Our projects",
+      "title": "What we’re building",
+      "description": "Practical solutions that help businesses work better, stay organized, and retain control of their digital environment.",
+      "items": {
+        "authen": {
+          "name": "Authen",
+          "category": "Identity and authentication",
+          "description": "Open-source infrastructure for managing user identities and authentication, connecting your applications, and building a unified sign-in experience without depending on a particular framework or provider.",
+          "tagline": "One identity. Every application.",
+          "action": "Discover Authen"
+        },
+        "workspace": {
+          "name": "Workspace",
+          "category": "Work and collaboration",
+          "description": "A workspace that brings together the essential tools your teams need to communicate, organize, and collaborate in a coherent environment designed to work as one.",
+          "tagline": "A workspace you own.",
+          "action": "Discover Workspace"
+        },
+        "tarico": {
+          "name": "Tarico",
+          "category": "Human resources management",
+          "description": "A human resources management solution that helps businesses structure HR processes, centralize information, and manage their teams more effectively.",
+          "tagline": "HR that supports your growth.",
+          "action": "Discover Tarico"
+        }
+      }
+    },
+    "mission": {
+      "eyebrow": "Our purpose",
+      "title": "Why Opensya exists",
+      "description": "Businesses need technology that adapts to their ambitions, not constraints that limit their possibilities. We build open infrastructure to give them greater freedom and control over their digital environment.",
+      "highlight": "We don’t just build software. We build what enables others to build."
+    },
+    "approach": {
+      "eyebrow": "Our approach",
+      "title": "Open foundations. Unlimited possibilities.",
+      "description": "We design technology to meet real needs, evolve with changing uses, and give businesses the freedom to choose.",
+      "items": {
+        "open": {
+          "title": "Open by nature",
+          "description": "Open-source technologies that anyone can explore, understand, use, and improve."
+        },
+        "modular": {
+          "title": "Modular by design",
+          "description": "Components that can be used, integrated, and adapted to the needs of each project."
+        },
+        "sustainable": {
+          "title": "Built to last",
+          "description": "Technological foundations designed to evolve with businesses without limiting their future choices."
+        }
+      }
+    },
+    "tools": {
+      "eyebrow": "For developers",
+      "title": "The tools we build",
+      "description": "We also build open-source tools that make developers’ work simpler, more reliable, and easier to control.",
+      "action": "Explore our tools",
+      "items": {
+        "runable": {
+          "name": "Runable",
+          "category": "Vue.js framework",
+          "description": "A framework for building modern Vue.js applications with file-based routing, server-side rendering, and data loading—while letting you choose your server runtime.",
+          "action": "Discover Runable"
+        },
+        "syt": {
+          "name": "Syt",
+          "category": "TypeScript configuration",
+          "description": "A fluent, type-safe builder for creating, editing, and merging tsconfig.json files, with Zod validation, autocomplete, and type checking.",
+          "action": "Discover Syt"
+        },
+        "epizod": {
+          "name": "ēpizod",
+          "category": "Validation schemas",
+          "description": "A library that turns Zod schemas into storable and transferable JSON definitions, then rebuilds them as executable Zod schemas on both the frontend and backend.",
+          "action": "Discover Epizod"
+        },
+        "persistence": {
+          "name": "Persistence",
+          "category": "Data persistence",
+          "description": "A persistence layer that connects applications to different databases through a consistent API and extensible architecture.",
+          "action": "Discover Persistence"
+        },
+        "vContent": {
+          "name": "v-content",
+          "category": "Dynamic content for Vue.js",
+          "description": "A tool for managing and integrating content into Vue.js applications, designed to simplify content usage and rendering.",
+          "action": "Discover v-content"
+        }
+      }
+    },
+    "openSource": {
+      "eyebrow": "Our commitment",
+      "title": "Open source at the heart of what we do",
+      "description": "We believe technology should be understandable, adaptable, and improvable by the people who use it. That is why we develop in the open, giving everyone the opportunity to explore our projects, adapt them to their needs, and contribute to their evolution.",
+      "action": "Explore our projects on GitHub"
+    },
+    "community": {
+      "eyebrow": "Let’s build together",
+      "title": "The best ideas grow together.",
+      "description": "Are you part of a business, building software, or interested in contributing to an open-source project? Explore our work and let’s build what comes next together.",
+      "actions": {
+        "contact": "Let’s talk about your project",
+        "contribute": "Contribute on GitHub"
+      }
+    }
+  },
+  "project": {
+    "title": "Projects",
+    "status": "In development",
+    "github": "Explore on GitHub",
+    "contact": "Discuss the project",
+    "contactHref": "mailto:contact{'@'}opensya.com",
+    "back": "All projects",
+    "stateTitle": "Project status",
+    "stateCommon": "Opensya develops its projects in the open. The organization’s GitHub is the best source for seeing what actually exists.",
+    "envisaged": "Planned",
+    "newTab": "opens in a new tab",
+    "items": {
+      "authen": {
+        "name": "Authen",
+        "category": "Identity and authentication",
+        "description": "Open-source infrastructure for managing user identities and authentication, connecting your applications, and building a unified sign-in experience without depending on a particular framework or provider.",
+        "tagline": "One identity. Every application.",
+        "action": "Discover Authen"
+      },
+      "workspace": {
+        "name": "Workspace",
+        "category": "Work and collaboration",
+        "description": "A workspace that brings together the essential tools your teams need to communicate, organize, and collaborate in a coherent environment designed to work as one.",
+        "tagline": "A workspace you own.",
+        "action": "Discover Workspace"
+      },
+      "tarico": {
+        "name": "Tarico",
+        "category": "Human resources management",
+        "description": "A human resources management solution that helps businesses structure HR processes, centralize information, and manage their teams more effectively.",
+        "tagline": "HR that supports your growth.",
+        "action": "Discover Tarico"
+      }
+    }
+  },
+  "authen": {
+    "meta": {
+      "title": "Authen — Open-source identity and authentication infrastructure | Opensya",
+      "description": "Authen is an identity and authentication infrastructure project, independent of frameworks and sign-in methods, designed to serve multiple applications."
+    },
+    "hero": {
+      "category": "Identity and authentication",
+      "title": "One identity. Multiple applications. The freedom to choose.",
+      "intro": "Every new application brings its own accounts, sign-in flows, and rules. Authen is an open-source infrastructure project that aims to make identity a shared foundation, independent of frameworks and authentication methods.",
+      "tagline": "One identity. Any application. Any authentication provider."
+    },
+    "problem": {
+      "title": "When every application has its own identity",
+      "p1": "A person has one account here and another there, and must enter the same information everywhere. Each team rebuilds its own sign-in flow with its own choices, and changing authentication methods means updating every application.",
+      "p2": "With just one application, this may go unnoticed. As soon as several applications need to work together, identity stops being a sign-in detail and becomes an architectural concern."
+    },
+    "approach": {
+      "title": "Separating what should be separate",
+      "intro": "Authen starts with a simple idea: identity infrastructure is more than a sign-in form. The project therefore separates several concepts that are often conflated.",
+      "items": {
+        "identity": {
+          "title": "Identity",
+          "description": "Who the person is, regardless of the application they use."
+        },
+        "profile": {
+          "title": "Profile",
+          "description": "Information about the person, which may vary from one context to another."
+        },
+        "credentials": {
+          "title": "Credentials",
+          "description": "How the person proves who they are. This method can change without changing their identity."
+        },
+        "sessions": {
+          "title": "Sessions",
+          "description": "The period for which access is granted, and to which application."
+        }
+      },
+      "principles": "Two principles guide the design around this separation: independence from any framework, stack, or authentication method, and extensibility, so new providers can be added without rethinking the whole system. Authen is open source under the Apache 2.0 license."
+    },
+    "building": {
+      "title": "What we aim to build",
+      "intro": "Authen is designed as independent infrastructure that can be used by Opensya Workspace and other applications.",
+      "items": {
+        "shared": "An identity that can be used across multiple applications.",
+        "login": "Unified sign-in experiences and, eventually, single sign-on (SSO) scenarios.",
+        "methods": "Multiple authentication methods: email and password, codes or links sent by email, phone, and external providers."
+      }
+    },
+    "state": {
+      "description": "Authen is being designed and developed. The authentication methods and scenarios described above reflect the project’s goals; we do not present them as operational until they are documented in the repository."
+    },
+    "closing": {
+      "title": "A foundation built in the open",
+      "description": "If digital identity for organizations interests you, you can explore and discuss the project and, as it progresses, contribute to it."
+    }
+  },
+  "workspace": {
+    "meta": {
+      "title": "Workspace — An open, modular work environment | Opensya",
+      "description": "Workspace is a digital work environment project that aims to bring an organization’s essential tools together in a coherent, open, and modular system."
+    },
+    "hero": {
+      "category": "Work and collaboration",
+      "title": "A workspace designed around your organization.",
+      "intro": "Calendars, notes, messages, video calls, and forms: everyday work relies on tools designed separately. Workspace aims to bring them together in a coherent, modular environment that the organization remains in control of."
+    },
+    "problem": {
+      "title": "Tools that don’t talk to each other",
+      "p1": "A meeting is scheduled in one tool, prepared in another, and followed up in a third. Each has its own accounts, permissions, and administration.",
+      "p2": "Each tool may be excellent on its own. Bringing them together takes time, attention, and compromises—and the organization bears the cost."
+    },
+    "approach": {
+      "title": "Why a new work environment?",
+      "intro": "Many tools already exist, and many are excellent. Workspace explores a different approach: a system designed from the outset to work coherently, adapt to the organization, and give it greater control over its tools.",
+      "items": {
+        "open": {
+          "title": "Openness",
+          "description": "A project people can read, understand, and evolve."
+        },
+        "modular": {
+          "title": "Modularity",
+          "description": "Components that adapt to needs, rather than the other way around."
+        },
+        "coherent": {
+          "title": "Consistency",
+          "description": "A seamless experience from one tool to another."
+        },
+        "control": {
+          "title": "Control",
+          "description": "An organization that remains in control of its digital environment."
+        }
+      },
+      "origin": "The idea grew out of the needs of African businesses, particularly in Senegal, but is intended to serve organizations far beyond the region."
+    },
+    "building": {
+      "title": "The scope we envision",
+      "intro": "These are the areas Workspace aims to cover. This is the intended scope, not a list of available features.",
+      "items": [
+        "Agenda and calendar",
+        "Notes and information capture",
+        "Messaging and communication",
+        "Video conferencing",
+        "Forms",
+        "Work organization and coordination",
+        "Users and administration"
+      ],
+      "outro": "The goal is not to place applications side by side, but to make them work together."
+    },
+    "state": {
+      "description": "Workspace is under development. Its scope and capabilities will evolve as it is built, and we do not claim that all planned applications already exist or are currently connected."
+    },
+    "closing": {
+      "title": "A work environment shaped in the open",
+      "description": "If you’re interested in how organizations work and choose their tools, explore the project or talk with us about its direction."
+    }
+  },
+  "tarico": {
+    "meta": {
+      "title": "Tarico — A modular HR platform | Opensya",
+      "description": "Tarico is a human resources management platform project built around a shared core and modules that can evolve with the organization."
+    },
+    "hero": {
+      "category": "Human resources management",
+      "title": "HR that supports business growth.",
+      "intro": "Teams grow, processes change, and needs become clearer. Tarico is an HR platform project that aims to structure HR management around a shared foundation and modules that can evolve with the organization."
+    },
+    "problem": {
+      "title": "HR evolves faster than its tools",
+      "p1": "As an organization grows, HR processes accumulate one by one, often informally. Team information becomes scattered, and every new need feels like another project to build.",
+      "p2": "Structuring these processes does not mean freezing them. It means giving them a clear foundation the organization can continue to build on."
+    },
+    "approach": {
+      "title": "A shared foundation, modular capabilities",
+      "intro": "Tarico is built on a modular TypeScript architecture. Its core, Tarico Core, provides a shared foundation. Business capabilities are built on this foundation, so every new need does not become a separate application.",
+      "modules": {
+        "title": "Modules",
+        "description": "Business capabilities added progressively as the organization needs them."
+      },
+      "core": {
+        "title": "Tarico Core",
+        "description": "The shared foundation on which the modules rely."
+      },
+      "outro": "This reflects a core belief: an HR product should evolve gradually, at the pace of the teams it supports."
+    },
+    "building": {
+      "title": "What Tarico aims to make possible",
+      "items": {
+        "processes": {
+          "title": "Structure processes",
+          "description": "Provide a clear framework for how the organization works."
+        },
+        "information": {
+          "title": "Organize information",
+          "description": "Bring team-related information together in one place."
+        },
+        "evolve": {
+          "title": "Evolve the tools",
+          "description": "Add capabilities as needs arise, without starting from scratch."
+        }
+      }
+    },
+    "state": {
+      "description": "Tarico is under development. We do not present its modules as complete or the platform as commercially available. No adoption figures or pricing are being claimed."
+    },
+    "closing": {
+      "title": "A product that grows with its needs",
+      "description": "If you’re interested in structuring HR processes and products that evolve gradually, explore the project or talk with us about its direction."
+    }
+  },
+  "investors": {
+    "meta": {
+      "title": "Investors — Why Opensya builds open infrastructure | Opensya",
+      "description": "Opensya’s vision, its three projects in development, and how they fit together: Authen, Workspace, and Tarico—open-source infrastructure for businesses."
+    },
+    "contactHref": "mailto:contact{'@'}opensya.com",
+    "actions": {
+      "contact": "Start a conversation",
+      "projects": "Discover the projects",
+      "github": "Explore on GitHub"
+    },
+    "hero": {
+      "eyebrow": "Investors",
+      "title": "Open foundations, built to last.",
+      "intro": "Opensya builds open-source infrastructure for businesses. This page presents our vision, the coherence of our three projects, and their actual stage of progress today."
+    },
+    "thesis": {
+      "title": "Why these projects, and why now",
+      "p1": "An organization’s essential tools—its digital identity, workspace, and team management—are often black boxes assembled after the fact. Organizations depend on them without being able to understand, adapt, or evolve them.",
+      "p2": "Opensya takes a different approach: open, modular infrastructure that businesses can build on and remain in control of."
+    },
+    "beliefs": {
+      "title": "What guides our decisions",
+      "intro": "Three beliefs shape the design of every project.",
+      "items": {
+        "ownership": {
+          "title": "Control belongs to the organization",
+          "description": "Businesses should remain in control of their tools, data, and digital environment."
+        },
+        "foundations": {
+          "title": "Foundations before features",
+          "description": "Open, modular foundations that allow new capabilities to be added without rebuilding everything."
+        },
+        "durability": {
+          "title": "Designed for the long term",
+          "description": "Technology designed to evolve with organizations without limiting their future choices."
+        }
+      }
+    },
+    "projects": {
+      "title": "Three projects, one philosophy",
+      "intro": "Each project addresses a different need. All share the same approach: open, modular, and sustainable.",
+      "items": {
+        "authen": "Identity and authentication as a shared foundation for multiple applications, including Workspace.",
+        "workspace": "A work environment designed to bring an organization’s essential tools together in a coherent system.",
+        "tarico": "An HR platform built around a shared core, Tarico Core, and modules that evolve with the organization."
+      }
+    },
+    "transparency": {
+      "title": "What we can say today",
+      "intro": "We prefer to present the projects as they really are, rather than portray them as more advanced than they are.",
+      "items": {
+        "stage": {
+          "title": "Projects in development",
+          "description": "Authen, Workspace, and Tarico are being built. None is presented here as a finished product."
+        },
+        "open": {
+          "title": "Open development",
+          "description": "The work is done in the open. The organization’s GitHub is the most reliable source for seeing what exists."
+        },
+        "claims": {
+          "title": "No figures we cannot substantiate",
+          "description": "We make no claims about adoption metrics, projections, or customer references. We prefer to discuss these matters directly and in context."
+        }
+      }
+    },
+    "closing": {
+      "title": "If this vision resonates with you",
+      "description": "We welcome conversations about the purpose of these projects, their design decisions, and the direction they are taking. Get in touch, or start by exploring what’s available on GitHub."
+    }
+  },
+  "leadership": {
+    "title": "Leadership",
+    "meta": {
+      "title": "Leadership — Mamadou DIA, Founder of Opensya | Opensya",
+      "description": "Mamadou DIA, founder and technical lead at Opensya: his approach to engineering, open source, and building sustainable products."
+    },
+    "hero": {
+      "name": "Mamadou DIA",
+      "role": "Founder and Technical Lead at Opensya",
+      "photoAlt": "Portrait of Mamadou DIA",
+      "title": "Understand the problem first. Build the foundations next.",
+      "intro": "At Opensya, Mamadou DIA leads technical strategy and development. His work starts from a simple principle: a good system is not the one that does the most, but the one that remains understandable as needs change."
+    },
+    "approach": {
+      "title": "An engineering approach",
+      "background": "A senior developer specializing in the JavaScript and TypeScript ecosystem, Mamadou works across both frontend and backend. He has held technical leadership responsibilities, including codebase organization, code reviews, and mentoring developers.",
+      "p1": "It starts with the problem. Before choosing a framework or database, he seeks to understand what the organization is really trying to achieve—and what is getting in its way today.",
+      "p2": "For him, architecture is a way to manage complexity: breaking a system into modular parts that can evolve without forcing changes elsewhere. Every technical decision is judged by the value it brings and the long-term cost it imposes on those who maintain it.",
+      "p3": "That is why the developer experience matters as much as the user experience: a system that is hard to understand soon becomes hard to evolve. Complexity that adds no real value is a debt best avoided."
+    },
+    "work": {
+      "title": "From code to products",
+      "intro": "Existing tools are not always enough. We must also understand their limitations, explore other approaches, and, when there is a genuine need, build the missing tool.",
+      "items": {
+        "products": {
+          "title": "Infrastructure and products",
+          "description": "Opensya projects designed around real organizational problems."
+        },
+        "tools": {
+          "title": "Tools for developers",
+          "description": "Open-source tools that make development simpler and easier to control."
+        },
+        "practice": {
+          "title": "Thinking about the craft",
+          "description": "Architecture, conventions, and developer experience—all of which shape a product’s lifespan."
+        }
+      },
+      "outro": "These are not unrelated ideas. They express the same approach: understand problems deeply, design solid foundations, and build reusable solutions."
+    },
+    "openSource": {
+      "title": "Why openness matters",
+      "p1": "For Mamadou, open source is about more than publishing code. It is a way to build technology that others can examine, understand, adapt, and evolve.",
+      "p2": "In practical terms, an organization that can inspect how its tools work can adapt them to its needs without waiting for others to make decisions on its behalf. Opensya exists to support that freedom to build its own digital environment."
+    },
+    "projects": {
+      "title": "Projects reflecting one vision",
+      "intro": "Each project illustrates one aspect of this approach. Their individual pages provide more detail.",
+      "items": {
+        "authen": "An exploration of digital identity and technological independence.",
+        "workspace": "An exploration of consistency across work and collaboration tools.",
+        "tarico": "An HR product built around business needs and a modular architecture."
+      },
+      "status": "Authen, Workspace, and Tarico are in development.",
+      "tools": "Alongside these projects, Opensya builds tools for developers:"
+    },
+    "closing": {
+      "title": "Keep building",
+      "description": "The best way to understand Opensya’s work is through the projects themselves. Explore them, read the code, or contact us if you’re working through a concrete problem.",
+      "projects": "Discover the projects",
+      "repos": "Explore the repositories",
+      "contact": "Contact Opensya"
+    }
+  },
+  "footer": {
+    "homeLabel": "Opensya, back to home",
+    "navLabel": "Footer navigation",
+    "mission": "We build open-source infrastructure for businesses.",
+    "status": "Authen, Workspace, and Tarico are in development.",
+    "projects": "Projects",
+    "tools": "Tools",
+    "company": "Opensya",
+    "leadership": "Leadership",
+    "investors": "Investors",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top"
+  }
+}

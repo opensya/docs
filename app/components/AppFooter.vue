@@ -29,6 +29,8 @@ const tools = [
   },
 ];
 
+const { locales, setLocale, localeProperties } = useI18n();
+
 const email = computed(() => t("project.contactHref").replace("mailto:", ""));
 </script>
 
@@ -78,9 +80,9 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
             {{ $t("footer.mission") }}
           </p>
 
-          <p class="mt-5 text-sm text-muted">
+          <!-- <p class="mt-5 text-sm text-muted">
             {{ $t("footer.status") }}
-          </p>
+          </p> -->
         </div>
 
         <!-- Colonnes de navigation -->
@@ -193,13 +195,42 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
       >
         <p>© {{ year }} Opensya. {{ $t("footer.rights") }}</p>
 
-        <a
+        <UDropdownMenu
+          :items="
+            locales.map((locale) => ({
+              value: locale.code,
+              label: locale.name,
+              onSelect() {
+                setLocale(locale.code);
+              },
+            }))
+          "
+          :content="{
+            align: 'start',
+            side: 'bottom',
+            sideOffset: 8,
+          }"
+          :ui="{
+            content: 'w-48',
+          }"
+        >
+          <UButton
+            :label="localeProperties.name"
+            icon="i-tabler-language"
+            color="neutral"
+            variant="ghost"
+            size="lg"
+            class="rounded-none border-default"
+          />
+        </UDropdownMenu>
+
+        <!-- <a
           href="#top"
           class="inline-flex items-center gap-1 w-max hover:text-default"
         >
           {{ $t("footer.backToTop") }}
           <UIcon name="i-lucide-arrow-up" class="size-4" aria-hidden="true" />
-        </a>
+        </a> -->
       </div>
     </UContainer>
   </footer>
