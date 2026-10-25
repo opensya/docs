@@ -24,11 +24,11 @@ export default defineNuxtConfig({
       script: [
         {
           src: "https://analytics.runablejs.com/script.js",
-          "data-website-id": "756c383e-95d4-43f5-9363-40b1f84fd579",
+          "data-website-id": "1ea69d0c-c562-4e72-9353-368df5a512c2",
         },
         {
           src: "https://analytics.runablejs.com/recorder.js",
-          "data-website-id": "756c383e-95d4-43f5-9363-40b1f84fd579",
+          "data-website-id": "1ea69d0c-c562-4e72-9353-368df5a512c2",
         },
       ],
 
