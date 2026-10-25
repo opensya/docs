@@ -34,28 +34,6 @@ const tools = [
 
 <template>
   <main id="top">
-    <section>
-      <div class="relative overflow-hidden min-h-screen">
-        <UContainer
-          class="py-16 sm:py-24 lg:py-28 relative min-h-screen flex flex-col justify-center"
-        >
-          <h1 class="font-notch leading-[1.1] text-[clamp(2rem,6.4vw,3.2rem)]">
-            <span class="block relative z-1">
-              {{ $t("home.hero.title") }}
-            </span>
-          </h1>
-
-          <p class="mt-5 text-lg font-light">
-            {{ $t("home.hero.description") }}
-          </p>
-
-          <p class="mt-5 text-lg font-light">
-            {{ $t("home.hero.highlight") }}
-          </p>
-        </UContainer>
-      </div>
-    </section>
-
     <section class="py-32 bg-accented/20">
       <UContainer>
         <div class="mb-8">
@@ -93,20 +71,40 @@ const tools = [
       </UContainer>
     </section>
 
-    <section class="bg-accented/20">
-      <div class="relative bg-pink- overflow-hidden">
-        <UContainer class="pb-16 sm:pb-24 lg:pb-28 relative">
-          <h2 class="text-4xl font-notch">{{ $t("home.mission.title") }}</h2>
+    <section>
+      <div class="relative overflow-hidden">
+        <UContainer
+          class="py-16 sm:py-24 lg:py-28 relative flex flex-col justify-center"
+        >
+          <h1 class="font-notch leading-[1.1] text-[clamp(2rem,6.4vw,3.2rem)]">
+            <span class="block relative z-1">
+              {{ $t("home.hero.title") }}
+            </span>
+          </h1>
 
-          <p class="mt-5 text-lg font-light max-w-2xl">
-            {{ $t("home.mission.description") }}
+          <p class="mt-5 text-lg font-light">
+            {{ $t("home.hero.description") }}
+          </p>
+
+          <p class="mt-5 text-lg font-light">
+            {{ $t("home.hero.highlight") }}
           </p>
         </UContainer>
       </div>
     </section>
 
+    <section>
+      <UContainer class="relative">
+        <h2 class="text-4xl font-notch">{{ $t("home.mission.title") }}</h2>
+
+        <p class="mt-5 text-lg font-light max-w-2xl">
+          {{ $t("home.mission.description") }}
+        </p>
+      </UContainer>
+    </section>
+
     <!-- Our approach -->
-    <section class="py-24 sm:py-32">
+    <section class="py-24">
       <UContainer>
         <div class="max-w-2xl">
           <h2 class="text-4xl font-notch">
