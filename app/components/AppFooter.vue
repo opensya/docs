@@ -35,7 +35,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
 </script>
 
 <template>
-  <footer class="border-t border-default bg-accented/20">
+  <footer class="border-t border-default">
     <UContainer class="pt-20 pb-10 sm:pt-28">
       <!-- Marque + mission -->
       <div class="grid gap-12 lg:grid-cols-[1.4fr_2fr] lg:gap-20">
@@ -142,7 +142,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
               </li>
               <li>
                 <NuxtLink
-                  :to="localePath('/investisseurs')"
+                  :to="localePath('/investors')"
                   class="hover:text-primary"
                 >
                   {{ $t("footer.investors") }}

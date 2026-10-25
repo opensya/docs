@@ -30,33 +30,37 @@ onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
 
-const items = ref<NavigationMenuItem[]>([
-  {
-    label: $t("project.title"),
-    children: ["authen", "workspace", "tarico"].map((item) => {
-      return {
-        label: $t(`home.projects.items.${item}.name`),
-        // description: $t(`home.projects.items.${item}.description`),
-        to: localePath({ name: item }),
-      };
-    }),
-  },
+const items = computed(() => {
+  const items: NavigationMenuItem[] = [
+    {
+      label: $t("project.title"),
+      children: ["authen", "workspace", "tarico"].map((item) => {
+        return {
+          label: $t(`home.projects.items.${item}.name`),
+          // description: $t(`home.projects.items.${item}.description`),
+          to: localePath({ name: item }),
+        };
+      }),
+    },
 
-  {
-    label: $t("leadership.title"),
-    to: localePath({ name: "leadership" }),
-  },
-  {
-    label: $t("investors.hero.eyebrow"),
-    to: localePath({ name: "investors" }),
-  },
-  {
-    label: "GitHub",
-    icon: "i-simple-icons-github",
-    to: "https://github.com/opensya",
-    target: "_blank",
-  },
-]);
+    {
+      label: $t("leadership.title"),
+      to: localePath({ name: "leadership" }),
+    },
+    {
+      label: $t("investors.hero.eyebrow"),
+      to: localePath({ name: "investors" }),
+    },
+    {
+      label: "GitHub",
+      icon: "i-simple-icons-github",
+      to: "https://github.com/opensya",
+      target: "_blank",
+    },
+  ];
+
+  return items;
+});
 </script>
 
 <template>
