@@ -7,6 +7,8 @@ useSeoMeta({
 });
 definePageMeta({ colorMode: "light" });
 
+const localePath = useLocalePath();
+
 const tools = [
   {
     key: "runable",
@@ -17,8 +19,16 @@ const tools = [
     url: "https://github.com/domutala/syt",
   },
   {
+    key: "persistence",
+    url: "https://persistence.opensya.com/",
+  },
+  {
     key: "epizod",
     url: "https://github.com/domutala/epizod",
+  },
+  {
+    key: "vContent",
+    url: "https://github.com/domutala/v-content",
   },
 ];
 </script>
@@ -56,10 +66,10 @@ const tools = [
           </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <div
+          <article
             v-for="item in ['authen', 'workspace', 'tarico']"
             :key="item"
-            class="bg-default p-5 md:p-8"
+            class="bg-default p-5 md:p-8 flex flex-col"
           >
             <h3 class="font-notch text-2xl">
               {{ $t(`home.projects.items.${item}.name`) }}
@@ -68,7 +78,18 @@ const tools = [
             <p class="mt-5">
               {{ $t(`home.projects.items.${item}.description`) }}
             </p>
-          </div>
+
+            <div class="mt-auto">
+              <NuxtLink
+                :to="localePath(`/${item}`)"
+                class="mt-5 flex items-center gap-1 w-max text-primary"
+              >
+                {{ $t(`home.projects.items.${item}.action`) }}
+
+                <UIcon name="i-lucide-arrow-right" class="size-4" />
+              </NuxtLink>
+            </div>
+          </article>
         </div>
       </UContainer>
     </section>

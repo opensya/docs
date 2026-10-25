@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import type { NavigationMenuItem } from "@nuxt/ui";
+
+const localePath = useLocalePath();
+
 const scrollY = ref(0);
 const isHidden = ref(false);
 
@@ -25,6 +29,34 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
+
+const items = ref<NavigationMenuItem[]>([
+  {
+    label: $t("project.title"),
+    children: ["authen", "workspace", "tarico"].map((item) => {
+      return {
+        label: $t(`home.projects.items.${item}.name`),
+        // description: $t(`home.projects.items.${item}.description`),
+        to: localePath({ name: item }),
+      };
+    }),
+  },
+
+  {
+    label: $t("leadership.title"),
+    to: localePath({ name: "leadership" }),
+  },
+  {
+    label: $t("investors.hero.eyebrow"),
+    to: localePath({ name: "investors" }),
+  },
+  {
+    label: "GitHub",
+    icon: "i-simple-icons-github",
+    to: "https://github.com/opensya",
+    target: "_blank",
+  },
+]);
 </script>
 
 <template>
@@ -39,7 +71,10 @@ onUnmounted(() => {
       class="flex h-16 items-center justify- w-full gap-6 mx-auto px-4 sm:px-6 lg:px-8 text-default"
       :class="{ 'bg-default': scrollY > 50 }"
     >
-      <a href="#top" class="leading-[1.1] flex items-end gap-1.5 select-none">
+      <NuxtLink
+        :to="localePath('/')"
+        class="leading-[1.1] flex items-end gap-1.5 select-none hover:text-primary"
+      >
         <svg
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
@@ -69,13 +104,26 @@ onUnmounted(() => {
         <div class="font-notch font-semibold leading-[1.1] text-2xl">
           Opensya
         </div>
-      </a>
+      </NuxtLink>
 
-      <div class="flex items-center gap-2 ml-auto">
-        <UButton href="#contact" class="max-sm:hidden rounded-4xl">
-          contact
+      <UNavigationMenu
+        :items
+        class="w-full justify-end max-md:hidden"
+        trailing-icon=""
+        content-orientation="vertical"
+        variant="link"
+      >
+        <template #item-trailing> <div></div> </template>
+      </UNavigationMenu>
+
+      <!-- <div class="flex items-center gap-2 ml-auto">
+        <UButton
+          :to="$t('project.contactHref')"
+          class="max-sm:hidden rounded-4xl"
+        >
+          {{ $t("home.community.actions.contact") }}
         </UButton>
-      </div>
+      </div> -->
     </div>
   </header>
 </template>
