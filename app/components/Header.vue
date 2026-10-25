@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-const { lang, t } = useLang();
-
 const scrollY = ref(0);
 const isHidden = ref(false);
 
@@ -75,7 +73,7 @@ onUnmounted(() => {
 
       <div class="flex items-center gap-2 ml-auto">
         <UButton href="#contact" class="max-sm:hidden rounded-4xl">
-          {{ t.nav.start }}
+          contact
         </UButton>
       </div>
     </div>
