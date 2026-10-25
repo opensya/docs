@@ -142,11 +142,11 @@ onUnmounted(() =>
           />
 
           <div
-            class="flex items-center justify-center bg-default size-8 rounded-full absolute top-1/2 -left-3.5 border border-default"
+            class="flex items-center justify-center bg-info size-8 rounded-full absolute top-1/2 -left-3.5 border border-default"
           >
             <UIcon
               name="i-lucide-message-circle-check"
-              class="size-5"
+              class="size-4 text-white"
               :class="{ 'scale-110 -rotate-6': open }"
               aria-hidden="true"
             />

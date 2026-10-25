@@ -15,9 +15,26 @@ definePageMeta({ colorMode: "light" });
 const dimensions = ["products", "tools", "practice"];
 const projects = ["authen", "workspace", "onerh"];
 const tools = [
-  { key: "runable", url: "https://runablejs.com" },
-  { key: "syt", url: "https://github.com/domutala/syt" },
-  { key: "epizod", url: "https://github.com/domutala/epizod" },
+  {
+    key: "runable",
+    url: "https://runablejs.com",
+  },
+  {
+    key: "syt",
+    url: "https://github.com/domutala/syt",
+  },
+  {
+    key: "persistence",
+    url: "https://persistence.opensya.com/",
+  },
+  {
+    key: "epizod",
+    url: "https://github.com/domutala/epizod",
+  },
+  {
+    key: "vContent",
+    url: "https://github.com/domutala/v-content",
+  },
 ];
 </script>
 
@@ -54,14 +71,6 @@ const tools = [
               {{ $t("leadership.hero.intro") }}
             </p>
           </div>
-
-          <!-- <img
-            src="/images/domutala.jpeg"
-            :alt="$t('leadership.hero.photoAlt')"
-            width="400"
-            height="400"
-            class="size-40 object-cover md:size-56"
-          /> -->
         </div>
       </UContainer>
     </section>
@@ -206,10 +215,6 @@ const tools = [
           </p>
 
           <div class="mt-8 flex flex-wrap gap-3">
-            <UButton :to="localePath('/')">
-              {{ $t("leadership.closing.projects") }}
-            </UButton>
-
             <UButton
               to="https://github.com/opensya"
               target="_blank"
