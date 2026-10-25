@@ -32,32 +32,16 @@ const tools = [
         >
           <h1 class="font-notch leading-[1.1] text-[clamp(2rem,6.4vw,3.2rem)]">
             <span class="block relative z-1">
-              Nous construisons des infrastructures open source pour les
-              entreprises.
+              {{ $t("home.hero.title") }}
             </span>
           </h1>
 
           <p class="mt-5 text-lg font-light">
-            Chez Opensya, nous construisons des infrastructures open source pour
-            les entreprises. Des fondations technologiques solides, conçues pour
-            répondre aux besoins réels des organisations, accompagner leur
-            croissance et leur donner les moyens de bâtir leurs propres
-            solutions. Nous croyons que les outils essentiels au fonctionnement
-            des entreprises ne devraient pas être des boîtes noires, mais des
-            infrastructures que chacun peut comprendre, adapter et faire évoluer
-            librement.
+            {{ $t("home.hero.description") }}
           </p>
 
           <p class="mt-5 text-lg font-light">
-            Nous voulons donner aux entreprises la liberté de construire sans
-            limites. Des technologies ouvertes, modulaires et durables, qui leur
-            permettent de garder le contrôle de leurs outils, de leurs données
-            et de leur avenir numérique. Parce que l’innovation ne devrait pas
-            dépendre de solutions imposées, nous créons les fondations sur
-            lesquelles les entreprises peuvent inventer, connecter et faire
-            grandir leurs propres idées. Opensya ne construit pas simplement des
-            logiciels : nous construisons ce qui permet aux autres de
-            construire.
+            {{ $t("home.hero.highlight") }}
           </p>
         </UContainer>
       </div>
