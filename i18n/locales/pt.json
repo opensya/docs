@@ -467,5 +467,10 @@
     "contact": "Contacto",
     "rights": "Todos os direitos reservados.",
     "backToTop": "Voltar ao topo"
+  },
+  "contactBubble": {
+    "label": "Entre em contacto",
+    "line1": "Uma pergunta ou uma ideia?",
+    "line2": "Vamos conversar diretamente."
   }
 }

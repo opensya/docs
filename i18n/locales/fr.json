@@ -471,5 +471,11 @@
     "contact": "Contact",
     "rights": "Tous droits réservés.",
     "backToTop": "Haut de page"
+  },
+
+  "contactBubble": {
+    "label": "Me contacter",
+    "line1": "Une question, une idée ?",
+    "line2": "Écrivons-nous directement."
   }
 }
