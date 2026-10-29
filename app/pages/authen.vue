@@ -89,6 +89,48 @@ const envisaged = ["shared", "login", "methods"];
             <p class="mt-3">{{ $t(`authen.building.items.${item}`) }}</p>
           </li>
         </ul>
+
+        <!-- Schéma conceptuel : une identité, un socle, plusieurs applications. -->
+        <div class="mt-14 max-w-4xl">
+          <div
+            class="grid items-center gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:gap-6"
+          >
+            <div class="border border-default p-6 md:p-8">
+              <p class="font-notch text-xl md:text-2xl">
+                {{ $t("authen.building.diagram.identity") }}
+              </p>
+            </div>
+
+            <UIcon
+              name="i-lucide-move-right"
+              class="mx-auto size-6 rotate-90 text-muted md:rotate-0"
+              aria-hidden="true"
+            />
+
+            <div class="border border-default bg-accented/20 p-6 md:p-8">
+              <p class="font-notch text-xl md:text-2xl">Authen</p>
+            </div>
+
+            <UIcon
+              name="i-lucide-move-right"
+              class="mx-auto size-6 rotate-90 text-muted md:rotate-0"
+              aria-hidden="true"
+            />
+
+            <div class="flex flex-col gap-3">
+              <div class="border border-default p-4 md:p-5">
+                <p class="font-notch text-lg md:text-xl">
+                  {{ $t("home.projects.items.workspace.name") }}
+                </p>
+              </div>
+              <div class="border border-dashed border-default p-4 md:p-5">
+                <p class="font-notch text-lg text-muted md:text-xl">
+                  {{ $t("authen.building.diagram.otherApps") }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </UContainer>
     </section>
 

@@ -116,6 +116,14 @@
       }
     }
   },
+  "header": {
+    "menu": "Menu"
+  },
+  "carousel": {
+    "previous": "Anterior",
+    "next": "Seguinte"
+  },
+
   "project": {
     "title": "Projetos",
     "status": "Em desenvolvimento",
@@ -193,6 +201,10 @@
     "building": {
       "title": "O que pretendemos construir",
       "intro": "O Authen foi concebido como uma infraestrutura independente, utilizável pelo Opensya Workspace e por outras aplicações.",
+      "diagram": {
+        "identity": "A identidade",
+        "otherApps": "Outras aplicações"
+      },
       "items": {
         "shared": "Uma identidade utilizável em várias aplicações.",
         "login": "Experiências de início de sessão unificadas e, futuramente, cenários de single sign-on (SSO).",

@@ -116,6 +116,13 @@
       }
     }
   },
+  "header": {
+    "menu": "Menu"
+  },
+  "carousel": {
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
   "project": {
     "title": "Projets",
     "status": "En développement",
@@ -194,6 +201,10 @@
     "building": {
       "title": "Ce que nous cherchons à construire",
       "intro": "Authen est pensé comme une infrastructure indépendante, utilisable par Opensya Workspace comme par d’autres applications.",
+      "diagram": {
+        "identity": "L’identité",
+        "otherApps": "D’autres applications"
+      },
       "items": {
         "shared": "Une identité utilisable dans plusieurs applications.",
         "login": "Des expériences de connexion unifiées et, à terme, des scénarios de SSO.",
@@ -466,6 +477,7 @@
     "projects": "Projets",
     "tools": "Outils",
     "company": "Opensya",
+    "vision": "Vision",
     "leadership": "Leadership",
     "investors": "Investisseurs",
     "contact": "Contact",
@@ -477,5 +489,145 @@
     "label": "Me contacter",
     "line1": "Une question, une idée ?",
     "line2": "Écrivons-nous directement."
+  },
+
+  "vision": {
+    "title": "Notre vision",
+    "meta": {
+      "title": "Vision — Construire la technologie, depuis l’Afrique | Opensya",
+      "description": "Opensya construit des briques technologiques open source pour que le Sénégal et l’Afrique développent leurs propres technologies et que les entreprises gardent la maîtrise de leur avenir numérique."
+    },
+    "hero": {
+      "eyebrow": "Notre vision",
+      "title": "Construire des briques ouvertes qui peuvent s’assembler pour former des systèmes plus ambitieux.",
+      "description": "Depuis l’Afrique, nous construisons des infrastructures open source pour développer nos propres capacités technologiques, réduire nos dépendances et donner aux entreprises plus de maîtrise sur leur avenir numérique.",
+      "actions": {
+        "projects": "Découvrir nos projets",
+        "openSource": "Explorer l’open source"
+      }
+    },
+    "hero2": {
+      "eyebrow": "Notre vision",
+      "title": "Construire la technologie, depuis l’Afrique.",
+      "description": "Opensya développe des infrastructures open source pour que le Sénégal et l’Afrique puissent construire leurs propres technologies, et pour que les entreprises gardent la maîtrise de leur avenir numérique. C’est une ambition de long terme que nous réalisons pas à pas.",
+      "actions": {
+        "projects": "Découvrir nos projets",
+        "openSource": "Explorer l’open source"
+      }
+    },
+    "context": {
+      "eyebrow": "Le constat",
+      "title": "L’Afrique doit aussi construire",
+      "paragraphs": [
+        "Utiliser la technologie ne suffit pas. Pour faire ses propres choix, il faut aussi pouvoir comprendre, construire et faire évoluer les outils dont on dépend.",
+        "Le Sénégal et l’Afrique ont des développeurs, des entreprises et des idées. Pour transformer ce potentiel en solutions concrètes, nous devons aussi construire nos propres infrastructures et développer les moyens de les faire évoluer.",
+        "Il ne s’agit ni de tout reconstruire seuls, ni de tourner le dos aux technologies conçues ailleurs. Il s’agit de pouvoir choisir, construire et maîtriser nos propres solutions."
+      ],
+      "items": [
+        {
+          "title": "Choisir",
+          "description": "Comparer les solutions et retenir celle qui répond à nos besoins, sans dépendre d’un choix imposé."
+        },
+        {
+          "title": "Construire",
+          "description": "Créer nos propres outils lorsque les solutions existantes ne répondent pas à nos besoins."
+        },
+        {
+          "title": "Maîtriser",
+          "description": "Comprendre nos technologies pour pouvoir les adapter, les maintenir et les faire évoluer."
+        }
+      ]
+    },
+    "openSource": {
+      "eyebrow": "Notre conviction",
+      "title": "L’open source comme fondation",
+      "description": "L’open source ne se résume pas à la gratuité. C’est une manière de construire ensemble : le code est accessible, les connaissances se partagent et chacun peut s’appuyer sur le travail des autres pour aller plus loin.",
+      "items": [
+        {
+          "title": "Réutiliser les acquis",
+          "description": "Inutile de tout recommencer. Nous pouvons reprendre des briques existantes, les améliorer et construire de nouvelles solutions à partir de ce qui fonctionne déjà."
+        },
+        {
+          "title": "Progresser ensemble",
+          "description": "En partageant le code et les connaissances, nous permettons à d’autres développeurs et organisations de contribuer aux mêmes fondations et de les faire évoluer."
+        },
+        {
+          "title": "Comprendre et adapter",
+          "description": "Un code ouvert peut être étudié, modifié et adapté. Chacun peut comprendre son fonctionnement et le faire évoluer selon ses besoins."
+        }
+      ]
+    },
+    "approach": {
+      "eyebrow": "Notre méthode",
+      "title": "Construire brique par brique",
+      "description": "Plutôt que de multiplier les applications isolées, nous développons des briques technologiques ouvertes. Chacune répond à un besoin précis et peut être réutilisée, combinée et assemblée avec d’autres.",
+      "steps": [
+        {
+          "title": "Une brique",
+          "description": "Un composant ouvert qui répond à un besoin précis et peut servir de fondation à d’autres projets."
+        },
+        {
+          "title": "Plusieurs usages",
+          "description": "Une même brique peut servir plusieurs applications, développeurs, entreprises et organisations."
+        },
+        {
+          "title": "Des systèmes plus ambitieux",
+          "description": "En combinant ces briques, nous pouvons construire des systèmes plus complets et donner vie à de nouvelles idées."
+        }
+      ],
+      "conclusion": "Nous ne voulons pas seulement créer des produits. Nous voulons construire des fondations sur lesquelles d’autres pourront bâtir leurs propres solutions."
+    },
+    "ecosystem": {
+      "eyebrow": "Notre ambition",
+      "title": "Un écosystème technologique africain",
+      "description": "Nous voulons contribuer à un écosystème dans lequel les développeurs, les entreprises et les organisations peuvent s’appuyer sur des technologies construites depuis l’Afrique pour créer leurs propres solutions.",
+      "items": [
+        {
+          "title": "Des développeurs",
+          "description": "Qui disposent de fondations solides pour créer, partager et faire évoluer leurs propres outils."
+        },
+        {
+          "title": "Des entreprises",
+          "description": "Qui peuvent construire des solutions adaptées à leurs besoins et à leur réalité."
+        },
+        {
+          "title": "Des organisations",
+          "description": "Qui peuvent participer à l’évolution des technologies qu’elles utilisent et dont elles dépendent."
+        }
+      ],
+      "worldwide": "Construites depuis l’Afrique, ces technologies ont vocation à être utilisées, adaptées et enrichies partout dans le monde.",
+      "note": "Cet écosystème reste à construire. Nous voulons y contribuer progressivement, avec tous ceux qui souhaitent prendre part à cette ambition."
+    },
+    "sovereignty": {
+      "eyebrow": "Pour les entreprises",
+      "title": "La souveraineté, concrètement",
+      "description": "Pour une entreprise, la souveraineté technologique est concrète : c’est pouvoir garder la maîtrise des outils qui font fonctionner son activité et rester libre de ses choix.",
+      "items": [
+        {
+          "title": "Ses outils",
+          "description": "Les adapter à ses besoins et les faire évoluer avec son activité."
+        },
+        {
+          "title": "Ses données",
+          "description": "Savoir où elles sont, comment elles sont utilisées et pouvoir les récupérer."
+        },
+        {
+          "title": "Ses choix",
+          "description": "Faire évoluer ses systèmes et changer de fournisseur sans dépendre entièrement d’un seul acteur."
+        }
+      ],
+      "conclusion": "La souveraineté n’exclut ni la coopération ni les technologies venues d’ailleurs. Elle consiste à conserver la capacité de choisir, de décider et de faire évoluer ses outils."
+    },
+    "conclusion": {
+      "eyebrow": "La suite",
+      "title": "Construire la suite",
+      "statement": "Nous ne voulons pas seulement utiliser la technologie du monde. Nous voulons aussi contribuer à la construire, depuis l’Afrique, pour l’Afrique et pour le monde.",
+      "description": "Cette ambition se réalise brique par brique, grâce aux fondations que nous développons et à tous ceux qui pourront les utiliser, les améliorer et construire dessus.",
+      "actions": {
+        "projects": "Découvrir nos projets",
+        "github": "Explorer GitHub",
+        "contact": "Échanger avec nous"
+      }
+    }
   }
 }

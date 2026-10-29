@@ -29,14 +29,5 @@ export default defineAppConfig({
         variant: "subtle",
       },
     },
-    button: {
-      compoundVariants: [
-        {
-          color: "primary",
-          variant: "solid",
-          class: "shadow-md shadow-primary/30",
-        },
-      ],
-    },
   },
 });

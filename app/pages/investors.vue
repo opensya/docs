@@ -124,10 +124,13 @@ const facts = ["stage", "open", "claims"];
 
             <NuxtLink
               :to="localePath(`/${item}`)"
-              class="flex items-center gap-1 w-max text-primary"
+              class="arrow-link group"
             >
               {{ $t(`home.projects.items.${item}.action`) }}
-              <UIcon name="i-lucide-arrow-right" class="size-4" />
+              <UIcon
+                name="i-lucide-arrow-right"
+                class="size-4 transition-transform group-hover:translate-x-0.5 motion-reduce:transform-none"
+              />
             </NuxtLink>
           </li>
         </ul>

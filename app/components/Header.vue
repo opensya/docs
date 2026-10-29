@@ -5,6 +5,7 @@ const localePath = useLocalePath();
 
 const scrollY = ref(0);
 const isHidden = ref(false);
+const isMenuOpen = ref(false);
 
 let lastScrollY = 0;
 
@@ -44,9 +45,15 @@ const items = computed(() => {
     },
 
     {
+      label: $t("vision.title"),
+      to: localePath({ name: "vision" }),
+    },
+
+    {
       label: $t("leadership.title"),
       to: localePath({ name: "leadership" }),
     },
+
     {
       label: $t("investors.hero.eyebrow"),
       to: localePath({ name: "investors" }),
@@ -61,53 +68,39 @@ const items = computed(() => {
 
   return items;
 });
+
+const mobileItems = computed(() => [
+  ...["authen", "workspace", "onerh"].map((item) => ({
+    label: $t(`home.projects.items.${item}.name`),
+    to: localePath({ name: item }),
+  })),
+  { label: $t("vision.title"), to: localePath({ name: "vision" }) },
+  { label: $t("leadership.title"), to: localePath({ name: "leadership" }) },
+  { label: $t("investors.hero.eyebrow"), to: localePath({ name: "investors" }) },
+]);
 </script>
 
 <template>
   <header
     class="header flex items-center px-3"
     :class="{
-      'header--scrolled': scrollY > 50,
       'header--hidden': isHidden,
     }"
   >
     <div
-      class="flex h-16 items-center justify- w-full gap-6 mx-auto px-4 sm:px-6 lg:px-8 text-default"
-      :class="{ 'bg-default': scrollY > 50 }"
+      class="header-bar flex h-16 w-full items-center gap-6 px-4 sm:px-6 lg:px-8"
+      :class="{ 'header-bar--scrolled': scrollY > 50 }"
     >
       <NuxtLink
         :to="localePath('/')"
-        class="leading-[1.1] flex items-end gap-1.5 select-none hover:text-primary"
+        class="flex items-end gap-1.5 leading-[1.1] select-none hover:text-primary"
+        :aria-label="$t('footer.homeLabel')"
       >
-        <svg
-          version="1.0"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 336.000000 500.000000"
-          preserveAspectRatio="xMidYMid meet"
-          class="h-7 fill-current"
-        >
-          <g
-            transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
-            stroke="none"
-          >
-            <path
-              d="M1011 4462 c-853 -1771 -943 -1965 -965 -2059 -68 -300 66 -628 323
--788 37 -23 500 -245 699 -335 l62 -29 59 122 c32 67 164 343 293 612 485
-1011 1008 2111 1008 2120 0 2 -120 86 -267 186 -148 100 -424 290 -615 421
--190 131 -350 238 -355 238 -4 0 -114 -219 -242 -488z"
-            />
-            <path
-              d="M2189 3031 c-40 -75 -389 -767 -776 -1538 l-705 -1403 32 0 c28 0
-824 102 1535 196 110 14 205 31 212 38 13 12 641 1260 746 1481 81 171 103
-265 94 400 -8 120 -28 191 -83 303 -54 111 -142 210 -242 274 -37 23 -219 119
--405 213 l-337 172 -71 -136z"
-            />
-          </g>
-        </svg>
+        <AppLogo aria-hidden="true" />
 
-        <div class="font-notch font-semibold leading-[1.1] text-2xl">
+        <span class="font-notch font-semibold leading-[1.1] text-2xl">
           Opensya
-        </div>
+        </span>
       </NuxtLink>
 
       <UNavigationMenu
@@ -120,14 +113,51 @@ const items = computed(() => {
         <template #item-trailing> <div></div> </template>
       </UNavigationMenu>
 
-      <!-- <div class="flex items-center gap-2 ml-auto">
+      <UDrawer
+        v-model:open="isMenuOpen"
+        :ui="{
+          content: 'h-auto max-h-3/4',
+          body: 'p-0',
+        }"
+      >
         <UButton
-          :to="$t('project.contactHref')"
-          class="max-sm:hidden rounded-4xl"
-        >
-          {{ $t("home.community.actions.contact") }}
-        </UButton>
-      </div> -->
+          icon="i-lucide-menu"
+          color="neutral"
+          variant="ghost"
+          class="ml-auto md:hidden"
+          :aria-label="$t('header.menu')"
+          :aria-expanded="isMenuOpen"
+        />
+
+        <template #body>
+          <nav :aria-label="$t('header.menu')">
+            <ul class="divide-y divide-default">
+              <li v-for="item in mobileItems" :key="item.to">
+                <NuxtLink
+                  :to="item.to"
+                  class="flex items-center justify-between px-6 py-4 font-notch text-xl"
+                  active-class="text-primary"
+                  @click="isMenuOpen = false"
+                >
+                  {{ item.label }}
+                  <UIcon name="i-lucide-arrow-right" class="size-4" />
+                </NuxtLink>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/opensya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-between px-6 py-4 font-notch text-xl"
+                >
+                  GitHub
+                  <UIcon name="i-lucide-arrow-up-right" class="size-4" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </template>
+      </UDrawer>
     </div>
   </header>
 </template>
@@ -139,12 +169,31 @@ const items = computed(() => {
   left: 0;
   width: 100%;
   height: 80px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s var(--ease-out-expo);
   z-index: 1000;
+}
+
+.header-bar {
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 0.3s var(--ease-out-expo),
+    border-color 0.3s var(--ease-out-expo);
+}
+
+.header-bar--scrolled {
+  background-color: var(--ui-bg);
+  border-bottom-color: var(--ui-border);
 }
 
 /* Masque le header quand on scrolle vers le bas */
 .header--hidden {
   transform: translateY(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .header-bar {
+    transition: none;
+  }
 }
 </style>

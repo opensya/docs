@@ -116,6 +116,14 @@
       }
     }
   },
+  "header": {
+    "menu": "Menu"
+  },
+  "carousel": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+
   "project": {
     "title": "Projects",
     "status": "In development",
@@ -193,6 +201,10 @@
     "building": {
       "title": "What we aim to build",
       "intro": "Authen is designed as independent infrastructure that can be used by Opensya Workspace and other applications.",
+      "diagram": {
+        "identity": "Identity",
+        "otherApps": "Other applications"
+      },
       "items": {
         "shared": "An identity that can be used across multiple applications.",
         "login": "Unified sign-in experiences and, eventually, single sign-on (SSO) scenarios.",

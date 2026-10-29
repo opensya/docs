@@ -45,31 +45,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
             class="flex items-end gap-1.5 w-max select-none"
             :aria-label="$t('footer.homeLabel')"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 336.000000 500.000000"
-              preserveAspectRatio="xMidYMid meet"
-              class="h-7 fill-current"
-              aria-hidden="true"
-            >
-              <g
-                transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
-                stroke="none"
-              >
-                <path
-                  d="M1011 4462 c-853 -1771 -943 -1965 -965 -2059 -68 -300 66 -628 323
--788 37 -23 500 -245 699 -335 l62 -29 59 122 c32 67 164 343 293 612 485
-1011 1008 2111 1008 2120 0 2 -120 86 -267 186 -148 100 -424 290 -615 421
--190 131 -350 238 -355 238 -4 0 -114 -219 -242 -488z"
-                />
-                <path
-                  d="M2189 3031 c-40 -75 -389 -767 -776 -1538 l-705 -1403 32 0 c28 0
-824 102 1535 196 110 14 205 31 212 38 13 12 641 1260 746 1481 81 171 103
-265 94 400 -8 120 -28 191 -83 303 -54 111 -142 210 -242 274 -37 23 -219 119
--405 213 l-337 172 -71 -136z"
-                />
-              </g>
-            </svg>
+            <AppLogo class="h-7" aria-hidden="true" />
 
             <span class="font-notch font-semibold leading-[1.1] text-2xl">
               Opensya
@@ -97,7 +73,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
               <li v-for="item in projects" :key="item">
                 <NuxtLink
                   :to="localePath(`/${item}`)"
-                  class="hover:text-primary"
+                  class="transition-colors hover:text-primary"
                 >
                   {{ $t(`home.projects.items.${item}.name`) }}
                 </NuxtLink>
@@ -114,7 +90,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
                   :href="tool.url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1 hover:text-primary"
+                  class="inline-flex items-center gap-1 transition-colors hover:text-primary"
                 >
                   {{ $t(`home.tools.items.${tool.key}.name`) }}
                   <span class="sr-only">({{ $t("project.newTab") }})</span>
@@ -134,8 +110,16 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
             <ul class="mt-5 space-y-3">
               <li>
                 <NuxtLink
+                  :to="localePath({ name: 'vision' })"
+                  class="transition-colors hover:text-primary"
+                >
+                  {{ $t("footer.vision") }}
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
                   :to="localePath('/leadership')"
-                  class="hover:text-primary"
+                  class="transition-colors hover:text-primary"
                 >
                   {{ $t("footer.leadership") }}
                 </NuxtLink>
@@ -143,7 +127,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
               <li>
                 <NuxtLink
                   :to="localePath('/investors')"
-                  class="hover:text-primary"
+                  class="transition-colors hover:text-primary"
                 >
                   {{ $t("footer.investors") }}
                 </NuxtLink>
@@ -158,7 +142,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
               <li>
                 <a
                   :href="$t('project.contactHref')"
-                  class="hover:text-primary flex items-center gap-2"
+                  class="flex items-center gap-2 transition-colors hover:text-primary"
                 >
                   <UIcon
                     name="i-lucide-mail"
@@ -173,7 +157,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
                   href="https://github.com/opensya"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 hover:text-primary"
+                  class="inline-flex items-center gap-2 transition-colors hover:text-primary"
                 >
                   <UIcon
                     name="i-simple-icons-github"
