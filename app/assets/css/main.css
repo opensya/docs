@@ -38,6 +38,11 @@
   --text-hero: clamp(2.2rem, 8.4vw, 7.2rem);
   --text-hero--line-height: 0.95;
   --text-hero--letter-spacing: -0.04em;
+
+  --text-hero-sm: clamp(1.8rem, 6vw, 5rem);
+  --text-hero-sm--line-height: 1;
+  --text-hero-sm--letter-spacing: -0.035em;
+
   --text-h1: clamp(2rem, 5vw, 3.5rem);
   --text-h1--line-height: 1.05;
   --text-h1--letter-spacing: -0.03em;
@@ -259,7 +264,11 @@
   transition: color 150ms var(--ease-out-expo);
 
   &:hover {
-    color: color-mix(in oklab, var(--ui-primary) 80%, var(--ui-text-highlighted));
+    color: color-mix(
+      in oklab,
+      var(--ui-primary) 80%,
+      var(--ui-text-highlighted)
+    );
   }
 }
 

@@ -177,12 +177,11 @@ const toolItems = tools.map((tool) => ({
       </UContainer>
     </section>
 
-    <div class="sdfsdf max-w-300"></div>
     <ScrollRevealText
-      class="max-w-400 mx-auto px-4 sm:px-6 lg:px-8"
+      class="max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8"
       :text="$t('home.hero.title')"
       :ui="{
-        text: 'text-hero font-semibold font-notch max-w-400 text-left ',
+        text: 'text-hero-sm font-semibold font-notch max-w-400 text-left ',
       }"
     >
       <template #after="{ isFullyRevealed }">
