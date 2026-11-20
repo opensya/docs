@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ScrollRevealText from "~/components/ScrollRevealText.vue";
+
 useSeoMeta({
   ogTitle: "Opensya",
   ogDescription: $t("home.hero.title"),
@@ -51,6 +53,9 @@ const toolItems = tools.map((tool) => ({
         alt=""
         class="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 h-full"
       />
+
+      <!-- <div class="absolute inset-0 backdrop-blur bg-white/5"></div> -->
+
       <UContainer class="relative py-30">
         <h1 class="max-w-6xl font-notch text-">
           {{ $t("home.mission.highlight") }}
@@ -172,15 +177,47 @@ const toolItems = tools.map((tool) => ({
       </UContainer>
     </section>
 
+    <div class="sdfsdf max-w-300"></div>
+    <ScrollRevealText
+      class="max-w-400 mx-auto px-4 sm:px-6 lg:px-8"
+      :text="$t('home.hero.title')"
+      :ui="{
+        text: 'text-hero font-semibold font-notch max-w-400 text-left ',
+      }"
+    >
+      <template #after="{ isFullyRevealed }">
+        <div v-if="isFullyRevealed" class="mt-6">
+          <p class="text-lg font-light max-w-5xl">
+            {{ $t("home.hero.highlight") }}
+          </p>
+
+          <div class="mt-10 flex flex-wrap gap-3">
+            <UButton
+              to="https://github.com/opensya"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="solid"
+              color="primary"
+              size="xl"
+              :aria-label="`${$t('home.hero.actions.github')} (${$t('project.newTab')})`"
+            >
+              {{ $t("home.hero.actions.github") }}
+              <UIcon name="i-simple-icons-github" class="size-4" />
+            </UButton>
+          </div>
+        </div>
+      </template>
+    </ScrollRevealText>
+
     <!-- Hero -->
-    <section>
-      <UContainer class="pt-36 pb-20 sm:pt-44 sm:pb-28">
-        <h1 class="max-w-6xl font-notch text-">
+    <section class="py-0 hidden">
+      <UContainer class="py-0">
+        <!-- <h1 class="max-w-6xl font-notch text-">
           {{ $t("home.hero.title") }}
-        </h1>
+        </h1> -->
 
         <div
-          class="mt-10 grid max-w-5xl gap-6 text-lg font-light md:grid-cols-2 md:gap-16"
+          class="mt- grid max-w-5xl gap-6 text-lg font-light md:grid-cols-2 md:gap-16"
         >
           <p>
             {{ $t("home.hero.description") }}
@@ -214,7 +251,7 @@ const toolItems = tools.map((tool) => ({
     </section>
 
     <!-- Mission -->
-    <section class="py-24 sm:py-32">
+    <section class="py-24 sm:py-32 border-t border-default mt-15">
       <UContainer>
         <p class="section-eyebrow">{{ $t("home.mission.eyebrow") }}</p>
 

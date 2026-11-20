@@ -88,18 +88,18 @@ const mobileItems = computed(() => [
     class="header flex items-center py-0"
     :class="{
       'header--hidden': isHidden,
+      'header-bar--scrolled': scrollY > 50,
     }"
   >
     <div
-      class="header-bar flex h-full w-full items-center gap-6 px-4 sm:px-6 lg:px-8"
-      :class="{ 'header-bar--scrolled': scrollY > 50 }"
+      class="header-bar flex h-full w-full max-w-(--ui-container) mx-auto items-center gap-6 px-4 sm:px-6 lg:px-8"
     >
       <NuxtLink
         :to="localePath('/')"
         class="flex items-end gap-1.5 leading-[1.1] select-none hover:text-primary"
         :aria-label="$t('footer.homeLabel')"
       >
-        <AppLogo aria-hidden="true" class="text-primary" />
+        <AppLogo aria-hidden="true" class="text-" />
 
         <span class="font-notch font-semibold leading-[1.1] text-2xl">
           Opensya
@@ -185,7 +185,7 @@ const mobileItems = computed(() => [
 
 .header-bar--scrolled {
   background-color: var(--ui-bg);
-  border-bottom-color: var(--ui-border);
+  /* border-bottom-color: var(--ui-border); */
 }
 
 /* Masque le header quand on scrolle vers le bas */
