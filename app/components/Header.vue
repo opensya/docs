@@ -76,19 +76,22 @@ const mobileItems = computed(() => [
   })),
   { label: $t("vision.title"), to: localePath({ name: "vision" }) },
   { label: $t("leadership.title"), to: localePath({ name: "leadership" }) },
-  { label: $t("investors.hero.eyebrow"), to: localePath({ name: "investors" }) },
+  {
+    label: $t("investors.hero.eyebrow"),
+    to: localePath({ name: "investors" }),
+  },
 ]);
 </script>
 
 <template>
   <header
-    class="header flex items-center px-3"
+    class="header flex items-center py-0"
     :class="{
       'header--hidden': isHidden,
     }"
   >
     <div
-      class="header-bar flex h-16 w-full items-center gap-6 px-4 sm:px-6 lg:px-8"
+      class="header-bar flex h-full w-full items-center gap-6 px-4 sm:px-6 lg:px-8"
       :class="{ 'header-bar--scrolled': scrollY > 50 }"
     >
       <NuxtLink

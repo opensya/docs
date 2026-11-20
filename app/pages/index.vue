@@ -42,45 +42,6 @@ const toolItems = tools.map((tool) => ({
 
 <template>
   <main id="top">
-    <!-- Hero -->
-    <section>
-      <UContainer class="pt-36 pb-20 sm:pt-44 sm:pb-28">
-        <h1 class="max-w-6xl font-notch text-hero">
-          {{ $t("home.hero.title") }}
-        </h1>
-
-        <div
-          class="mt-10 grid max-w-5xl gap-6 text-lg font-light md:grid-cols-2 md:gap-16"
-        >
-          <p>
-            {{ $t("home.hero.description") }}
-          </p>
-
-          <p>
-            {{ $t("home.hero.highlight") }}
-          </p>
-        </div>
-
-        <div class="mt-10 flex flex-wrap gap-3">
-          <UButton to="#projets">
-            {{ $t("home.hero.actions.projects") }}
-          </UButton>
-
-          <UButton
-            to="https://github.com/opensya"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="outline"
-            color="neutral"
-            :aria-label="`${$t('home.hero.actions.github')} (${$t('project.newTab')})`"
-          >
-            {{ $t("home.hero.actions.github") }}
-            <UIcon name="i-simple-icons-github" class="size-4" />
-          </UButton>
-        </div>
-      </UContainer>
-    </section>
-
     <!-- Projets -->
     <section id="projets" class="scroll-mt-24 bg-accented/20 py-24 sm:py-32">
       <UContainer>
@@ -170,6 +131,47 @@ const toolItems = tools.map((tool) => ({
       </UContainer>
     </section>
 
+    <!-- Hero -->
+    <section>
+      <UContainer class="pt-36 pb-20 sm:pt-44 sm:pb-28">
+        <h1 class="max-w-6xl font-notch text-">
+          {{ $t("home.hero.title") }}
+        </h1>
+
+        <div
+          class="mt-10 grid max-w-5xl gap-6 text-lg font-light md:grid-cols-2 md:gap-16"
+        >
+          <p>
+            {{ $t("home.hero.description") }}
+          </p>
+
+          <p>
+            {{ $t("home.hero.highlight") }}
+          </p>
+        </div>
+
+        <div class="mt-10 flex flex-wrap gap-3">
+          <!-- 
+          <UButton to="#projets">
+            {{ $t("home.hero.actions.projects") }}
+          </UButton> 
+         -->
+
+          <UButton
+            to="https://github.com/opensya"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="outline"
+            color="neutral"
+            :aria-label="`${$t('home.hero.actions.github')} (${$t('project.newTab')})`"
+          >
+            {{ $t("home.hero.actions.github") }}
+            <UIcon name="i-simple-icons-github" class="size-4" />
+          </UButton>
+        </div>
+      </UContainer>
+    </section>
+
     <!-- Mission -->
     <section class="py-24 sm:py-32">
       <UContainer>
@@ -237,42 +239,42 @@ const toolItems = tools.map((tool) => ({
           </p>
         </div>
 
-        <UAccordion
-          :items="toolItems"
-          type="single"
-          default-value="runable"
-          class="mt-14 border-t border-default"
-          :ui="{
-            item: 'border-b border-default',
-            trigger: 'py-6 text-xl md:text-2xl font-notch',
-            content: 'pb-6',
-          }"
-        >
-          <template #content="{ item }">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-5">
+          <article
+            v-for="{ key, label, url } in toolItems"
+            :key="key"
+            class="group bg-default p-5 md:p-8 flex flex-col border border-default"
+          >
+            <h3 class="font-notch text-2xl">
+              {{ label }}
+              <!-- {{ $t(`home.projects.items.${key}.name`) }} -->
+            </h3>
             <p class="text-sm text-muted">
-              {{ $t(`home.tools.items.${item.key}.category`) }}
+              {{ $t(`home.tools.items.${key}.category`) }}
             </p>
 
-            <p class="mt-3 max-w-3xl text-muted">
-              {{ $t(`home.tools.items.${item.key}.description`) }}
+            <p class="mt-5">
+              {{ $t(`home.tools.items.${key}.description`) }}
             </p>
 
-            <a
-              :href="item.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="arrow-link group mt-5"
-            >
-              {{ $t(`home.tools.items.${item.key}.action`) }}
-              <span class="sr-only">({{ $t("project.newTab") }})</span>
-              <UIcon
-                name="i-lucide-arrow-up-right"
-                class="size-4 transition-transform group-hover:translate-x-0.5 motion-reduce:transform-none"
-                aria-hidden="true"
-              />
-            </a>
-          </template>
-        </UAccordion>
+            <div class="mt-auto">
+              <a
+                :href="url"
+                class="arrow-link mt-5"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t(`home.tools.items.${key}.action`) }}
+
+                <UIcon
+                  name="i-lucide-arrow-up-right"
+                  class="size-4 transition-transform group-hover:translate-x-0.5 motion-reduce:transform-none"
+                  aria-hidden="true"
+                />
+              </a>
+            </div>
+          </article>
+        </div>
       </UContainer>
     </section>
 
