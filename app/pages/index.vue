@@ -90,30 +90,37 @@ const toolItems = tools.map((tool) => ({
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <article
+          <UPageCard
             v-for="{ key } in projects"
             :key="key"
-            class="group bg-default p-5 md:p-8 flex flex-col"
+            class="rounded-none border-0 group"
+            orientation="vertical"
+            spotlight
+            spotlight-color="primary"
           >
-            <h3 class="font-notch text-2xl">
-              {{ $t(`home.projects.items.${key}.name`) }}
-            </h3>
+            <template #default>
+              <div class="flex flex-col">
+                <h3 class="font-notch text-2xl">
+                  {{ $t(`home.projects.items.${key}.name`) }}
+                </h3>
 
-            <p class="mt-5">
-              {{ $t(`home.projects.items.${key}.description`) }}
-            </p>
+                <p class="mt-5">
+                  {{ $t(`home.projects.items.${key}.description`) }}
+                </p>
 
-            <div class="mt-auto">
-              <NuxtLink :to="localePath(`/${key}`)" class="arrow-link mt-5">
-                {{ $t(`home.projects.items.${key}.action`) }}
+                <div class="mt-auto">
+                  <NuxtLink :to="localePath(`/${key}`)" class="arrow-link mt-5">
+                    {{ $t(`home.projects.items.${key}.action`) }}
 
-                <UIcon
-                  name="i-lucide-arrow-right"
-                  class="size-4 transition-transform group-hover:translate-x-0.5 motion-reduce:transform-none"
-                />
-              </NuxtLink>
-            </div>
-          </article>
+                    <UIcon
+                      name="i-lucide-arrow-right"
+                      class="size-4 transition-transform group-hover:translate-x-0.5 motion-reduce:transform-none"
+                    />
+                  </NuxtLink>
+                </div>
+              </div>
+            </template>
+          </UPageCard>
         </div>
 
         <!-- <UCarousel
