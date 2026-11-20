@@ -44,35 +44,35 @@ const toolItems = tools.map((tool) => ({
   <main id="top">
     <!-- Hero -->
     <section
-      class="relative md:min-h-screen flex flex-col justify-end bg-white"
+      class="relative md:min-h-screen flex flex-col justify-center bg-white"
     >
       <img
         src="/images/n1.gif"
         alt=""
-        class="pointer-events-none absolute top-1/2 left-1/2 -translate-1/2 h-full"
+        class="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 h-full"
       />
       <UContainer class="relative py-30">
-        <div class="mt-10 flex flex-wrap gap-3 mb-5">
-          <UButton to="#projets" size="xl">
-            {{ $t("home.hero.actions.projects") }}
-          </UButton>
+        <h1 class="max-w-6xl font-notch text-">
+          {{ $t("home.mission.highlight") }}
+        </h1>
 
+        <div class="mt-10 flex flex-wrap gap-3">
           <UButton
             to="mailto:mamadoutalladia@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            variant="outline"
-            color="neutral"
+            variant="solid"
+            color="primary"
             size="xl"
           >
-            {{ $t("home.hero.actions.mail") }}
             <UIcon name="i-lucide-message-circle-check" class="size-4" />
+            {{ $t("home.hero.actions.mail") }}
+          </UButton>
+
+          <UButton to="#projets" size="xl" variant="outline" color="neutral">
+            {{ $t("home.hero.actions.projects") }}
           </UButton>
         </div>
-
-        <h1 class="max-w-6xl font-notch text-">
-          {{ $t("home.mission.highlight") }}
-        </h1>
       </UContainer>
     </section>
 
