@@ -99,7 +99,7 @@ const mobileItems = computed(() => [
         class="flex items-end gap-1.5 leading-[1.1] select-none hover:text-primary"
         :aria-label="$t('footer.homeLabel')"
       >
-        <AppLogo aria-hidden="true" />
+        <AppLogo aria-hidden="true" class="text-primary" />
 
         <span class="font-notch font-semibold leading-[1.1] text-2xl">
           Opensya
@@ -171,7 +171,7 @@ const mobileItems = computed(() => [
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 64px;
   transition: transform 0.3s var(--ease-out-expo);
   z-index: 1000;
 }
