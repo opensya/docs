@@ -1,7 +1,119 @@
 {
   "home": {
+    "meta": {
+      "title": "Opensya — Des briques logicielles ouvertes",
+      "description": "Découvrez les briques logicielles ouvertes d’Opensya, conçues pour s’intégrer à vos projets et vous laisser la maîtrise de vos applications."
+    },
+    "hero": {
+      "title": "Des briques logicielles ouvertes pour garder la maîtrise de vos applications",
+      "description": "Chaque brique répond à un besoin précis. Vous pouvez l’intégrer seule à un projet existant ou l’associer à d’autres pour construire une application autour de vos choix techniques.",
+      "primaryAction": "Découvrir les briques",
+      "secondaryAction": "Lire le manifeste"
+    },
+    "projects": {
+      "title": "Ce que nous construisons",
+      "lead": "Comment partager des comptes entre plusieurs applications ? Comment appliquer les mêmes règles à vos données, quel que soit le point d’entrée ?",
+      "description": "Ce sont des problèmes que l’on retrouve d’un projet à l’autre. Nous travaillons sur les briques qui permettent d’y répondre.",
+      "items": {
+        "persistence": {
+          "name": "OpenSya Persistence",
+          "tagline": "Appliquez les mêmes règles à vos données, même lorsque le point d’entrée change.",
+          "description": "OpenSya Persistence est un moteur de persistance pour TypeScript. Il s’appuie sur une définition commune de vos données pour gérer leur validation, leurs relations et les règles qui s’appliquent à chaque opération.",
+          "action": "Lire la documentation de Persistence"
+        },
+        "authen": {
+          "name": "Authen",
+          "tagline": "Un même compte pour plusieurs applications.",
+          "description": "Authen est un projet d’infrastructure d’identité et d’authentification. Nous le concevons pour que plusieurs applications puissent partager la même identité utilisateur, tout en laissant à l’équipe le choix des méthodes de connexion.",
+          "action": "Découvrir le projet Authen"
+        }
+      }
+    },
+    "architecture": {
+      "title": "Ce qui rend une brique indépendante",
+      "example": "Prenons une règle métier simple. Une demande de congé doit être approuvée avant d’être comptabilisée. Cette règle reste la même, qu’on approuve la demande depuis un portail RH ou depuis une application mobile.",
+      "description": "Nous concevons nos briques en séparant les règles qu’elles exécutent des outils qui les entourent, comme l’interface, le framework ou la base de données. Cette séparation donne à chaque équipe la possibilité de reprendre une brique dans un autre projet et d’adapter son intégration à une nouvelle architecture."
+    },
+    "developerTools": {
+      "title": "Des outils pour le travail quotidien des développeurs",
+      "description": "L’indépendance technique se joue aussi dans des décisions très concrètes. Où définir les règles d’un formulaire ? Quel serveur utiliser avec Vue ? Comment vérifier la configuration d’un projet TypeScript ?",
+
+      "items": {
+        "runable": {
+          "name": "Runable",
+          "category": "Framework Vue.js",
+          "description": "Apporte les conventions de {vueLink} pour le routage et le rendu côté serveur, avec le serveur que vous choisissez.",
+          "action": "Découvrir Runable"
+        },
+
+        "epizod": {
+          "name": "ēpizod",
+          "category": "Formulaires et validation",
+          "description": "Permet de décrire un formulaire et ses règles dans un format réutilisable côté client et côté serveur.",
+          "action": "Découvrir ēpizod sur GitHub"
+        },
+        "syt": {
+          "name": "Syt",
+          "category": "Configuration TypeScript",
+          "description": "Aide à construire un tsconfig.json avec l’autocomplétion et la validation de sa configuration.",
+          "action": "Découvrir Syt sur GitHub"
+        }
+      },
+
+      "action": "Explorer les outils de développement"
+    },
+
+    "durability": {
+      "title": "Construire pour durer",
+      "description": "Une brique doit rester utile quand le projet évolue ou qu’une autre équipe en reprend la maintenance. C’est pour cela que nous privilégions un code lisible, que nous documentons les décisions qui comptent et que nous corrigeons les problèmes révélés par l’usage.",
+      "action": "Lire le manifeste"
+    },
+    "origins": {
+      "title": "Opensya est née au Sénégal",
+      "description": "Nous voulons contribuer, depuis le Sénégal, aux fondations logicielles sur lesquelles des équipes du monde entier peuvent s’appuyer. L’ouverture donne un sens concret à cette ambition. Une équipe peut lire le code d’une brique, comprendre les choix qui l’ont façonnée et l’adapter à un besoin que nous n’avions pas prévu.",
+      "sovereignty": "C’est aussi notre façon de penser la souveraineté numérique. Elle commence par la capacité de comprendre les outils dont on dépend, de choisir ceux que l’on adopte et de contribuer à leur évolution.",
+      "action": "Lire le manifeste"
+    },
+
+    "insideOpensya": {
+      "title": "Inside Opensya",
+      "description": "Une brique prend forme à travers des décisions, des essais et des remises en question. Dans Inside Opensya, nous partageons ce que nous construisons, les raisons de nos choix et ce que les premiers usages nous amènent à revoir.",
+      "action": "Lire le journal de construction"
+    },
+
+    "approach": {
+      "eyebrow": "Notre approche",
+      "title": "Évaluez une brique avant de l’adopter",
+      "description": "Commencez par le besoin de votre projet. Le code et la documentation de la brique vous aident à comprendre ce qu’elle couvre et ce que son intégration demande.",
+      "items": {
+        "open": {
+          "title": "Vérifier ce qu’elle couvre",
+          "description": "Consultez les exemples pour voir si la brique prend en charge le cas que vous cherchez à résoudre."
+        },
+        "modular": {
+          "title": "Examiner son intégration",
+          "description": "Repérez les dépendances et les points de connexion avec votre application."
+        },
+        "sustainable": {
+          "title": "Comprendre ce que vous pouvez adapter",
+          "description": "Explorez le code pour voir ce qui peut être configuré et ce qui demanderait une modification."
+        }
+      }
+    },
+
+    "contribute": {
+      "highlight": "Vos projets nous montrent ce que nos briques doivent encore apprendre à faire.",
+      "title": "Aidez-nous à améliorer nos outils",
+      "eyebrow": "Construisons ensemble",
+      "description": "Un exemple vous aurait aidé à démarrer ? Une intégration vous a bloqué ? Ouvrez une issue dans le dépôt concerné et décrivez ce que vous essayiez de faire.",
+      "action": "Trouver le dépôt de votre outil"
+    }
+  },
+  "home_0": {
     "hero": {
       "title": "Nous construisons des infrastructures open source pour les entreprises.",
+      "title_2": "Des briques logicielles ouvertes pour garder la maîtrise de vos applications",
+      "description_2": "Chaque brique répond à un besoin précis. Vous pouvez l’intégrer seule à un projet existant ou l’associer à d’autres pour construire une application autour de vos choix techniques.",
       "description": "Chez Opensya, nous construisons des infrastructures open source pour les entreprises. Des fondations technologiques solides, conçues pour répondre aux besoins réels des organisations, accompagner leur croissance et leur donner les moyens de bâtir leurs propres solutions. Nous croyons que les outils essentiels au fonctionnement des entreprises ne devraient pas être des boîtes noires, mais des infrastructures que chacun peut comprendre, adapter et faire évoluer librement.",
       "highlight": "Nous voulons donner aux entreprises la liberté de construire sans limites. Des technologies ouvertes, modulaires et durables, qui leur permettent de garder le contrôle de leurs outils, de leurs données et de leur avenir numérique. Parce que l’innovation ne devrait pas dépendre de solutions imposées, nous créons les fondations sur lesquelles les entreprises peuvent inventer, connecter et faire grandir leurs propres idées. Opensya ne construit pas simplement des logiciels : nous construisons ce qui permet aux autres de construire.",
       "actions": {

@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+@import "./liquid.scss";
+
 /* Fonts — copy webfonts/*[wght].woff2 to public/fonts/ as StackSans{Text,Headline,Notch}.woff2 */
 @font-face {
   font-family: "Stack Sans Text";
@@ -93,6 +95,7 @@
 
   /* Semantic tokens (light) */
   --color-bg: var(--color-ink-50);
+  --color-bg: var(--color-white);
   --color-surface: #fff;
   --color-surface-muted: var(--color-ink-100);
   --color-border: var(--color-ink-200);
@@ -125,6 +128,7 @@
 
 :root {
   --ui-container: 72rem;
+  --ui-container: 92rem;
 }
 
 /* Dark mode: .dark on <html> */
@@ -274,7 +278,7 @@
 
 @utility container-page {
   width: 100%;
-  max-width: 70rem;
+  max-width: var(--ui-container);
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vw, 3rem);
 }

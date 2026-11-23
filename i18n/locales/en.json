@@ -1,5 +1,109 @@
 {
   "home": {
+    "meta": {
+      "title": "Opensya — Open software building blocks",
+      "description": "Explore Opensya’s open software building blocks, designed to fit into your projects and help you stay in control of your applications."
+    },
+    "hero": {
+      "title": "Open software building blocks that keep you in control of your applications",
+      "description": "Each building block addresses a specific need. You can add it on its own to an existing project or combine it with others to build an application around your own technical choices.",
+      "primaryAction": "Explore the building blocks",
+      "secondaryAction": "Read the manifesto"
+    },
+    "projects": {
+      "title": "What we’re building",
+      "lead": "How do you share accounts across applications? How do you apply the same rules to your data, regardless of the entry point?",
+      "description": "These problems come up from one project to the next. We’re working on building blocks to address them.",
+      "items": {
+        "persistence": {
+          "name": "OpenSya Persistence",
+          "tagline": "Apply the same rules to your data, even when the entry point changes.",
+          "description": "OpenSya Persistence is a persistence engine for TypeScript. It uses a shared definition of your data to manage validation, relationships, and the rules that apply to each operation.",
+          "action": "Read the Persistence documentation"
+        },
+        "authen": {
+          "name": "Authen",
+          "tagline": "One account for multiple applications.",
+          "description": "Authen is an identity and authentication infrastructure project. We’re designing it so that multiple applications can share a user identity while teams retain the choice of sign-in methods.",
+          "action": "Explore the Authen project"
+        }
+      }
+    },
+    "architecture": {
+      "title": "What makes a building block independent",
+      "example": "Consider a simple business rule. A leave request must be approved before it counts toward an employee’s leave balance. The rule is the same whether the request is approved through an HR portal or a mobile app.",
+      "description": "We design our building blocks to separate the rules they enforce from the tools around them, such as the user interface, framework, or database. This separation lets teams reuse a building block in another project and adapt how it integrates with a new architecture."
+    },
+    "developerTools": {
+      "title": "Tools for everyday development work",
+      "description": "Technical independence comes down to everyday decisions, too. Where do you define a form’s rules? Which server do you use with Vue? How do you check a TypeScript project’s configuration?",
+      "items": {
+        "runable": {
+          "name": "Runable",
+          "category": "Vue.js framework",
+          "description": "Brings {vueLink} conventions for routing and server-side rendering to the server of your choice.",
+          "action": "Explore Runable"
+        },
+        "epizod": {
+          "name": "ēpizod",
+          "category": "Forms and validation",
+          "description": "Lets you describe a form and its rules in a format you can reuse on both the client and the server.",
+          "action": "Explore ēpizod on GitHub"
+        },
+        "syt": {
+          "name": "Syt",
+          "category": "TypeScript configuration",
+          "description": "Helps you build a tsconfig.json file with autocomplete and configuration validation.",
+          "action": "Explore Syt on GitHub"
+        }
+      },
+      "action": "Explore the developer tools"
+    },
+    "durability": {
+      "title": "Building to last",
+      "description": "A building block should remain useful as the project evolves or another team takes over maintenance. That’s why we prioritize readable code, document the decisions that matter, and fix the problems that emerge in use.",
+      "action": "Read the manifesto"
+    },
+    "origins": {
+      "title": "Opensya was founded in Senegal",
+      "description": "From Senegal, we want to contribute to the software foundations that teams around the world can build on. Openness makes that ambition tangible. A team can read a building block’s code, understand the decisions that shaped it, and adapt it to a need we hadn’t anticipated.",
+      "sovereignty": "That’s also how we think about digital sovereignty. It starts with the ability to understand the tools you rely on, choose which ones you adopt, and contribute to how they evolve.",
+      "action": "Read the manifesto"
+    },
+    "insideOpensya": {
+      "title": "Inside Opensya",
+      "description": "A building block takes shape through decisions, experiments, and rethinking earlier choices. In Inside Opensya, we share what we’re building, why we make the choices we do, and what early use leads us to reconsider.",
+      "action": "Read the development journal"
+    },
+    "approach": {
+      "eyebrow": "Our approach",
+      "title": "Evaluate a building block before you adopt it",
+      "description": "Start with what your project needs. The building block’s code and documentation help you understand what it covers and what it takes to integrate it.",
+      "items": {
+        "open": {
+          "title": "Check what it covers",
+          "description": "Look through the examples to see whether the building block supports your use case."
+        },
+        "modular": {
+          "title": "Review how it integrates",
+          "description": "Identify its dependencies and where it connects to your application."
+        },
+        "sustainable": {
+          "title": "See what you can adapt",
+          "description": "Explore the code to see what you can configure and what would require a code change."
+        }
+      }
+    },
+    "contribute": {
+      "highlight": "Your projects show us what our building blocks still need to do.",
+      "title": "Help us improve our tools",
+      "eyebrow": "Let’s build together",
+      "description": "Would an example have helped you get started? Did you get stuck during integration? Open an issue in the relevant repository and describe what you were trying to do.",
+      "action": "Find your tool’s repository"
+    }
+  },
+
+  "home_0": {
     "hero": {
       "title": "We build open-source infrastructure for businesses.",
       "description": "At Opensya, we build open-source infrastructure for businesses. Solid technological foundations designed to meet organizations’ real needs, support their growth, and empower them to build their own solutions. We believe the tools businesses rely on should not be black boxes, but infrastructure that anyone can understand, adapt, and evolve freely.",

@@ -1,5 +1,109 @@
 {
   "home": {
+    "meta": {
+      "title": "Opensya — Blocos de software abertos",
+      "description": "Descubra os blocos de software abertos da Opensya, concebidos para se integrarem nos seus projetos e lhe permitirem manter o controlo das suas aplicações."
+    },
+    "hero": {
+      "title": "Blocos de software abertos para manter o controlo das suas aplicações",
+      "description": "Cada bloco responde a uma necessidade específica. Pode integrá-lo separadamente num projeto existente ou combiná-lo com outros para criar uma aplicação de acordo com as suas escolhas técnicas.",
+      "primaryAction": "Descobrir os blocos",
+      "secondaryAction": "Ler o manifesto"
+    },
+    "projects": {
+      "title": "O que estamos a construir",
+      "lead": "Como partilhar contas entre várias aplicações? Como aplicar as mesmas regras aos seus dados, independentemente do ponto de entrada?",
+      "description": "Estes problemas surgem em diferentes projetos. Estamos a desenvolver blocos que ajudam a resolvê-los.",
+      "items": {
+        "persistence": {
+          "name": "OpenSya Persistence",
+          "tagline": "Aplique as mesmas regras aos seus dados, mesmo quando o ponto de entrada muda.",
+          "description": "O OpenSya Persistence é um motor de persistência para TypeScript. Usa uma definição comum dos seus dados para gerir a validação, as relações e as regras aplicáveis a cada operação.",
+          "action": "Ler a documentação do Persistence"
+        },
+        "authen": {
+          "name": "Authen",
+          "tagline": "Uma só conta para várias aplicações.",
+          "description": "O Authen é um projeto de infraestrutura de identidade e autenticação. Estamos a desenvolvê-lo para que várias aplicações possam partilhar a mesma identidade de utilizador e para que cada equipa possa escolher os métodos de início de sessão.",
+          "action": "Conhecer o projeto Authen"
+        }
+      }
+    },
+    "architecture": {
+      "title": "O que torna um bloco independente",
+      "example": "Pense numa regra de negócio simples. Um pedido de férias tem de ser aprovado antes de ser contabilizado. A regra é a mesma, quer o pedido seja aprovado num portal de RH ou numa aplicação móvel.",
+      "description": "Concebemos os nossos blocos de forma a separar as regras que aplicam das ferramentas que os rodeiam, como a interface, a framework ou a base de dados. Esta separação permite a cada equipa reutilizar um bloco noutro projeto e adaptar a sua integração a uma nova arquitetura."
+    },
+    "developerTools": {
+      "title": "Ferramentas para o dia a dia dos programadores",
+      "description": "A independência técnica também passa por decisões concretas. Onde definir as regras de um formulário? Que servidor utilizar com Vue? Como verificar a configuração de um projeto TypeScript?",
+      "items": {
+        "runable": {
+          "name": "Runable",
+          "category": "Framework Vue.js",
+          "description": "Traz as convenções de {vueLink} para o encaminhamento de rotas e a renderização no servidor, com o servidor que escolher.",
+          "action": "Descobrir o Runable"
+        },
+        "epizod": {
+          "name": "ēpizod",
+          "category": "Formulários e validação",
+          "description": "Permite descrever um formulário e as suas regras num formato reutilizável no cliente e no servidor.",
+          "action": "Descobrir o ēpizod no GitHub"
+        },
+        "syt": {
+          "name": "Syt",
+          "category": "Configuração TypeScript",
+          "description": "Ajuda a criar um ficheiro tsconfig.json com preenchimento automático e validação da configuração.",
+          "action": "Descobrir o Syt no GitHub"
+        }
+      },
+      "action": "Explorar as ferramentas de desenvolvimento"
+    },
+    "durability": {
+      "title": "Construir para durar",
+      "description": "Um bloco deve continuar a ser útil à medida que o projeto evolui ou quando outra equipa assume a sua manutenção. Por isso, damos prioridade a código legível, documentamos as decisões que importam e corrigimos os problemas que surgem na utilização.",
+      "action": "Ler o manifesto"
+    },
+    "origins": {
+      "title": "A Opensya nasceu no Senegal",
+      "description": "A partir do Senegal, queremos contribuir para as fundações de software em que equipas de todo o mundo se podem apoiar. A abertura dá um sentido concreto a esta ambição. Uma equipa pode ler o código de um bloco, compreender as decisões que o moldaram e adaptá-lo a uma necessidade que não tínhamos previsto.",
+      "sovereignty": "É assim que entendemos a soberania digital. Começa pela capacidade de compreender as ferramentas de que dependemos, escolher as que adotamos e contribuir para a sua evolução.",
+      "action": "Ler o manifesto"
+    },
+    "insideOpensya": {
+      "title": "Inside Opensya",
+      "description": "Um bloco ganha forma através de decisões, experiências e escolhas que voltamos a pôr em causa. No Inside Opensya, partilhamos o que estamos a construir, as razões das nossas escolhas e o que as primeiras experiências de utilização nos levam a rever.",
+      "action": "Ler o diário de desenvolvimento"
+    },
+    "approach": {
+      "eyebrow": "A nossa abordagem",
+      "title": "Avalie um bloco antes de o adotar",
+      "description": "Comece pela necessidade do seu projeto. O código e a documentação do bloco ajudam a perceber o que este abrange e o que é necessário para o integrar.",
+      "items": {
+        "open": {
+          "title": "Verificar o que abrange",
+          "description": "Consulte os exemplos para perceber se o bloco dá resposta ao seu caso de utilização."
+        },
+        "modular": {
+          "title": "Analisar a integração",
+          "description": "Identifique as dependências e os pontos de ligação à sua aplicação."
+        },
+        "sustainable": {
+          "title": "Perceber o que pode adaptar",
+          "description": "Explore o código para perceber o que pode configurar e o que exigiria uma alteração ao código."
+        }
+      }
+    },
+    "contribute": {
+      "eyebrow": "Vamos construir juntos",
+      "highlight": "Os seus projetos mostram-nos o que falta aos nossos blocos para responder a novos usos.",
+      "title": "Ajude-nos a melhorar as nossas ferramentas",
+      "description": "Um exemplo teria ajudado a começar? Encontrou um obstáculo durante a integração? Abra uma issue no repositório correspondente e descreva o que estava a tentar fazer.",
+      "action": "Encontrar o repositório da sua ferramenta"
+    }
+  },
+
+  "home_0": {
     "hero": {
       "title": "Construímos infraestruturas de código aberto para empresas.",
       "description": "Na Opensya, construímos infraestruturas de código aberto para empresas. Bases tecnológicas sólidas, concebidas para responder às necessidades reais das organizações, apoiar o seu crescimento e permitir-lhes criar as suas próprias soluções. Acreditamos que as ferramentas essenciais às empresas não devem ser caixas-pretas, mas infraestruturas que todos possam compreender, adaptar e fazer evoluir livremente.",

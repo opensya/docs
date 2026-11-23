@@ -2,6 +2,7 @@
 import type { NavigationMenuItem } from "@nuxt/ui";
 
 const localePath = useLocalePath();
+const route = useRoute();
 
 const scrollY = ref(0);
 const isHidden = ref(false);
@@ -58,12 +59,12 @@ const items = computed(() => {
       label: $t("investors.hero.eyebrow"),
       to: localePath({ name: "investors" }),
     },
-    {
-      label: "GitHub",
-      icon: "i-simple-icons-github",
-      to: "https://github.com/opensya",
-      target: "_blank",
-    },
+    // {
+    //   label: "GitHub",
+    //   icon: "i-simple-icons-github",
+    //   to: "https://github.com/opensya",
+    //   target: "_blank",
+    // },
   ];
 
   return items;
@@ -81,14 +82,19 @@ const mobileItems = computed(() => [
     to: localePath({ name: "investors" }),
   },
 ]);
+
+const isHome = computed(() => {
+  return route.path === localePath({ name: "index" });
+});
 </script>
 
 <template>
   <header
-    class="header flex items-center py-0"
+    class="header flex items-center py-0 border-b border-transparent"
     :class="{
-      'header--hidden': isHidden,
-      'header-bar--scrolled': scrollY > 50,
+      'header--hiddend': isHidden,
+      'header-bar--scrolled border-default!': scrollY > 50,
+      'is-home': isHome,
     }"
   >
     <div
@@ -99,7 +105,7 @@ const mobileItems = computed(() => [
         class="flex items-end gap-1.5 leading-[1.1] select-none hover:text-primary"
         :aria-label="$t('footer.homeLabel')"
       >
-        <AppLogo aria-hidden="true" class="text-" />
+        <AppLogo aria-hidden="true" class="text- h-8" />
 
         <span class="font-notch font-semibold leading-[1.1] text-2xl">
           Opensya
@@ -108,13 +114,39 @@ const mobileItems = computed(() => [
 
       <UNavigationMenu
         :items
-        class="w-full justify-end max-md:hidden"
+        class="w- ml-10 justify-end max-md:hidden"
         trailing-icon=""
         content-orientation="vertical"
         variant="link"
       >
         <template #item-trailing> <div></div> </template>
       </UNavigationMenu>
+
+      <div class="ml-auto max-md:hidden flex items-center gap-2">
+        <UButton
+          href="https://github.com/opensya"
+          target="_blank"
+          rel="noopener noreferrer"
+          icon="i-simple-icons-github"
+          color="neutral"
+          variant="ghost"
+          size="xl"
+        >
+          GitHub
+        </UButton>
+
+        <UButton
+          to="mailto:mamadoutalladia@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+          variant="solid"
+          size="xl"
+          class="rounded-4xl"
+        >
+          Contactez-nous
+        </UButton>
+      </div>
 
       <UDrawer
         v-model:open="isMenuOpen"
@@ -165,15 +197,19 @@ const mobileItems = computed(() => [
   </header>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .header {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100%;
   height: 64px;
   transition: transform 0.3s var(--ease-out-expo);
   z-index: 1000;
+
+  &.is-home {
+    top: 40px;
+  }
 }
 
 .header-bar {
@@ -184,6 +220,7 @@ const mobileItems = computed(() => [
 }
 
 .header-bar--scrolled {
+  top: 0 !important;
   background-color: var(--ui-bg);
   /* border-bottom-color: var(--ui-border); */
 }
