@@ -218,6 +218,10 @@
   }
 }
 
+button {
+  cursor: pointer;
+}
+
 /* @layer components {
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-small font-medium

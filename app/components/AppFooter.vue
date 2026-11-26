@@ -29,8 +29,6 @@ const tools = [
   },
 ];
 
-const { locales, setLocale, localeProperties } = useI18n();
-
 const email = computed(() => t("project.contactHref").replace("mailto:", ""));
 </script>
 
@@ -179,34 +177,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
       >
         <p>© {{ year }} Opensya. {{ $t("footer.rights") }}</p>
 
-        <UDropdownMenu
-          :items="
-            locales.map((locale) => ({
-              value: locale.code,
-              label: locale.name,
-              onSelect() {
-                setLocale(locale.code);
-              },
-            }))
-          "
-          :content="{
-            align: 'start',
-            side: 'bottom',
-            sideOffset: 8,
-          }"
-          :ui="{
-            content: 'w-48',
-          }"
-        >
-          <UButton
-            :label="localeProperties.name"
-            icon="i-tabler-language"
-            color="neutral"
-            variant="ghost"
-            size="lg"
-            class="rounded-none border-default"
-          />
-        </UDropdownMenu>
+        <AppLanguage />
 
         <!-- <a
           href="#top"

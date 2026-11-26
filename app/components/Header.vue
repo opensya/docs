@@ -135,6 +135,17 @@ const isHome = computed(() => {
           GitHub
         </UButton> -->
 
+        <AppLanguage v-slot="{ label }">
+          <UButton
+            :label
+            icon="i-lucide-globe"
+            color="neutral"
+            variant="ghost"
+            size="lg"
+            class="rounded-4xl border-default"
+          />
+        </AppLanguage>
+
         <UButton
           to="mailto:mamadoutalladia@gmail.com"
           target="_blank"
