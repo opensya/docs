@@ -32,36 +32,33 @@ onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
 
-const projects: NavigationMenuChildItem[] = [
-  {
-    key: "persistence",
-    to: "https://persistence.opensya.com/",
-    target: "_blank",
-    label: $t(`home.projects.items.persistence.name`),
-    description: $t(`home.projects.items.persistence.description`),
-  },
-  {
-    key: "authen",
-    to: localePath({ name: "authen" }),
-    target: "_self",
-    label: $t(`home.projects.items.authen.name`),
-    description: $t(`home.projects.items.authen.description`),
-  },
-] as const;
+const projects = computed(() => {
+  const projects: NavigationMenuChildItem[] = [
+    {
+      key: "persistence",
+      to: "https://persistence.opensya.com/",
+      target: "_blank",
+      label: $t(`home.projects.items.persistence.name`),
+      description: $t(`home.projects.items.persistence.description`),
+    },
+    {
+      key: "authen",
+      to: localePath({ name: "authen" }),
+      target: "_self",
+      label: $t(`home.projects.items.authen.name`),
+      description: $t(`home.projects.items.authen.description`),
+    },
+  ];
+
+  return projects;
+});
 
 const items = computed(() => {
   const items: NavigationMenuItem[] = [
     {
       label: $t("project.title"),
       slot: "projects" as const,
-      children: projects,
-      // ["authen", "workspace", "onerh"].map((item) => {
-      //   return {
-      //     label: $t(`home.projects.items.${item}.name`),
-      //     // description: $t(`home.projects.items.${item}.description`),
-      //     to: localePath({ name: item }),
-      //   };
-      // }),
+      children: projects.value,
     },
 
     {
@@ -122,10 +119,7 @@ const tools = computed(() => {
 });
 
 const mobileItems = computed(() => [
-  ...["authen", "workspace", "onerh"].map((item) => ({
-    label: $t(`home.projects.items.${item}.name`),
-    to: localePath({ name: item }),
-  })),
+  ...projects.value,
   { label: $t("vision.title"), to: localePath({ name: "vision" }) },
   { label: $t("leadership.title"), to: localePath({ name: "leadership" }) },
   {
@@ -166,7 +160,7 @@ const isHome = computed(() => {
       <UNavigationMenu
         :items
         arrow
-        class="w-full ml-10 justify-start max-md:hidden"
+        class="w-full ml-10 justify-start max-lg:hidden"
         trailing-icon=""
         content-orientation="vertical"
         variant="link"
@@ -271,7 +265,7 @@ const isHome = computed(() => {
           color="primary"
           variant="solid"
           size="xl"
-          class="rounded-4xl"
+          class="rounded-4xl text-nowrap"
         >
           Contactez-nous
         </UButton>
@@ -288,7 +282,7 @@ const isHome = computed(() => {
           icon="i-lucide-menu"
           color="neutral"
           variant="ghost"
-          class="ml-auto md:hidden"
+          class="ml-auto lg:hidden"
           :aria-label="$t('header.menu')"
           :aria-expanded="isMenuOpen"
         />
@@ -304,7 +298,14 @@ const isHome = computed(() => {
                   @click="isMenuOpen = false"
                 >
                   {{ item.label }}
-                  <UIcon name="i-lucide-arrow-right" class="size-4" />
+                  <UIcon
+                    :name="
+                      item.target === '_blank'
+                        ? 'i-lucide-arrow-up-right'
+                        : 'i-lucide-arrow-right'
+                    "
+                    class="size-4"
+                  />
                 </NuxtLink>
               </li>
               <li>
