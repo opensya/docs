@@ -131,6 +131,10 @@ const mobileItems = computed(() => [
 const isHome = computed(() => {
   return route.path === localePath({ name: "index" });
 });
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 </script>
 
 <template>
@@ -325,6 +329,14 @@ const isHome = computed(() => {
       </UDrawer>
     </div>
   </header>
+
+  <div
+    v-if="scrollY > 50 && !isHidden"
+    class="fixed bottom-18 right-4 md:right-14 z-500"
+    @click="scrollToTop"
+  >
+    <UButton icon="i-lucide-arrow-up" variant="ghost" color="neutral" />
+  </div>
 </template>
 
 <style scoped lang="scss">

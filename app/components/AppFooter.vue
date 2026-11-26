@@ -203,19 +203,13 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
 
       <!-- Barre du bas -->
       <div
-        class="mt-16 flex flex-col gap-4 border-t border-default pt-6 text-sm text-muted sm:mt-20 sm:flex-row sm:items-center sm:justify-between"
+        class="mt-16 flex flex-col gap-4 border-t border-default pt-6 text-sm text-muted sm:mt-20 sm:flex-row sm:items-center sm:justify-"
       >
         <p>© {{ year }} Opensya. {{ $t("footer.rights") }}</p>
 
+        <div class="mx-auto"></div>
+        <UColorModeButton v-if="!$colorMode.forced" />
         <AppLanguage />
-
-        <!-- <a
-          href="#top"
-          class="inline-flex items-center gap-1 w-max hover:text-default"
-        >
-          {{ $t("footer.backToTop") }}
-          <UIcon name="i-lucide-arrow-up" class="size-4" aria-hidden="true" />
-        </a> -->
       </div>
     </UContainer>
   </footer>
