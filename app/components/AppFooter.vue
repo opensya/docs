@@ -1,33 +1,56 @@
 <script lang="ts" setup>
+import type { NavigationMenuChildItem } from "@nuxt/ui";
+
 const localePath = useLocalePath();
 const { t } = useI18n();
 
 const year = new Date().getFullYear();
 
-const projects = ["authen", "workspace", "onerh"];
+const projects = computed(() => {
+  const projects: NavigationMenuChildItem[] = [
+    {
+      key: "persistence",
+      to: "https://persistence.opensya.com/",
+      target: "_blank",
+      label: $t(`home.projects.items.persistence.name`),
+    },
+    {
+      key: "authen",
+      to: localePath({ name: "authen" }),
+      target: "_self",
+      label: $t(`home.projects.items.authen.name`),
+    },
+  ];
 
-const tools = [
-  {
-    key: "runable",
-    url: "https://runablejs.com",
-  },
-  {
-    key: "syt",
-    url: "https://github.com/domutala/syt",
-  },
-  {
-    key: "persistence",
-    url: "https://persistence.opensya.com/",
-  },
-  {
-    key: "epizod",
-    url: "https://github.com/domutala/epizod",
-  },
-  {
-    key: "vContent",
-    url: "https://github.com/domutala/v-content",
-  },
-];
+  return projects;
+});
+
+const tools = computed(() => {
+  return [
+    {
+      key: "runable",
+      url: "https://runablejs.com",
+    },
+    {
+      key: "epizod",
+      url: "https://github.com/domutala/epizod",
+    },
+    {
+      key: "syt",
+      url: "https://github.com/domutala/syt",
+    },
+    {
+      key: "vContent",
+      url: "https://github.com/domutala/v-content",
+    },
+  ].map((tool) => {
+    return {
+      ...tool,
+      value: tool.key,
+      label: $t(`home.developerTools.items.${tool.key}.name`),
+    };
+  });
+});
 
 const email = computed(() => t("project.contactHref").replace("mailto:", ""));
 </script>
@@ -50,9 +73,9 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
             </span>
           </NuxtLink>
 
-          <p class="mt-6 font-notch text-2xl leading-snug">
+          <!-- <p class="mt-6 font-notch text-2xl leading-snug">
             {{ $t("footer.mission") }}
-          </p>
+          </p> -->
 
           <!-- <p class="mt-5 text-sm text-muted">
             {{ $t("footer.status") }}
@@ -68,12 +91,19 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
           <div>
             <h2 class="text-sm text-muted">{{ $t("footer.projects") }}</h2>
             <ul class="mt-5 space-y-3">
-              <li v-for="item in projects" :key="item">
+              <li v-for="project in projects" :key="project.key">
                 <NuxtLink
-                  :to="localePath(`/${item}`)"
-                  class="transition-colors hover:text-primary"
+                  :to="project.to"
+                  class="inline-flex items-center gap-1 transition-colors hover:text-primary"
                 >
-                  {{ $t(`home.projects.items.${item}.name`) }}
+                  {{ project.label }}
+
+                  <UIcon
+                    v-if="project.target === '_blank'"
+                    name="i-lucide-arrow-up-right"
+                    class="size-3.5 text-muted"
+                    aria-hidden="true"
+                  />
                 </NuxtLink>
               </li>
             </ul>
@@ -90,7 +120,7 @@ const email = computed(() => t("project.contactHref").replace("mailto:", ""));
                   rel="noopener noreferrer"
                   class="inline-flex items-center gap-1 transition-colors hover:text-primary"
                 >
-                  {{ $t(`home.tools.items.${tool.key}.name`) }}
+                  {{ tool.label }}
                   <span class="sr-only">({{ $t("project.newTab") }})</span>
                   <UIcon
                     name="i-lucide-arrow-up-right"
