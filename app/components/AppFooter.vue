@@ -253,8 +253,6 @@ onUnmounted(() => observer?.disconnect());
         class="absolute inset-0 bg-linear-to-t to-20% from-default to-transparent"
       ></div>
     </div>
-
-    <!-- <div class="text-[28rem] font-notch font-bold">Opensya</div> -->
   </footer>
 </template>
 
