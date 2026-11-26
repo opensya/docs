@@ -8,7 +8,8 @@
       "title": "Open software building blocks that keep you in control of your applications",
       "description": "Each building block addresses a specific need. You can add it on its own to an existing project or combine it with others to build an application around your own technical choices.",
       "primaryAction": "Explore the building blocks",
-      "secondaryAction": "Read the manifesto"
+      "secondaryAction": "Read the manifesto",
+      "manisfestPathCode": "manifest"
     },
     "projects": {
       "title": "What we’re building",
@@ -31,7 +32,24 @@
     },
     "architecture": {
       "title": "What makes a building block independent",
-      "example": "Consider a simple business rule. A leave request must be approved before it counts toward an employee’s leave balance. The rule is the same whether the request is approved through an HR portal or a mobile app.",
+      "examples": [
+        {
+          "title": "Approve a leave request",
+          "description": "A leave request must be approved before the days are deducted from the employee’s leave balance. The same rule applies in the HR portal and the mobile app."
+        },
+        {
+          "title": "Validate an order based on stock availability",
+          "description": "An order can only be confirmed if the items are in stock. The online store and the point-of-sale system can use the same rule."
+        },
+        {
+          "title": "Verify a new email address",
+          "description": "An email address must be verified before it becomes the account’s primary address. When the team redesigns the profile screen, it can reuse the existing rule."
+        },
+        {
+          "title": "Preserve the original amount of a paid invoice",
+          "description": "A paid invoice must retain its original amount. If the company switches databases, it can adapt how invoices are stored and keep the same rule."
+        }
+      ],
       "description": "We design our building blocks to separate the rules they enforce from the tools around them, such as the user interface, framework, or database. This separation lets teams reuse a building block in another project and adapt how it integrates with a new architecture."
     },
     "developerTools": {

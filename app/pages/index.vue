@@ -50,8 +50,10 @@ const tools = [
 const toolItems = tools.map((tool) => ({
   ...tool,
   value: tool.key,
-  label: $t(`home.tools.items.${tool.key}.name`),
+  label: $t(`home.developerTools.items.${tool.key}.name`),
 }));
+
+const currentItem = ref(2);
 </script>
 
 <template>
@@ -92,12 +94,17 @@ const toolItems = tools.map((tool) => ({
               class="px-5 py-4"
               size="xl"
             >
-              <UIcon name="i-lucide-message-circle-check" class="size-4" />
+              <!-- <UIcon name="i-lucide-message-circle-check" class="size-4" /> -->
               {{ $t("home.hero.primaryAction") }}
             </UButton>
 
             <UButton
-              to="#projets"
+              :to="
+                $localePath({
+                  name: 'slug',
+                  params: { slug: $t('home.hero.manisfestPathCode') },
+                })
+              "
               size="xl"
               variant="ghost"
               color="neutral"
@@ -134,12 +141,12 @@ const toolItems = tools.map((tool) => ({
           </p>
         </header>
 
-        <div data-slot="grid" class="grid gap-4 md:grid-cols-2 md:gap-6">
+        <div data-slot="grid" class="grid gap-4 md:grid-cols-2 md:gap-4">
           <article
             v-for="project in projects"
             :key="project.key"
             data-slot="project"
-            class="group flex h-full flex-col rounded-xl border border-border bg-surface shadow-xs ring-0"
+            class="group flex h-full flex-col rounded-lg border-border bg-surface shadow-xs ring-0"
           >
             <div class="flex-1 space-y-4 p-6 sm:p-8">
               <h3 class="font-display text-h3 text-fg">
@@ -159,7 +166,7 @@ const toolItems = tools.map((tool) => ({
               <NuxtLink
                 :to="project.url"
                 :target="project.target"
-                class="arrow-link"
+                class="arrow-link text-info"
               >
                 {{ $t(`home.projects.items.${project.key}.action`) }}
 
@@ -174,41 +181,6 @@ const toolItems = tools.map((tool) => ({
               </NuxtLink>
             </div>
           </article>
-        </div>
-      </UContainer>
-    </section>
-
-    <section
-      id="architecture"
-      data-slot="architecture"
-      aria-labelledby="architecture-title"
-      class="scroll-mt-24 py-24 sm:py-40"
-    >
-      <UContainer>
-        <div class="text-center max-w-4xl space-y-4 mx-auto">
-          <div data-slot="content" class="">
-            <h2
-              id="architecture-title"
-              class="font-notch-title text-h2 text-fg"
-            >
-              {{ $t("home.architecture.title") }}
-            </h2>
-
-            <p
-              class="text-pretty text-body text-ink-600 dark:text-fg-muted mt-2"
-            >
-              {{ $t("home.architecture.description") }}
-            </p>
-          </div>
-
-          <div
-            data-slot="example"
-            class="rounded-xl p-8 mt-7 text-left border border-border bg-accented/30"
-          >
-            <p class="text-pretty text-lg font-light leading-relaxed text-fg">
-              {{ $t("home.architecture.example") }}
-            </p>
-          </div>
         </div>
       </UContainer>
     </section>
@@ -306,6 +278,111 @@ const toolItems = tools.map((tool) => ({
           </div>
         </UContainer>
       </div>
+    </section>
+
+    <section
+      id="architecture"
+      data-slot="architecture"
+      aria-labelledby="architecture-title"
+      class="scroll-mt-24 py-24 sm:py-40"
+    >
+      <UContainer>
+        <div class="space-y-4">
+          <div data-slot="content" class="text-center max-w-4xl mx-auto">
+            <h2
+              id="architecture-title"
+              class="font-notch-title text-h2 text-fg"
+            >
+              {{ $t("home.architecture.title") }}
+            </h2>
+
+            <p
+              class="text-pretty text-body text-ink-600 dark:text-fg-muted mt-2"
+            >
+              {{ $t("home.architecture.description") }}
+            </p>
+          </div>
+
+          <div class="mt-16 grid grid-cols-1 gap-3 lg:grid-cols-4">
+            <div
+              v-for="index in 4"
+              :key="index"
+              class="grid"
+              @click="currentItem = index"
+            >
+              <div
+                aria-hidden="true"
+                class="invisible hidden col-start-1 row-start-1 px-7 py-6 lg:block"
+              >
+                <p class="pb-4">
+                  {{
+                    $t(`home.architecture.examples.${index - 1}.description`)
+                  }}
+                </p>
+
+                <div class="flex min-h-11 items-center gap-3">
+                  <span class="min-w-0 flex-1 text-xl leading-[1.1]">
+                    {{ $t(`home.architecture.examples.${index - 1}.title`) }}
+                  </span>
+                  <span class="size-11 shrink-0"></span>
+                </div>
+              </div>
+
+              <div
+                class="col-start-1 row-start-1 self-end rounded-lg bg-surface"
+                :class="{ 'rounded-[16remgg]!': currentItem !== index }"
+              >
+                <div
+                  class="grid px-7 transition-[grid-template-rows,opacity] duration-300 ease-in-out motion-reduce:transition-none"
+                  :class="
+                    currentItem === index
+                      ? 'grid-rows-[1fr] opacity-100'
+                      : 'grid-rows-[0fr] opacity-0'
+                  "
+                  :aria-hidden="currentItem !== index"
+                >
+                  <div class="min-h-0 overflow-hidden">
+                    <p class="pt-6">
+                      {{
+                        $t(
+                          `home.architecture.examples.${index - 1}.description`,
+                        )
+                      }}
+                    </p>
+                  </div>
+                </div>
+
+                <h3
+                  class="flex items-center gap-3 px-7 py-6"
+                  :class="{ 'cursor-pointer': currentItem !== index }"
+                >
+                  <span
+                    class="min-w-0 flex-1 text-xl leading-[1.1]"
+                    :class="{ ' line-clamp-2': currentItem !== index }"
+                  >
+                    {{ $t(`home.architecture.examples.${index - 1}.title`) }}
+                  </span>
+                  <UIcon
+                    name="i-lucide-plus"
+                    class="size-8 shrink-0"
+                    :class="{ invisible: currentItem === index }"
+                    aria-hidden="true"
+                  />
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div
+            data-slot="example"
+            class="rounded-xl p-8 mt-7 text-left border border-border bg-accented/30 hidden"
+          >
+            <p class="text-pretty text-lg font-light leading-relaxed text-fg">
+              {{ $t("home.architecture.example") }}
+            </p>
+          </div>
+        </div>
+      </UContainer>
     </section>
 
     <!-- Outils développeurs -->

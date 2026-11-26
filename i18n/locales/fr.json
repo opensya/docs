@@ -8,7 +8,9 @@
       "title": "Des briques logicielles ouvertes pour garder la maîtrise de vos applications",
       "description": "Chaque brique répond à un besoin précis. Vous pouvez l’intégrer seule à un projet existant ou l’associer à d’autres pour construire une application autour de vos choix techniques.",
       "primaryAction": "Découvrir les briques",
-      "secondaryAction": "Lire le manifeste"
+      "secondaryAction": "Lire le manifeste",
+
+      "manisfestPathCode": "manifeste"
     },
     "projects": {
       "title": "Ce que nous construisons",
@@ -31,7 +33,24 @@
     },
     "architecture": {
       "title": "Ce qui rend une brique indépendante",
-      "example": "Prenons une règle métier simple. Une demande de congé doit être approuvée avant d’être comptabilisée. Cette règle reste la même, qu’on approuve la demande depuis un portail RH ou depuis une application mobile.",
+      "examples": [
+        {
+          "title": "Approuver une demande de congé",
+          "description": "Une demande de congé doit être approuvée avant que les jours soient déduits du solde. La même règle s’applique depuis le portail RH et l’application mobile."
+        },
+        {
+          "title": "Valider une commande selon le stock",
+          "description": "Une commande ne peut être validée que si les articles sont disponibles. La boutique en ligne et le logiciel de caisse peuvent s’appuyer sur la même règle."
+        },
+        {
+          "title": "Vérifier la nouvelle adresse e-mail d’un compte",
+          "description": "Une adresse e-mail doit être vérifiée avant de devenir l’adresse principale d’un compte. Quand l’équipe refond l’écran de profil, elle peut réutiliser la règle existante."
+        },
+        {
+          "title": "Préserver le montant d’une facture réglée",
+          "description": "Une facture réglée doit conserver son montant d’origine. Si l’entreprise change de base de données, elle peut adapter le stockage et conserver cette règle."
+        }
+      ],
       "description": "Nous concevons nos briques en séparant les règles qu’elles exécutent des outils qui les entourent, comme l’interface, le framework ou la base de données. Cette séparation donne à chaque équipe la possibilité de reprendre une brique dans un autre projet et d’adapter son intégration à une nouvelle architecture."
     },
     "developerTools": {

@@ -96,7 +96,7 @@
   /* Semantic tokens (light) */
   --color-bg: var(--color-ink-50);
   --color-bg: var(--color-white);
-  --color-surface: #fff;
+  --color-surface: var(--color-ink-100);
   --color-surface-muted: var(--color-ink-100);
   --color-border: var(--color-ink-200);
   --color-border-strong: var(--color-ink-300);

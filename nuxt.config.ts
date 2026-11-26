@@ -2,7 +2,7 @@ import { fileURLToPath } from "node:url";
 
 export default defineNuxtConfig({
   compatibilityDate: "2026-10-01",
-  modules: ["@nuxt/ui", "@nuxtjs/i18n"],
+  modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/content"],
 
   css: ["~/assets/css/main.css"],
 

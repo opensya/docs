@@ -64,7 +64,7 @@ onUnmounted(() =>
 <template>
   <div
     ref="root"
-    class="fixed bottom-4 right-4 sm:bottom-10 sm:right-10 z-200"
+    class="fixed right-4 sm:bottom-32 sm:right-10 z-200"
     @pointerenter="onPointerEnter"
     @pointerleave="onPointerLeave"
     @focusin="open = true"

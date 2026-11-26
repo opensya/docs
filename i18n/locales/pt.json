@@ -8,7 +8,8 @@
       "title": "Blocos de software abertos para manter o controlo das suas aplicações",
       "description": "Cada bloco responde a uma necessidade específica. Pode integrá-lo separadamente num projeto existente ou combiná-lo com outros para criar uma aplicação de acordo com as suas escolhas técnicas.",
       "primaryAction": "Descobrir os blocos",
-      "secondaryAction": "Ler o manifesto"
+      "secondaryAction": "Ler o manifesto",
+      "manisfestPathCode": "manifesto"
     },
     "projects": {
       "title": "O que estamos a construir",
@@ -31,7 +32,24 @@
     },
     "architecture": {
       "title": "O que torna um bloco independente",
-      "example": "Pense numa regra de negócio simples. Um pedido de férias tem de ser aprovado antes de ser contabilizado. A regra é a mesma, quer o pedido seja aprovado num portal de RH ou numa aplicação móvel.",
+      "examples": [
+        {
+          "title": "Aprovar um pedido de férias",
+          "description": "Um pedido de férias tem de ser aprovado antes de os dias serem descontados do saldo do trabalhador. A mesma regra aplica-se no portal de recursos humanos e na aplicação móvel."
+        },
+        {
+          "title": "Validar uma encomenda em função do stock",
+          "description": "Uma encomenda só pode ser confirmada se os artigos estiverem em stock. A loja online e o sistema de ponto de venda podem aplicar a mesma regra."
+        },
+        {
+          "title": "Verificar um novo endereço de e-mail",
+          "description": "Um endereço de e-mail tem de ser verificado antes de passar a ser o endereço principal da conta. Ao redesenhar o ecrã de perfil, a equipa pode reutilizar a regra existente."
+        },
+        {
+          "title": "Preservar o valor original de uma fatura paga",
+          "description": "Uma fatura paga deve manter o seu valor original. Se a empresa mudar de base de dados, pode adaptar a forma como guarda as faturas e manter a mesma regra."
+        }
+      ],
       "description": "Concebemos os nossos blocos de forma a separar as regras que aplicam das ferramentas que os rodeiam, como a interface, a framework ou a base de dados. Esta separação permite a cada equipa reutilizar um bloco noutro projeto e adaptar a sua integração a uma nova arquitetura."
     },
     "developerTools": {
