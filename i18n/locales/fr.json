@@ -55,6 +55,7 @@
     },
     "developerTools": {
       "title": "Des outils pour le travail quotidien des développeurs",
+      "subtitle": "Outils de développement",
       "description": "L’indépendance technique se joue aussi dans des décisions très concrètes. Où définir les règles d’un formulaire ? Quel serveur utiliser avec Vue ? Comment vérifier la configuration d’un projet TypeScript ?",
 
       "items": {
@@ -64,7 +65,12 @@
           "description": "Apporte les conventions de {vueLink} pour le routage et le rendu côté serveur, avec le serveur que vous choisissez.",
           "action": "Découvrir Runable"
         },
-
+        "vContent": {
+          "name": "v-content",
+          "category": "Contenu dynamique pour Vue.js",
+          "description": "Un outil pour gérer et intégrer du contenu dans les applications Vue.js, avec une approche pensée pour simplifier son utilisation et son rendu.",
+          "action": "Découvrir v-content"
+        },
         "epizod": {
           "name": "ēpizod",
           "category": "Formulaires et validation",

@@ -62,6 +62,12 @@
           "description": "Brings {vueLink} conventions for routing and server-side rendering to the server of your choice.",
           "action": "Explore Runable"
         },
+        "vContent": {
+          "name": "v-content",
+          "category": "Dynamic content for Vue.js",
+          "description": "A tool for managing and integrating content into Vue.js applications, designed to simplify content usage and rendering.",
+          "action": "Discover v-content"
+        },
         "epizod": {
           "name": "ēpizod",
           "category": "Forms and validation",

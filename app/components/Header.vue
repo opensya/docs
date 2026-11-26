@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { NavigationMenuItem } from "@nuxt/ui";
+import type { NavigationMenuChildItem, NavigationMenuItem } from "@nuxt/ui";
 
 const localePath = useLocalePath();
 const route = useRoute();
@@ -32,17 +32,36 @@ onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
 
+const projects: NavigationMenuChildItem[] = [
+  {
+    key: "persistence",
+    to: "https://persistence.opensya.com/",
+    target: "_blank",
+    label: $t(`home.projects.items.persistence.name`),
+    description: $t(`home.projects.items.persistence.description`),
+  },
+  {
+    key: "authen",
+    to: localePath({ name: "authen" }),
+    target: "_self",
+    label: $t(`home.projects.items.authen.name`),
+    description: $t(`home.projects.items.authen.description`),
+  },
+] as const;
+
 const items = computed(() => {
   const items: NavigationMenuItem[] = [
     {
       label: $t("project.title"),
-      children: ["authen", "workspace", "onerh"].map((item) => {
-        return {
-          label: $t(`home.projects.items.${item}.name`),
-          // description: $t(`home.projects.items.${item}.description`),
-          to: localePath({ name: item }),
-        };
-      }),
+      slot: "projects" as const,
+      children: projects,
+      // ["authen", "workspace", "onerh"].map((item) => {
+      //   return {
+      //     label: $t(`home.projects.items.${item}.name`),
+      //     // description: $t(`home.projects.items.${item}.description`),
+      //     to: localePath({ name: item }),
+      //   };
+      // }),
     },
 
     {
@@ -68,6 +87,38 @@ const items = computed(() => {
   ];
 
   return items;
+});
+
+const tools = computed(() => {
+  return [
+    {
+      key: "runable",
+      url: "https://runablejs.com",
+    },
+
+    // {
+    //   key: "persistence",
+    //   url: "https://persistence.opensya.com/",
+    // },
+    {
+      key: "epizod",
+      url: "https://github.com/domutala/epizod",
+    },
+    {
+      key: "syt",
+      url: "https://github.com/domutala/syt",
+    },
+    {
+      key: "vContent",
+      url: "https://github.com/domutala/v-content",
+    },
+  ].map((tool) => {
+    return {
+      ...tool,
+      value: tool.key,
+      label: $t(`home.developerTools.items.${tool.key}.name`),
+    };
+  });
 });
 
 const mobileItems = computed(() => [
@@ -114,15 +165,82 @@ const isHome = computed(() => {
 
       <UNavigationMenu
         :items
-        class="w- ml-10 justify-end max-md:hidden"
+        arrow
+        class="w-full ml-10 justify-start max-md:hidden"
         trailing-icon=""
         content-orientation="vertical"
         variant="link"
+        :ui="{
+          viewport: 'sm:w-(--reka-navigation-menu-viewport-width)',
+          content: 'sm:w-auto',
+          childList: 'sm:w-96',
+          childLinkDescription: 'text-balance line-clamp-2',
+        }"
       >
         <template #item-trailing> <div></div> </template>
+
+        <template #projects-content="{ item }">
+          <div class="grid gap-5 p-6 lg:w-200 grid-cols-12">
+            <div class="col-span-6">
+              <ul class="list-none">
+                <li
+                  v-for="(child, i) in item.children"
+                  :key="i"
+                  class="not-first:mt-3"
+                >
+                  <NuxtLink :to="child.to" :target="child.target" class="group">
+                    <div class="flex items-center gap-2">
+                      <p
+                        class="font-medium text-highlighted group-hover:text-primary font-notch"
+                      >
+                        {{ child.label }}
+                      </p>
+
+                      <UIcon
+                        v-if="child.target === '_blank'"
+                        name="i-lucide-arrow-up-right"
+                        class="size-4 transition-transform group-hover:translate-x-0.5 motion-reduce:transform-none"
+                      />
+                    </div>
+
+                    <p class="text-muted text-sm line-clamp-2">
+                      {{ child.description }}
+                    </p>
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-4">
+              <h2 class="text-xl font-notch">
+                {{ $t("home.developerTools.subtitle") }}
+              </h2>
+              <div class="flex flex-col gap-2 mt-3">
+                <a
+                  v-for="{ key, label, url } in tools"
+                  :key="key"
+                  :href="url"
+                  class="arrow-link flex items-center gap-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{ label }}
+
+                  <UIcon
+                    name="i-lucide-arrow-up-right"
+                    class="size-4 transition-transform group-hover:translate-x-0.5 motion-reduce:transform-none"
+                    aria-hidden="true"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </template>
       </UNavigationMenu>
 
-      <div class="ml-auto max-md:hidden flex items-center gap-2">
+      <div
+        class="ml-auto w-full max-md:hidden flex items-center justify-end gap-2"
+      >
         <!-- <UButton
           href="https://github.com/opensya"
           target="_blank"

@@ -62,6 +62,12 @@
           "description": "Traz as convenções de {vueLink} para o encaminhamento de rotas e a renderização no servidor, com o servidor que escolher.",
           "action": "Descobrir o Runable"
         },
+        "vContent": {
+          "name": "v-content",
+          "category": "Conteúdo dinâmico para Vue.js",
+          "description": "Uma ferramenta para gerir e integrar conteúdo em aplicações Vue.js, concebida para simplificar a sua utilização e renderização.",
+          "action": "Descubra o v-content"
+        },
         "epizod": {
           "name": "ēpizod",
           "category": "Formulários e validação",
