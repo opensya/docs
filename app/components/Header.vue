@@ -182,7 +182,7 @@ const isHome = computed(() => {
                   :key="i"
                   class="not-first:mt-3"
                 >
-                  <NuxtLink :to="child.to" :target="child.target" class="group">
+                  <ULink :to="child.to" :target="child.target" class="group">
                     <div class="flex items-center gap-2">
                       <p
                         class="font-medium text-highlighted group-hover:text-primary font-notch"
@@ -200,7 +200,7 @@ const isHome = computed(() => {
                     <p class="text-muted text-sm line-clamp-2">
                       {{ child.description }}
                     </p>
-                  </NuxtLink>
+                  </ULink>
                 </li>
               </ul>
             </div>
