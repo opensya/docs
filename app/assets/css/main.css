@@ -76,7 +76,7 @@
   --color-ink-950: oklch(0.13 0.008 250);
 
   /* Colors — brand (change the hue to rebrand) */
-  --color-brand-50: oklch(0.97 0.03 55);
+  /* --color-brand-50: oklch(0.97 0.03 55);
   --color-brand-100: oklch(0.93 0.07 55);
   --color-brand-200: oklch(0.88 0.12 55);
   --color-brand-300: oklch(0.82 0.16 52);
@@ -85,7 +85,19 @@
   --color-brand-600: oklch(0.6 0.18 45);
   --color-brand-700: oklch(0.5 0.15 43);
   --color-brand-800: oklch(0.4 0.12 42);
-  --color-brand-900: oklch(0.3 0.08 42);
+  --color-brand-900: oklch(0.3 0.08 42); */
+
+  --color-brand-50: #e7f3ff;
+  --color-brand-100: #d3e8ff;
+  --color-brand-200: #b0d4ff;
+  --color-brand-300: #81b8ff;
+  --color-brand-400: #4f8dff;
+  --color-brand-500: #2865ff;
+  --color-brand-600: #0437ff;
+  --color-brand-700: #002fff;
+  --color-brand-800: #002ee6;
+  --color-brand-900: #0b2da4;
+  --color-brand-950: #07185f;
 
   /* Colors — status */
   --color-success: oklch(0.65 0.17 150);
@@ -129,6 +141,7 @@
 :root {
   --ui-container: 72rem;
   --ui-container: 92rem;
+  --ui-container: 100rem;
 }
 
 /* Dark mode: .dark on <html> */

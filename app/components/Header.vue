@@ -92,7 +92,7 @@ const isHome = computed(() => {
   <header
     class="header flex items-center py-0 border-b border-transparent"
     :class="{
-      'header--hiddend': isHidden,
+      'header--hidden': isHidden,
       'header-bar--scrolled border-default!': scrollY > 50,
       'is-home': isHome,
     }"
@@ -123,7 +123,7 @@ const isHome = computed(() => {
       </UNavigationMenu>
 
       <div class="ml-auto max-md:hidden flex items-center gap-2">
-        <UButton
+        <!-- <UButton
           href="https://github.com/opensya"
           target="_blank"
           rel="noopener noreferrer"
@@ -133,7 +133,7 @@ const isHome = computed(() => {
           size="xl"
         >
           GitHub
-        </UButton>
+        </UButton> -->
 
         <UButton
           to="mailto:mamadoutalladia@gmail.com"
@@ -207,7 +207,7 @@ const isHome = computed(() => {
   transition: transform 0.3s var(--ease-out-expo);
   z-index: 1000;
 
-  &.is-home {
+  &.is-homed {
     top: 40px;
   }
 }

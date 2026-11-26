@@ -59,7 +59,61 @@ const currentItem = ref(2);
 <template>
   <main id="top">
     <!-- Hero -->
-    <section class="relative md:min-h- bg- text- border- border-default">
+    <!-- <AppScrollShrinkContainer
+      :scroll-distance="400"
+      class="relative border-b border-border"
+    >
+    </AppScrollShrinkContainer> -->
+
+    <div
+      class="relative h- flex flex-col justify-center overflow-hidden border-b-2 border-border"
+    >
+      <!-- <img
+          src="/images/n1.gif"
+          alt=""
+          class="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 h-full w-full object-cover object-center"
+        /> -->
+
+      <!-- <div
+          class="absolute inset-0 backdrop-blur-xl bg-radial-[at_25%_25%] from-ink-50/80 to-ink-200/80"
+        ></div> -->
+
+      <UContainer class="relative mt-40 mb-20 flex flex-col items- text-">
+        <h1 class="max-w-9xl font-notch text-hero-sm">
+          {{ $t("home.hero.title") }}
+          <!-- {{ $t("home.mission.highlight") }} -->
+        </h1>
+        <p class="max-w-150 mt-5">
+          {{ $t("home.hero.description") }}
+        </p>
+
+        <div class="mt-20 flex flex-wrap gap-3">
+          <UButton
+            href="#projects"
+            rel="noopener noreferrer"
+            variant="solid"
+            color="primary"
+            size="2xl"
+            class="font-normal"
+          >
+            <!-- <UIcon name="i-lucide-message-circle-check" class="size-4" /> -->
+            {{ $t("home.hero.primaryAction") }}
+          </UButton>
+
+          <UButton
+            :to="$localePath({ name: 'manifesto' })"
+            variant="ghost"
+            color="neutral"
+            size="2xl"
+            class="font-normal"
+          >
+            {{ $t("home.hero.secondaryAction") }}
+          </UButton>
+        </div>
+      </UContainer>
+    </div>
+
+    <section class="relative hidden md:min-h- bg- text- border- border-default">
       <div
         class="py-40 mt-5 relative h-[calc(100vh-40px)] flex flex-col justify-center bg-primary-700 mx-5 rounded-[4.3rem] ring ring-default overflow-hidden"
       >
@@ -166,7 +220,7 @@ const currentItem = ref(2);
               <NuxtLink
                 :to="project.url"
                 :target="project.target"
-                class="arrow-link text-info"
+                class="arrow-link"
               >
                 {{ $t(`home.projects.items.${project.key}.action`) }}
 
@@ -260,7 +314,7 @@ const currentItem = ref(2);
             <div class="flex lg:justify-center items-center">
               <div>
                 <UButton
-                  href="#contact"
+                  :to="$localePath({ name: 'manifesto' })"
                   color="neutral"
                   class="py-3 px-4 group"
                   size="xl"
@@ -508,7 +562,7 @@ const currentItem = ref(2);
           <div class="max-w-3xl mx-auto text-center">
             <p class="section-eyebrow">{{ $t("home.contribute.eyebrow") }}</p>
 
-            <h2 class="mt-4 text-4xl font-notch">
+            <h2 class="mt-4 text-4xl font-notch text-primary">
               {{ $t("home.contribute.title") }}
             </h2>
 
@@ -519,7 +573,8 @@ const currentItem = ref(2);
             <div class="mt-8 flex justify-center gap-3">
               <UButton
                 to="mailto:contact@opensya.com"
-                size="xl"
+                size="2xl"
+                class="font-normal"
                 color="neutral"
               >
                 {{ $t("home.contribute.action") }}
@@ -529,108 +584,18 @@ const currentItem = ref(2);
         </div>
       </template>
     </ScrollRevealText>
-
-    <!-- Hero -->
-    <section class="py-0 hidden">
-      <UContainer class="py-0">
-        <!-- <h1 class="max-w-6xl font-notch text-">
-          {{ $t("home.hero.title") }}
-        </h1> -->
-
-        <div
-          class="mt- grid max-w-5xl gap-6 text-lg font-light md:grid-cols-2 md:gap-16"
-        >
-          <p>
-            {{ $t("home.hero.description") }}
-          </p>
-
-          <p>
-            {{ $t("home.hero.highlight") }}
-          </p>
-        </div>
-
-        <div class="mt-10 flex flex-wrap gap-3">
-          <!-- 
-          <UButton to="#projets">
-            {{ $t("home.hero.actions.projects") }}
-          </UButton> 
-         -->
-
-          <UButton
-            to="https://github.com/opensya"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="outline"
-            color="neutral"
-            :aria-label="`${$t('home.hero.actions.github')} (${$t('project.newTab')})`"
-          >
-            {{ $t("home.hero.actions.github") }}
-            <UIcon name="i-simple-icons-github" class="size-4" />
-          </UButton>
-        </div>
-      </UContainer>
-    </section>
-
-    <!-- Mission -->
-    <section class="py-24 sm:py-32 border-t border-default hidden">
-      <UContainer>
-        <p class="section-eyebrow">{{ $t("home.mission.eyebrow") }}</p>
-
-        <h2 class="mt-4 text-4xl font-notch">
-          {{ $t("home.mission.title") }}
-        </h2>
-
-        <p class="mt-5 max-w-2xl text-lg font-light">
-          {{ $t("home.mission.description") }}
-        </p>
-
-        <p class="mt-12 max-w-3xl font-notch text-2xl leading-snug">
-          {{ $t("home.mission.highlight") }}
-        </p>
-      </UContainer>
-    </section>
-
-    <!-- Open source -->
-    <section class="bg-accented/20 py-24 sm:py-32 hidden">
-      <UContainer>
-        <div class="max-w-3xl">
-          <p class="section-eyebrow">{{ $t("home.openSource.eyebrow") }}</p>
-
-          <h2 class="mt-4 text-4xl font-notch">
-            {{ $t("home.openSource.title") }}
-          </h2>
-
-          <p class="mt-5 text-lg font-light">
-            {{ $t("home.openSource.description") }}
-          </p>
-
-          <UButton
-            to="https://github.com/opensya"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="outline"
-            color="neutral"
-            class="mt-8"
-            :aria-label="`${$t('home.openSource.action')} (${$t('project.newTab')})`"
-          >
-            {{ $t("home.openSource.action") }}
-            <UIcon name="i-simple-icons-github" class="size-4" />
-          </UButton>
-        </div>
-      </UContainer>
-    </section>
   </main>
 </template>
 
 <style scoped lang="scss">
 .back {
-  background: rgba(0, 0, 0, 0.03);
-  background: rgba(255, 149, 0, 0.205);
+  background: var(--color-brand-400);
   -webkit-mask: url(/images/grid.svg) center / cover no-repeat;
   mask: url(/images/grid.svg) center / cover no-repeat;
   overflow: hidden;
   position: absolute;
   inset: 0;
+  opacity: 0.205;
 }
 
 .durability {
@@ -640,12 +605,6 @@ const currentItem = ref(2);
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 1) 70%
     );
-
-    // background: linear-gradient(
-    //   to top right,
-    //   rgba(255, 255, 255, 0) 0%,
-    //   rgba(255, 255, 255, 1) 60%
-    // );
 
     content: "";
     inset: 0;

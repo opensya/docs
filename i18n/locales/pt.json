@@ -7,7 +7,7 @@
     "hero": {
       "title": "Blocos de software abertos para manter o controlo das suas aplicações",
       "description": "Cada bloco responde a uma necessidade específica. Pode integrá-lo separadamente num projeto existente ou combiná-lo com outros para criar uma aplicação de acordo com as suas escolhas técnicas.",
-      "primaryAction": "Descobrir os blocos",
+      "primaryAction": "Descobrir os nossos projetos",
       "secondaryAction": "Ler o manifesto",
       "manisfestPathCode": "manifesto"
     },

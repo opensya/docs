@@ -7,7 +7,7 @@
     "hero": {
       "title": "Des briques logicielles ouvertes pour garder la maîtrise de vos applications",
       "description": "Chaque brique répond à un besoin précis. Vous pouvez l’intégrer seule à un projet existant ou l’associer à d’autres pour construire une application autour de vos choix techniques.",
-      "primaryAction": "Découvrir les briques",
+      "primaryAction": "Découvrir nos projets",
       "secondaryAction": "Lire le manifeste",
 
       "manisfestPathCode": "manifeste"
