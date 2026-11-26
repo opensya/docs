@@ -29,29 +29,45 @@ const { data: page } = await useAsyncData(
     watch: [locale], // Refetch when locale changes
   },
 );
+
+if (!page.value) {
+  throw createError({ status: 404, statusText: "Page not found", fatal: true });
+}
 </script>
 
 <template>
   <template v-if="page">
-    <UContainer class="max-w-5xl py-45 space-y-5">
-      <h1 class="font-notch text-center">
-        {{ page.meta.subtitle }}
-      </h1>
+    <UPage>
+      <div class="flex">
+        <UContentToc
+          :links="page.body.toc?.links"
+          :ui="{ title: 'hidden' }"
+          class="w-70 mt-12 md:mt-24 lg:mt-45 max-lg:hidden"
+          color="neutral"
+          highlight-color="neutral"
+          highlight
+        >
+        </UContentToc>
 
-      <p class="text-muted text-center">
-        {{ page.description }}
-      </p>
+        <UContainer class="max-w-5xl py-12 md:py-24 lg:py-45 space-y-5">
+          <h1 class="font-notch text-center">
+            {{ page.meta.subtitle }}
+          </h1>
 
-      <p class="text-center">
-        {{ page.meta.author }} -
-        <span class="text-muted">12 novembre 2026</span>
-      </p>
+          <p class="text-muted text-center">
+            {{ page.description }}
+          </p>
 
-      <ContentRenderer :value="page" class="mt-20 *:md:px-20" />
-    </UContainer>
+          <p class="text-center">
+            {{ page.meta.author }} -
+            <span class="text-muted">12 novembre 2026</span>
+          </p>
+
+          <ContentRenderer :value="page" class="mt-20 *:md:px-20" />
+        </UContainer>
+
+        <div class="w-70 max-xl:hidden"></div>
+      </div>
+    </UPage>
   </template>
-  <div v-else>
-    <h1>Page not found</h1>
-    <p>This page doesn't exist in {{ locale }} language.</p>
-  </div>
 </template>
