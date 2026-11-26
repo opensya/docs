@@ -72,7 +72,7 @@ onUnmounted(() =>
     @keydown.esc="open = false"
   >
     <div
-      class="flex items-center rounded-full bg-default ring ring-default shadow-2xl transition-shadow duration-300 h-full"
+      class="flex items-center rounded-full bg-default ring ring-border shadow-2xl transition-shadow duration-300 h-full"
       :class="{ 'shadow-[0_20px_50px_-12px_rgb(0_0_0/0.35)]': open }"
     >
       <!-- Contacts : le panneau se déplie vers la gauche -->
@@ -88,7 +88,7 @@ onUnmounted(() =>
                 target="_blank"
                 rel="noopener noreferrer"
                 :aria-label="`${contact.label} (${$t('project.newTab')})`"
-                class="flex size-11 items-center justify-center rounded-full ring-default transition duration-300 ease-out hover:bg-accented/40 hover:text-primary hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-primary motion-reduce:transition-none"
+                class="flex size-11 items-center justify-center rounded-full ring-border transition duration-300 ease-out hover:bg-accented/40 hover:text-primary hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-primary motion-reduce:transition-none"
                 :class="
                   open
                     ? 'opacity-100 translate-x-0 scale-100'

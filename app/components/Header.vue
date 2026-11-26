@@ -138,7 +138,7 @@ const isHome = computed(() => {
     class="header flex items-center py-0 border-b border-transparent"
     :class="{
       'header--hidden': isHidden,
-      'header-bar--scrolled border-default!': scrollY > 50,
+      'header-bar--scrolled border-border!': scrollY > 50,
       'is-home': isHome,
     }"
   >
@@ -351,7 +351,7 @@ const isHome = computed(() => {
 
 .header-bar--scrolled {
   top: 0 !important;
-  background-color: var(--ui-bg);
+  background-color: var(--color-bg);
   /* border-bottom-color: var(--ui-border); */
 }
 

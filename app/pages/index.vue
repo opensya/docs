@@ -6,6 +6,7 @@ useSeoMeta({
   ogDescription: $t("home.hero.title"),
   twitterCard: "summary",
 });
+
 definePageMeta({ colorMode: "light" });
 
 const localePath = useLocalePath();
@@ -176,7 +177,7 @@ const currentItem = ref(2);
       id="projects"
       data-slot="projects"
       aria-labelledby="projects-title"
-      class="scroll-mt-24 pt-30 pb-16 sm:pb-24 bg-white"
+      class="scroll-mt-24 pt-30 pb-16 sm:pb-24"
     >
       <UContainer>
         <header data-slot="header" class="mb-8 max-w-3xl space-y-4 sm:mb-12">
@@ -458,7 +459,7 @@ const currentItem = ref(2);
           <article
             v-for="{ key, label, url } in toolItems"
             :key="key"
-            class="group bg-default p-5 md:p-8 flex flex-col border border-default rounded-lg"
+            class="group bg- p-5 md:p-8 flex flex-col border border-border rounded-lg"
           >
             <h3 class="font-notch text-2xl">
               {{ label }}
@@ -518,7 +519,7 @@ const currentItem = ref(2);
     </section>
 
     <!-- Notre approche -->
-    <section class="bg-accented/20 py-24 sm:py-32">
+    <section class="bg-surface/50 py-24 sm:py-32">
       <UContainer>
         <div class="max-w-2xl">
           <p class="section-eyebrow">{{ $t("home.approach.eyebrow") }}</p>
@@ -603,7 +604,7 @@ const currentItem = ref(2);
     background: linear-gradient(
       to top left,
       rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 70%
+      var(--color-bg) 70%
     );
 
     content: "";

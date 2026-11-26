@@ -56,7 +56,7 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    colorMode: false,
+    colorMode: true,
   },
 
   i18n: {

@@ -149,6 +149,7 @@
 
 .dark {
   --color-bg: var(--color-ink-950);
+  --ui-bg: var(--color-ink-950);
   --color-surface: var(--color-ink-900);
   --color-surface-muted: var(--color-ink-800);
   --color-border: var(--color-ink-800);
