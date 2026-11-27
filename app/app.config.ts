@@ -10,8 +10,8 @@ export default defineAppConfig({
 
     colors: {
       primary: "blue",
-      secondary: "orange",
-      neutral: "taupe",
+      secondary: "purple",
+      neutral: "neutral",
     },
 
     button: {

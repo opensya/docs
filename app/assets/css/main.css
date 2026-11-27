@@ -1,12 +1,9 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@import "./liquid.scss";
-
-/* Fonts — copy webfonts/*[wght].woff2 to public/fonts/ as StackSans{Text,Headline,Notch}.woff2 */
 @font-face {
   font-family: "Stack Sans Text";
-  src: url("../fonts/StackSansText.woff2") format("woff2");
+  src: url("/fonts/StackSansText.woff2") format("woff2");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -14,7 +11,7 @@
 
 @font-face {
   font-family: "Stack Sans Headline";
-  src: url("../fonts/StackSansHeadline.woff2") format("woff2");
+  src: url("/fonts/StackSansHeadline.woff2") format("woff2");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;
@@ -22,7 +19,7 @@
 
 @font-face {
   font-family: "Stack Sans Notch";
-  src: url("../fonts/StackSansNotch.woff2") format("woff2");
+  src: url("/fonts/StackSansNotch.woff2") format("woff2");
   font-weight: 200 700;
   font-style: normal;
   font-display: swap;

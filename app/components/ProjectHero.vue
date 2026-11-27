@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const localePath = useLocalePath();
-
 defineProps<{
   name: string;
   category: string;
@@ -13,14 +11,6 @@ defineProps<{
 <template>
   <section class="relative overflow-hidden">
     <UContainer class="pt-36 pb-20 sm:pt-44 sm:pb-28">
-      <NuxtLink
-        :to="localePath('/')"
-        class="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-primary"
-      >
-        <UIcon name="i-lucide-arrow-left" class="size-4" aria-hidden="true" />
-        {{ $t("project.back") }}
-      </NuxtLink>
-
       <p class="mt-10 font-notch text-xl text-muted">
         {{ name }}
         <span class="sr-only">—</span>

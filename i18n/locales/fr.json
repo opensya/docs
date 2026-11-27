@@ -254,6 +254,58 @@
       }
     }
   },
+
+  "blog": {
+    "header": { "title": "Blog" },
+
+    "home": {
+      "seo": {
+        "title": "Blog Opensya — Actualités et projets open source",
+        "description": "Suivez les actualités d’Opensya, découvrez nos études de cas et comprenez les choix qui guident la construction de nos briques logicielles open source."
+      },
+
+      "hero": {
+        "title": "Blog",
+        "description": "Retrouvez les annonces d’Opensya, les avancées de nos projets open source et les choix techniques qui les façonnent."
+      }
+    },
+    "news": {
+      "title": "Actualités",
+      "seo": {
+        "title": "Actualités | Blog Opensya",
+        "description": "Suivez les annonces d’Opensya, les nouvelles versions et les avancées de nos projets open source."
+      }
+    },
+    "case-studies": {
+      "title": "Études de cas",
+      "seo": {
+        "title": "Études de cas | Blog Opensya",
+        "description": "Découvrez comment des équipes abordent des problèmes concrets, les choix qu’elles font et ce qu’elles apprennent en construisant leurs logiciels."
+      }
+    },
+    "ecosystem": {
+      "title": "Écosystème",
+      "seo": {
+        "title": "Écosystème open source | Blog Opensya",
+        "description": "Explorez les projets, les outils et les communautés open source qui aident les équipes à construire et à faire évoluer leurs logiciels."
+      }
+    },
+    "inside": {
+      "title": "Inside Opensya",
+      "seo": {
+        "title": "Inside Opensya | Le journal d’Opensya",
+        "description": "Suivez la construction d’Opensya. Nous y partageons les décisions qui façonnent nos briques logicielles, les difficultés rencontrées et ce que nous apprenons."
+      }
+    },
+
+    "categories": {
+      "all": { "title": "Tous les postes" },
+      "news": { "title": "Actualités" },
+      "case-studies": { "title": "Études de cas" },
+      "ecosystem": { "title": "Écosystème" },
+      "inside": { "title": "Inside Opensya" }
+    }
+  },
   "header": {
     "menu": "Menu"
   },

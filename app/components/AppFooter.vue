@@ -88,11 +88,11 @@ onUnmounted(() => observer?.disconnect());
             class="flex items-end gap-1.5 w-max select-none"
             :aria-label="$t('footer.homeLabel')"
           >
-            <AppLogo class="h-7" aria-hidden="true" />
+            <AppLogo class="h-10 w-10" aria-hidden="true" />
 
-            <span class="font-notch font-semibold leading-[1.1] text-2xl">
+            <!-- <span class="font-notch font-semibold leading-[1.1] text-2xl">
               Opensya
-            </span>
+            </span> -->
           </NuxtLink>
 
           <!-- <p class="mt-6 font-notch text-2xl leading-snug">

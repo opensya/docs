@@ -4,7 +4,8 @@ subtitle: "Faça evoluir o seu software, um bloco de cada vez."
 description: "Construímos blocos de software abertos para que as equipas mantenham o controlo das suas aplicações e possam rever as suas escolhas técnicas à medida que as necessidades mudam."
 author: "Opensya"
 date: "12/11/2026"
-meta:
+
+seo:
   title: "Manifesto da Opensya — A liberdade de construir"
   description: "Descubra por que razão a Opensya desenvolve blocos de software abertos, independentes e reutilizáveis e quais os princípios que orientam esse trabalho."
 ---

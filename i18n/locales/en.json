@@ -127,6 +127,55 @@
     }
   },
 
+  "blog": {
+    "header": { "title": "Blog" },
+    "home": {
+      "seo": {
+        "title": "Opensya Blog — News and Open Source Projects",
+        "description": "Follow Opensya’s latest news, explore our case studies, and learn about the decisions behind our open source software components."
+      },
+      "hero": {
+        "title": "Blog",
+        "description": "Catch up on Opensya’s announcements, see how our open source projects are progressing, and learn about the technical decisions that shape them."
+      }
+    },
+    "news": {
+      "title": "News",
+      "seo": {
+        "title": "News | Opensya Blog",
+        "description": "Follow Opensya’s announcements, new releases, and updates on our open source projects."
+      }
+    },
+    "case-studies": {
+      "title": "Case Studies",
+      "seo": {
+        "title": "Case Studies | Opensya Blog",
+        "description": "See how teams tackle real problems, what decisions they make, and what they learn as they build their software."
+      }
+    },
+    "ecosystem": {
+      "title": "Ecosystem",
+      "seo": {
+        "title": "Open Source Ecosystem | Opensya Blog",
+        "description": "Explore the open source projects, tools, and communities that help teams build and evolve their software."
+      }
+    },
+    "inside": {
+      "title": "Inside Opensya",
+      "seo": {
+        "title": "Inside Opensya | The Opensya Journal",
+        "description": "Follow our work as we build Opensya. We share the decisions that shape our software components, the challenges we face, and what we learn along the way."
+      }
+    },
+    "categories": {
+      "all": { "title": "All Posts" },
+      "news": { "title": "News" },
+      "case-studies": { "title": "Case Studies" },
+      "ecosystem": { "title": "Ecosystem" },
+      "inside": { "title": "Inside Opensya" }
+    }
+  },
+
   "home_0": {
     "hero": {
       "title": "We build open-source infrastructure for businesses.",

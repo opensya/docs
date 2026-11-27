@@ -75,6 +75,12 @@ const items = computed(() => {
       label: $t("investors.hero.eyebrow"),
       to: localePath({ name: "investors" }),
     },
+
+    {
+      label: $t("blog.header.title"),
+      to: localePath({ name: "blog" }),
+    },
+
     // {
     //   label: "GitHub",
     //   icon: "i-simple-icons-github",

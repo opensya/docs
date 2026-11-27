@@ -127,6 +127,55 @@
     }
   },
 
+  "blog": {
+    "header": { "title": "Blogue" },
+    "home": {
+      "seo": {
+        "title": "Blogue da Opensya — Notícias e projetos de código aberto",
+        "description": "Acompanhe as notícias da Opensya, descubra os nossos estudos de caso e conheça as decisões que orientam o desenvolvimento dos nossos componentes de software de código aberto."
+      },
+      "hero": {
+        "title": "Blogue",
+        "description": "Acompanhe os anúncios da Opensya, a evolução dos nossos projetos de código aberto e as decisões técnicas que lhes dão forma."
+      }
+    },
+    "news": {
+      "title": "Notícias",
+      "seo": {
+        "title": "Notícias | Blogue da Opensya",
+        "description": "Acompanhe os anúncios da Opensya, as novas versões e a evolução dos nossos projetos de código aberto."
+      }
+    },
+    "case-studies": {
+      "title": "Estudos de caso",
+      "seo": {
+        "title": "Estudos de caso | Blogue da Opensya",
+        "description": "Descubra como as equipas resolvem problemas concretos, que decisões tomam e o que aprendem ao desenvolver o seu software."
+      }
+    },
+    "ecosystem": {
+      "title": "Ecossistema",
+      "seo": {
+        "title": "Ecossistema de código aberto | Blogue da Opensya",
+        "description": "Explore os projetos, as ferramentas e as comunidades de código aberto que ajudam as equipas a desenvolver e a fazer evoluir o seu software."
+      }
+    },
+    "inside": {
+      "title": "Inside Opensya",
+      "seo": {
+        "title": "Inside Opensya | O diário da Opensya",
+        "description": "Acompanhe a construção da Opensya. Partilhamos as decisões que dão forma aos nossos componentes de software, as dificuldades que encontramos e o que aprendemos pelo caminho."
+      }
+    },
+    "categories": {
+      "all": { "title": "Todos os artigos" },
+      "news": { "title": "Notícias" },
+      "case-studies": { "title": "Estudos de caso" },
+      "ecosystem": { "title": "Ecossistema" },
+      "inside": { "title": "Inside Opensya" }
+    }
+  },
+
   "home_0": {
     "hero": {
       "title": "Construímos infraestruturas de código aberto para empresas.",

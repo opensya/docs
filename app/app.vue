@@ -5,7 +5,9 @@ import AppHeader from "./components/Header.vue";
 <template>
   <UApp>
     <AppHeader />
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
     <AppFooter />
     <!-- <ContactBubble /> -->
   </UApp>

@@ -4,7 +4,8 @@ subtitle: "Evolve your software, one building block at a time."
 description: "We build open software building blocks so teams can stay in control of their applications and revisit their technical choices as their needs change."
 author: "Opensya"
 date: "12/11/2026"
-meta:
+
+seo:
   title: "The Opensya Manifesto — The Freedom to Build"
   description: "Discover why Opensya builds open, independent, reusable software building blocks and the principles that guide this work."
 ---

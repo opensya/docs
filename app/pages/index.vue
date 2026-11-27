@@ -519,7 +519,7 @@ const currentItem = ref(2);
     </section>
 
     <!-- Notre approche -->
-    <section class="bg-surface/50 py-24 sm:py-32">
+    <section class="py-24 sm:py-32">
       <UContainer>
         <div class="max-w-2xl">
           <p class="section-eyebrow">{{ $t("home.approach.eyebrow") }}</p>

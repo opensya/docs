@@ -2,7 +2,13 @@ import { fileURLToPath } from "node:url";
 
 export default defineNuxtConfig({
   compatibilityDate: "2026-10-01",
-  modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/content"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxtjs/i18n",
+    "@nuxt/content",
+    "@nuxt/image",
+    "nuxt-og-image",
+  ],
 
   css: ["~/assets/css/main.css"],
 
@@ -62,6 +68,7 @@ export default defineNuxtConfig({
   i18n: {
     defaultLocale: "fr",
     strategy: "prefix_and_default",
+    customRoutes: "meta",
     locales: [
       { code: "fr", name: "Français", file: "fr.json" },
       { code: "en", name: "English", file: "en.json" },

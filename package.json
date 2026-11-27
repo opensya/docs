@@ -17,15 +17,20 @@
     "@nuxt/content": "3.17.0",
     "@nuxt/ui": "^4.12.0",
     "@nuxtjs/i18n": "10.6.0",
+    "@takumi-rs/core": "^2.22.1",
     "better-sqlite3": "^13.2.0",
     "nuxt": "^4.5.2",
     "resend": "^6.34.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
-    "vue": "^3.5.44"
+    "vue": "^3.5.44",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@nuxt/image": "^2.2.1",
     "@types/node": "^26.6.5",
+    "nuxt-og-image": "^7.2.0",
+    "nuxtseo-devtools-host": "^1.0.3",
     "sass": "^1.106.0"
   }
 }

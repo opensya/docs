@@ -4,7 +4,8 @@ subtitle: "Faites évoluer vos logiciels, une brique à la fois."
 description: "Nous construisons des briques logicielles ouvertes pour que les équipes gardent la maîtrise de leurs applications et puissent faire évoluer leurs choix techniques."
 author: "Opensya"
 date: "12/11/2026"
-meta:
+
+seo:
   title: "Manifeste Opensya — La liberté de construire"
   description: "Découvrez pourquoi Opensya développe des briques logicielles ouvertes, indépendantes et réutilisables, et les principes qui guident ce travail."
 ---
